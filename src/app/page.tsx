@@ -79,7 +79,7 @@ export default function Home() {
                 target="_blank"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="flex items-center space-x-2 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-8 py-4 rounded-2xl font-heading font-semibold text-base hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                className="flex items-center space-x-2 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 md:px-8 px-2 py-4 rounded-2xl font-heading font-semibold text-base hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
               >
                 <span>Get Free Consultation</span>
               </motion.a>
@@ -170,8 +170,8 @@ export default function Home() {
       </section>
 
       {/* Products Section */}
-      <section id="products" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-900 px-4">
-        <div className="container mx-auto px-4">
+      <section id="products" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-900 md:px-4 px-2">
+        <div className="container mx-auto md:px-4 px-2">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -187,7 +187,7 @@ export default function Home() {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {products.map((product) => (
               <ProductCard 
                 key={product.id} 
