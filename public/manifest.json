@@ -1,0 +1,17 @@
+{
+  "name": "TechParts Pro - Premium Computer Components",
+  "short_name": "TechParts Pro",
+  "description": "Your trusted partner for premium computer components and gaming hardware",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}

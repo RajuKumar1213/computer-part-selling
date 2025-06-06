@@ -1,0 +1,9 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="400" height="300" fill="#1a1a1a"/>
+<rect x="50" y="50" width="300" height="200" rx="10" fill="#333"/>
+<rect x="70" y="70" width="80" height="60" rx="5" fill="#555"/>
+<rect x="70" y="140" width="260" height="10" rx="5" fill="#777"/>
+<rect x="70" y="160" width="200" height="10" rx="5" fill="#777"/>
+<rect x="70" y="180" width="180" height="10" rx="5" fill="#777"/>
+<text x="200" y="230" text-anchor="middle" fill="#999" font-family="Arial" font-size="14">RTX 4090 Graphics Card</text>
+</svg>
