@@ -16,29 +16,21 @@ interface ProductDetailModalProps {
 export default function ProductDetailModal({ product, isOpen, onClose }: ProductDetailModalProps) {
 
     const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-    const [isPlaying, setIsPlaying] = useState(false); 
-
-    useEffect(() => {
+    const [isPlaying, setIsPlaying] = useState(false);     useEffect(() => {
         if (isOpen) {
             // Store current scroll position
             const currentScrollY = window.scrollY;
+
             // Get the scrollbar width
             const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
 
-            // Apply scroll lock with position fixed to prevent all scrolling
+            // Apply scroll lock with position fixed to prevent background scrolling
             document.body.style.position = 'fixed';
             document.body.style.top = `-${currentScrollY}px`;
             document.body.style.left = '0';
             document.body.style.right = '0';
             document.body.style.paddingRight = `${scrollbarWidth}px`;
             document.body.classList.add('modal-open');
-
-            // Prevent touch scrolling on mobile
-            const preventScroll = (e: TouchEvent) => {
-                e.preventDefault();
-            };
-
-            document.addEventListener('touchmove', preventScroll, { passive: false });
 
             return () => {
                 // Restore scroll position and remove lock
@@ -48,7 +40,6 @@ export default function ProductDetailModal({ product, isOpen, onClose }: Product
                 document.body.style.right = '';
                 document.body.style.paddingRight = '';
                 document.body.classList.remove('modal-open');
-                document.removeEventListener('touchmove', preventScroll);
 
                 // Restore scroll position
                 window.scrollTo(0, currentScrollY);
@@ -88,25 +79,19 @@ export default function ProductDetailModal({ product, isOpen, onClose }: Product
     const discountPercentage = product.originalPrice ? Math.round((savings / product.originalPrice) * 100) : 0;
 
     return (
-        <AnimatePresence>
-            {isOpen && (<motion.div
+        <AnimatePresence>            {isOpen && (<motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="fixed inset-0 items-end z-50 flex md:items-center md:justify-center md:p-4 bg-black/80 backdrop-blur-sm "
+                className="fixed inset-0 items-end z-50 flex md:items-center md:justify-center md:p-4 bg-black/80 backdrop-blur-sm"
                 onClick={onClose}
-                onWheel={(e) => e.preventDefault()}
-                onTouchMove={(e) => e.preventDefault()}
-                style={{ touchAction: 'none' }}
             >                    <motion.div
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
-                transition={{ type: "spring", damping: 25, stiffness: 300 }} className="relative w-full max-w-7xl h-[100vh] md:h-[90vh] bg-white dark:bg-gray-900 md:rounded-2xl rounded-t-2xl shadow-2xl overflow-hidden"
+                transition={{ type: "spring", damping: 25, stiffness: 300 }}
+                className="relative w-full max-w-7xl h-[100vh] md:h-[90vh] bg-white dark:bg-gray-900 md:rounded-2xl rounded-t-2xl shadow-2xl overflow-hidden"
                 onClick={(e) => e.stopPropagation()}
-                onWheel={(e) => e.stopPropagation()}
-                onTouchMove={(e) => e.stopPropagation()}
-                style={{ touchAction: 'auto' }}
             >
                     {/* Close Button */}
                     <button
@@ -114,11 +99,10 @@ export default function ProductDetailModal({ product, isOpen, onClose }: Product
                         className="absolute top-4 right-4 z-10 p-2 bg-white/90 dark:bg-gray-800/90 rounded-full shadow-lg hover:bg-white dark:hover:bg-gray-800 transition-colors"
                     >
                         <X className="w-6 h-6" />
-                    </button>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
+                    </button>                    <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
                         <div className="md:relative bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 p-2 flex flex-col h-full">
                             {/* Main Image */}
-                            <div className="relative min-h-52  flex-1 rounded-xl overflow-hidden bg-white dark:bg-gray-800 shadow-lg mb-3">
+                            <div className="relative min-h-60 flex-1 rounded-xl overflow-hidden bg-white dark:bg-gray-800 shadow-lg mb-3">
                                 <Image
                                     src={product.images[selectedImageIndex]}
                                     alt={product.name}
@@ -174,10 +158,9 @@ export default function ProductDetailModal({ product, isOpen, onClose }: Product
                                     ))}
                                 </div>
                             </div>
-                        </div>
-                        {/* Right Side - Product Details */}
-                        <div className="p-4 md:p-8 overflow-y-auto">
-                            <div className="space-y-4 md:space-y-6">                                {/* Product Title & Rating */}
+                        </div>                        {/* Right Side - Product Details */}
+                        <div className="p-4 md:p-8 modal-content-scroll" style={{ maxHeight: '100%' }}>
+                            <div className="space-y-4 md:space-y-6">{/* Product Title & Rating */}
                                 <div>
                                     <div className="flex items-center gap-2 text-xs md:text-sm text-gray-600 dark:text-gray-400 mb-2">
                                         <span className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-2 py-1 rounded text-xs">{product.category}</span>
