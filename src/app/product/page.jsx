@@ -11,7 +11,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import ProductDetailModal from "@/components/ProductDetailModal";
-import { products, companyInfo } from "@/data/products-new";
+import { products, companyInfo } from "@/data/products";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 

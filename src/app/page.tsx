@@ -7,7 +7,7 @@ import ProductCard from '@/components/ProductCard';
 import ProductDetailModal from '@/components/ProductDetailModal';
 import { Footer } from '@/components/Footer';
 import { WhatsAppFloat } from '@/components/WhatsAppFloat';
-import { products, companyInfo } from '@/data/products-new';
+import { products, companyInfo } from '@/data/products';
 import { Product } from '@/types';
 import { Zap, Shield, Users, Award, ArrowRight, Star } from 'lucide-react';
 

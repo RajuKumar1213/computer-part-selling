@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, Facebook, Twitter, Instagram } from 'lucide-react';
-import { contactInfo, companyInfo } from '@/data/products';
+import { companyInfo, contactInfo } from '@/data/products';
 
 export function Footer() {
   return (
@@ -15,12 +15,16 @@ export function Footer() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="col-span-1 lg:col-span-2"
-          >            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">S</span>
-              </div>              <h3 className="text-2xl font-heading font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                {companyInfo.name}
-              </h3>
+          >            <div className="flex items-center space-x-3 mb-4">
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center shadow-lg">
+                <span className="text-white font-bold text-lg">SGS</span>
+              </div>
+              <div>
+                <h3 className="text-xl font-heading font-bold text-white">
+                  Sagacious Global Services
+                </h3>
+                <p className="text-sm text-gray-400">Advanced POS Solutions</p>
+              </div>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
               {companyInfo.description}

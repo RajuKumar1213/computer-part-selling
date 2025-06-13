@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Award, Users, Calendar, CheckCircle, Globe, Briefcase, Target, Star, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 import {Header} from '@/components/Header';
-import { companyInfo } from '@/data/products-new';
+import { companyInfo } from '@/data/products';
 
 export default function AboutPage() {
   const [zoomState, setZoomState] = useState({

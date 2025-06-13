@@ -18,7 +18,7 @@ import {
   AlertCircle,
 } from "lucide-react";
 import { Header } from "@/components/Header";
-import { companyInfo } from "@/data/products-new";
+import { companyInfo } from "@/data/products";
 import { Footer } from "@/components/Footer";
 import {sendEmail} from "@/lib/sendEmail";
 
@@ -33,10 +33,10 @@ export default function ContactPage() {
     product: "",
     time: "", // Will be set on form submission
   });
-
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState("");
+  const [isDuplicate, setIsDuplicate] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -44,32 +44,100 @@ export default function ContactPage() {
       ...prev,
       [name]: value,
     }));
-    // Clear error when user starts typing
+    // Clear messages when user starts typing
     if (submitError) setSubmitError("");
+    if (isDuplicate) setIsDuplicate(false);
+  };
+
+  // Check for duplicate submission
+  const checkForDuplicateSubmission = () => {
+    const submissions = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
+    return submissions.some(submission => 
+      submission.email === formData.email || submission.phone === formData.phone
+    );
+  };
+
+  // Save submission to localStorage
+  const saveSubmissionToStorage = () => {
+    const submissions = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
+    const newSubmission = {
+      email: formData.email,
+      phone: formData.phone,
+      name: formData.name,
+      timestamp: new Date().toISOString(),
+    };
+    submissions.push(newSubmission);
+    localStorage.setItem('contactSubmissions', JSON.stringify(submissions));
+  };
+
+  // Generate WhatsApp message from form data
+  const generateWhatsAppMessage = (data) => {
+    let message = "Hello! I'm interested in your services.\n\n";
+    
+    if (data.name) message += `*Name:* ${data.name}\n`;
+    if (data.email) message += `*Email:* ${data.email}\n`;
+    if (data.phone) message += `*Phone:* ${data.phone}\n`;
+    if (data.company) message += `*Company:* ${data.company}\n`;
+    if (data.product) message += `*Interested in:* ${data.product}\n`;
+    if (data.subject) message += `*Subject:* ${data.subject}\n`;
+    if (data.message) message += `*Message:* ${data.message}\n`;
+    
+    message += "\nPlease get back to me at your earliest convenience.";
+    
+    return message;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    // Check for duplicate submission
+    if (checkForDuplicateSubmission()) {
+      setIsDuplicate(true);
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitError("");
+    setIsDuplicate(false);
 
     const time = new Date().toLocaleString("en-US", {
       timeZone: "Asia/Kolkata",
     });
 
-    setFormData((prev) => ({
-      ...prev,
-      time: time, // Set current time in form data
-    }));
+    const submissionData = {
+      ...formData,
+      time: time,
+    };
 
     try {
-        await sendEmail(formData);
-        setIsSubmitting(false); 
-    } catch (error) {
+      await sendEmail(submissionData);
       
-        setIsSubmitting(false);
-        console.error("Error sending email:", error);
-        setSubmitError("Failed to send message. Please try again later.");
+      // Success - save to localStorage and show success message
+      saveSubmissionToStorage();
+      setIsSubmitted(true);
+      setIsSubmitting(false);
+      
+      // Clear form data
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        company: "",
+        subject: "",
+        message: "",
+        product: "",
+        time: "",
+      });
+
+      // Auto-hide success message after 15 seconds
+      setTimeout(() => {
+        setIsSubmitted(false);
+      }, 15000);
+
+    } catch (error) {
+      setIsSubmitting(false);
+      console.error("Error sending email:", error);
+      setSubmitError(error.message || "Failed to send message. Please try again later.");
     }
   };
 
@@ -236,8 +304,7 @@ export default function ContactPage() {
                 <p className="text-gray-600 dark:text-gray-300 mb-8">
                   Fill out the form below and we'll get back to you within 24
                   hours.
-                </p>
-                {/* Error Message */}
+                </p>                {/* Error Message */}
                 {submitError && (
                   <motion.div
                     initial={{ opacity: 0, y: -10 }}
@@ -250,6 +317,22 @@ export default function ContactPage() {
                     </p>
                   </motion.div>
                 )}
+
+                {/* Duplicate Submission Message */}
+                {isDuplicate && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="mb-6 p-4 bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-lg flex items-center gap-3"
+                  >
+                    <AlertCircle className="w-5 h-5 text-orange-600 dark:text-orange-400 flex-shrink-0" />
+                    <div className="text-orange-700 dark:text-orange-300 text-sm">
+                      <p className="font-medium">You have already submitted a request!</p>
+                      <p>We have your details and will contact you soon. No need to submit again.</p>
+                    </div>
+                  </motion.div>
+                )}
+
                 {/* Success Message */}
                 {isSubmitted && (
                   <motion.div
@@ -259,8 +342,8 @@ export default function ContactPage() {
                   >
                     <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-400 flex-shrink-0" />
                     <div className="text-green-700 dark:text-green-300 text-sm">
-                      <p className="font-medium">Message sent successfully!</p>
-                      <p>We'll get back to you within 24 hours.</p>
+                      <p className="font-medium">Your request has been submitted successfully! ✅</p>
+                      <p>Someone will contact you very soon to discuss your requirements.</p>
                     </div>
                   </motion.div>
                 )}
@@ -392,10 +475,9 @@ export default function ContactPage() {
                       placeholder="Tell us about your requirements, project details, or any questions you have..."
                     ></textarea>
                   </div>{" "}
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <button
+                  <div className="flex flex-col sm:flex-row gap-4">                    <button
                       type="submit"
-                      disabled={isSubmitting || isSubmitted}
+                      disabled={isSubmitting || isSubmitted || isDuplicate}
                       className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-gray-400 disabled:to-gray-500 text-white py-3 px-6 rounded-lg font-semibold transition-all flex items-center justify-center gap-2"
                     >
                       {isSubmitting ? (
@@ -406,8 +488,10 @@ export default function ContactPage() {
                       ) : isSubmitted ? (
                         <>
                           <CheckCircle className="w-5 h-5" />
-                          Sent Successfully!
+                          Submitted Successfully!
                         </>
+                      ) : isDuplicate ? (
+                        <>Already Submitted</>
                       ) : (
                         <>
                           <Send className="w-5 h-5" />
