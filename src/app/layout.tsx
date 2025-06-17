@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -17,16 +16,16 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Sagacious Global Services - Advanced POS Solutions for Modern Retail",
-  description: "Transform your retail business with our comprehensive Nukkad Shop POS systems. Complete billing solutions, inventory management, UPI integration, and expert support. Trusted by retailers across India.",
-  keywords: "POS systems, point of sale, retail POS, Nukkad Shop, billing software, inventory management, UPI payments, retail solutions, POS hardware, business automation",
+  title: "Sagacious Global Services - Leading IT Solutions Provider",
+  description: "Transform your business with cutting-edge IT solutions, software development, and digital transformation services. Enterprise-grade technology solutions with 24/7 support.",
+  keywords: "IT solutions, software development, digital transformation, enterprise software, business consulting, technology services, custom software, mobile apps",
   authors: [{ name: "Sagacious Global Services" }],
   creator: "Sagacious Global Services",
   publisher: "Sagacious Global Services",
   metadataBase: new URL('https://sagaciousglobal.com'),
   openGraph: {
-    title: "Sagacious Global Services - Advanced POS Solutions",
-    description: "Transform your retail business with our comprehensive Nukkad Shop POS systems. Complete solutions for modern retailers with expert support.",
+    title: "Sagacious Global Services - Leading IT Solutions Provider",
+    description: "Transform your business with cutting-edge IT solutions, software development, and digital transformation services.",
     url: "https://sagaciousglobal.com",
     siteName: "Sagacious Global Services",
     images: [
@@ -34,7 +33,7 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Sagacious Global Services - Advanced POS Solutions",
+        alt: "Sagacious Global Services - Leading IT Solutions Provider",
       },
     ],
     locale: "en_US",
@@ -42,8 +41,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sagacious Global Services - Advanced POS Solutions",
-    description: "Transform your retail business with our comprehensive Nukkad Shop POS systems and expert support.",
+    title: "Sagacious Global Services - Leading IT Solutions Provider",
+    description: "Transform your business with cutting-edge IT solutions and enterprise-grade technology services.",
     images: ["/og-image.jpg"],
     creator: "@sagaciousglobal",
   },
@@ -91,15 +90,8 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       </head>
-      <body className={`${inter.variable} ${poppins.variable} font-sans antialiased`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+      <body className={`${inter.variable} ${poppins.variable} font-sans antialiased bg-white text-gray-900`}>
+        {children}
       </body>
     </html>
   );
