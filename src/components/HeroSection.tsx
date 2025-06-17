@@ -73,7 +73,7 @@ export function HeroSection() {
 
       {/* Content Overlay */}
       <div className="relative z-10 min-h-screen flex items-center">
-        <div className="container mx-auto px-4 py-20">
+        <div className="container mx-auto px-6 lg:px-8 py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <motion.div
@@ -158,7 +158,8 @@ export function HeroSection() {
                     <div className="text-xs text-gray-300">{stat.label}</div>
                   </div>
                 ))}
-              </motion.div>            </motion.div>
+              </motion.div>            
+              </motion.div>
           </div>
         </div>
       </div>

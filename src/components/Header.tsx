@@ -28,8 +28,7 @@ export function Header() {
 
   return (
     <>
-      {/* Top Bar */}
-      <div className="bg-gray-900 text-white py-2 px-4">
+      {/* Top Bar */}      <div className="bg-gray-900 text-white py-2 px-6 lg:px-8">
         <div className="container mx-auto flex justify-between items-center text-sm">
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2">
@@ -54,7 +53,7 @@ export function Header() {
         transition={{ duration: 0.6 }}
         className="sticky top-0 z-50 bg-white/95 backdrop-blur-lg border-b border-gray-200 shadow-lg"
       >
-        <div className="container mx-auto px-4 py-4">
+        <div className="container mx-auto px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <motion.div
@@ -147,7 +146,7 @@ export function Header() {
               exit={{ opacity: 0, height: 0 }}
               className="lg:hidden bg-white border-t border-gray-200 shadow-lg"
             >
-              <div className="container mx-auto px-4 py-6">
+              <div className="container mx-auto px-6 lg:px-8 py-6">
                 <nav className="space-y-4">
                   {navItems.map((item) => (
                     <div key={item.name}>

@@ -1,0 +1,195 @@
+'use client';
+
+import { motion } from 'framer-motion';
+import { Award, Clock, Shield, Users, Headphones, Zap, CheckCircle, Star } from 'lucide-react';
+
+const advantages = [
+  {
+    icon: Award,
+    title: 'Industry Expertise',
+    description: 'Over 10 years of experience serving businesses across diverse industries with proven solutions.',
+    stats: '1000+ Projects Completed'
+  },
+  {
+    icon: Clock,
+    title: 'Quick Deployment',
+    description: 'Rapid implementation and setup to get your business running with minimal downtime.',
+    stats: '48-Hour Setup'
+  },
+  {
+    icon: Shield,
+    title: 'Reliable & Secure',
+    description: 'Enterprise-grade security and 99.9% uptime guarantee for all our systems and services.',
+    stats: '99.9% Uptime'
+  },
+  {
+    icon: Users,
+    title: 'Dedicated Support',
+    description: 'Personal account managers and dedicated support team available when you need assistance.',
+    stats: '24/7 Support'
+  },
+  {
+    icon: Headphones,
+    title: 'Comprehensive Training',
+    description: 'Complete training programs to ensure your team can effectively use all our solutions.',
+    stats: 'Free Training'
+  },
+  {
+    icon: Zap,
+    title: 'Scalable Solutions',
+    description: 'Systems that grow with your business, from single location to multi-branch operations.',
+    stats: 'Unlimited Scale'
+  }
+];
+
+const testimonialHighlights = [
+  {
+    quote: "SGS transformed our retail operations completely. The POS system is intuitive and their support is exceptional.",
+    author: "Rajesh Kumar",
+    position: "Store Owner",
+    rating: 5
+  },
+  {
+    quote: "Best investment we made for our restaurant. The billing system handles everything seamlessly.",
+    author: "Priya Sharma",
+    position: "Restaurant Manager", 
+    rating: 5
+  },
+  {
+    quote: "Professional service, quality products, and ongoing support. Highly recommended for any business.",
+    author: "Amit Patel",
+    position: "Business Owner",
+    rating: 5
+  }
+];
+
+export function WhyChooseUsSection() {
+  return (    <section className="py-20 bg-white">
+      <div className="container mx-auto px-6 lg:px-8">
+        {/* Header */}        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.4 }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center px-4 py-2 bg-emerald-50 border border-emerald-200 rounded-full text-emerald-700 font-medium mb-4">
+            <CheckCircle className="w-4 h-4 mr-2" />
+            Why Choose Us
+          </div>
+          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            Your Success is Our Priority
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            We don&apos;t just sell products – we build long-term partnerships. Here&apos;s what makes us the preferred choice for businesses.
+          </p>
+        </motion.div>
+
+        {/* Advantages Grid */}        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+          {advantages.map((advantage, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.1 }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
+              className="group text-center"
+            >
+              {/* Icon */}
+              <div className="w-20 h-20 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                <advantage.icon className="w-10 h-10 text-white" />
+              </div>
+
+              {/* Content */}
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                {advantage.title}
+              </h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                {advantage.description}
+              </p>
+              
+              {/* Stats */}
+              <div className="inline-flex items-center px-3 py-1 bg-blue-50 border border-blue-200 rounded-full text-blue-700 font-medium text-sm">
+                {advantage.stats}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Testimonial Highlights */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="bg-gray-50 rounded-3xl p-12"
+        >
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">
+              What Our Clients Say
+            </h3>
+            <p className="text-lg text-gray-600">
+              Don&apos;t just take our word for it – hear from businesses who trust us.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonialHighlights.map((testimonial, index) => (
+              <motion.div                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.1 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                className="bg-white rounded-2xl p-6 border border-gray-200"
+              >
+                {/* Rating */}
+                <div className="flex items-center mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+
+                {/* Quote */}
+                <p className="text-gray-700 mb-4 italic">
+                 &quot;{testimonial.quote}&quot;
+                </p>
+
+                {/* Author */}
+                <div>
+                  <p className="font-semibold text-gray-900">{testimonial.author}</p>
+                  <p className="text-sm text-gray-500">{testimonial.position}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="text-center mt-16"
+        >
+          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-12 text-white">
+            <h3 className="text-3xl font-bold mb-4">
+              Ready to Transform Your Business?
+            </h3>
+            <p className="text-xl mb-8 opacity-90">
+              Join hundreds of satisfied businesses who chose SGS for their technology needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors duration-300 font-medium">
+                Get Free Consultation
+              </button>
+              <button className="px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-medium">
+                View Case Studies
+              </button>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
