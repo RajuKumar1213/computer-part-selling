@@ -1,45 +1,63 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Monitor, ShoppingCart, Cpu, HardDrive, Printer, Wifi } from 'lucide-react';
+import { Database, Server, Code, RefreshCw, Globe, Video, Mail, FileText, Users } from 'lucide-react';
 import { Button } from './ui/Button';
 
 const services = [
   {
-    icon: Monitor,
-    title: 'POS Systems',
-    description: 'Complete point-of-sale solutions with billing software, inventory management, and payment integration.',
-    features: ['Touch Screen Displays', 'Barcode Scanners', 'Receipt Printers', 'Cash Drawers']
+    icon: Database,
+    title: 'Data Processing',
+    description: 'Comprehensive data processing solutions with high accuracy and quick turnaround time.',
+    features: ['High-volume data entry', 'Data cleansing & validation', 'Digital conversion', 'Multi-language support']
   },
   {
-    icon: ShoppingCart,
-    title: 'Billing Solutions',
-    description: 'Advanced billing and invoicing software designed for retail, restaurants, and service businesses.',
-    features: ['GST Compliance', 'Multi-Store Support', 'Cloud Backup', 'Real-time Reports']
+    icon: Server,
+    title: 'Database Administration',
+    description: 'Professional database management and administration services for optimal performance.',
+    features: ['Database optimization', 'Performance monitoring', 'Backup & recovery', '24/7 support']
   },
   {
-    icon: Cpu,
-    title: 'Computer Hardware',
-    description: 'High-quality computer components and systems for business and personal use.',
-    features: ['Latest Processors', 'Gaming Systems', 'Office Computers', 'Warranty Support']
+    icon: Code,
+    title: 'Software Development',
+    description: 'Custom software development solutions tailored to your business requirements.',
+    features: ['Web applications', 'Mobile apps', 'Desktop software', 'API integration']
   },
   {
-    icon: HardDrive,
-    title: 'Data Solutions',
-    description: 'Secure data storage, backup solutions, and server systems for businesses.',
-    features: ['Cloud Storage', 'Data Recovery', 'Server Setup', 'Network Security']
+    icon: RefreshCw,
+    title: 'Software Re-engineering',
+    description: 'Legacy system modernization and comprehensive software testing services.',
+    features: ['System migration', 'Code optimization', 'Automated testing', 'Security audits']
   },
   {
-    icon: Printer,
-    title: 'Peripherals',
-    description: 'Complete range of computer peripherals and office equipment.',
-    features: ['Printers & Scanners', 'Keyboards & Mice', 'Webcams & Speakers', 'Networking Gear']
+    icon: Globe,
+    title: 'Web Designing',
+    description: 'Modern, responsive web design solutions that enhance user experience.',
+    features: ['Responsive design', 'UI/UX design', 'E-commerce solutions', 'SEO optimization']
   },
   {
-    icon: Wifi,
-    title: 'Network Setup',
-    description: 'Professional network installation and configuration services.',
-    features: ['WiFi Setup', 'LAN Configuration', 'Security Systems', 'Remote Support']
+    icon: Video,
+    title: 'Multimedia Production',
+    description: 'Creative multimedia solutions for effective communication and marketing.',
+    features: ['Video production', 'Graphic design', 'Interactive presentations', 'Brand identity']
+  },
+  {
+    icon: Mail,
+    title: 'E-Mailing Solutions',
+    description: 'Professional email solutions and communication systems for businesses.',
+    features: ['Email server setup', 'Bulk campaigns', 'Security solutions', 'Analytics & reporting']
+  },
+  {
+    icon: FileText,
+    title: 'Document Imaging',
+    description: 'Digital document management and imaging solutions for paperless operations.',
+    features: ['Document scanning', 'OCR technology', 'Archiving systems', 'Workflow automation']
+  },
+  {
+    icon: Users,
+    title: 'Back Office Activities',
+    description: 'Comprehensive back office support to streamline your business operations.',
+    features: ['Administrative support', 'Customer service', 'Accounting support', 'Process optimization']
   }
 ];
 
@@ -52,16 +70,16 @@ export function ServicesSection() {
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.4 }}
           className="text-center mb-16"
-        >
-          <div className="inline-flex items-center px-4 py-2 bg-blue-50 border border-blue-200 rounded-full text-blue-700 font-medium mb-4">
-            <ShoppingCart className="w-4 h-4 mr-2" />
+        >          <div className="inline-flex items-center px-3 py-1 bg-blue-50 border border-blue-200 rounded-full text-blue-700 font-medium text-sm mb-4">
+            <Server className="w-4 h-4 mr-2" />
             Our Services
           </div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Complete Business Solutions
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            Professional IT Solutions
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From POS systems to computer hardware, we provide everything your business needs to operate efficiently and grow successfully.
+          <p className="text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
+            Delivering quality IT solutions in Data Processing, Database Administration, Software Development, 
+            and comprehensive Back Office Activities since 2007.
           </p>
         </motion.div>
 

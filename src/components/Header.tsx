@@ -11,13 +11,15 @@ const navItems = [
     name: 'Services', 
     href: '/services',
     submenu: [
-      { name: 'IT Solutions', href: '/services/it-solutions' },
+      { name: 'Data Processing', href: '/services/data-processing' },
+      { name: 'Database Administration', href: '/services/database' },
       { name: 'Software Development', href: '/services/software' },
-      { name: 'Digital Transformation', href: '/services/digital' },
-      { name: 'Business Consulting', href: '/services/consulting' },
+      { name: 'Web Designing', href: '/services/web' },
+      { name: 'Multimedia Production', href: '/services/multimedia' },
+      { name: 'Back Office Activities', href: '/services/backoffice' },
     ]
   },
-  { name: 'Products', href: '/products' },
+  { name: 'Projects', href: '/projects' },
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
 ];
@@ -30,18 +32,17 @@ export function Header() {
     <>
       {/* Top Bar */}      <div className="bg-gray-900 text-white py-2 px-6 lg:px-8">
         <div className="container mx-auto flex justify-between items-center text-sm">
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-4">            <div className="flex items-center space-x-2">
               <Phone className="w-4 h-4" />
-              <span>+91 98765 43210</span>
+              <span>+91 9835 439 197</span>
             </div>
             <div className="flex items-center space-x-2">
               <Mail className="w-4 h-4" />
-              <span>info@sagaciousglobal.com</span>
+              <span>sagaciousglobals@gmail.com</span>
             </div>
           </div>
           <div className="hidden md:block">
-            <span>Leading IT Solutions Provider | 24/7 Support</span>
+            <span>Professional IT Services | Since 2007</span>
           </div>
         </div>
       </div>
@@ -67,9 +68,8 @@ export function Header() {
                 <div>
                   <h1 className="text-2xl font-bold text-gray-900 leading-tight">
                     Sagacious Global Services
-                  </h1>
-                  <p className="text-sm text-blue-600 font-medium -mt-1">
-                    Technology • Innovation • Excellence
+                  </h1>                  <p className="text-xs text-blue-600 font-medium -mt-1">
+                    Truly Partnered in IT Excellence
                   </p>
                 </div>
               </Link>

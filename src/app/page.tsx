@@ -2,9 +2,11 @@ import { Header } from '@/components/Header';
 import { HeroSection } from '@/components/HeroSection';
 import { ServicesSection } from '@/components/ServicesSection';
 import { StatsSection } from '@/components/StatsSection';
+import { ServiceBenefitsSection } from '@/components/ServiceBenefitsSection';
+import { InfrastructureSection } from '@/components/InfrastructureSection';
+import { PrestigiousProjectsSection } from '@/components/PrestigiousProjectsSection';
 import { WhyChooseUsSection } from '@/components/WhyChooseUsSection';
 import { AboutSection } from '@/components/AboutSection';
-import { IndustrySection } from '@/components/IndustrySection';
 import { TestimonialsSection } from '@/components/TestimonialsSection';
 import { CTASection } from '@/components/CTASection';
 import { Footer } from '@/components/Footer';
@@ -16,10 +18,12 @@ export default function Home() {
       <Header />
       <HeroSection />
       <ServicesSection />
+      <ServiceBenefitsSection />
       <StatsSection />
+      <InfrastructureSection />
+      <PrestigiousProjectsSection />
       <WhyChooseUsSection />
       <AboutSection />
-      <IndustrySection />
       <TestimonialsSection />
       <CTASection />
       <Footer />

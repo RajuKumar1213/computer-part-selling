@@ -1,198 +1,326 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import Image from 'next/image';
-import { ArrowRight, CheckCircle, Star, Zap, Shield, Users, ChevronLeft, ChevronRight } from 'lucide-react';
-import { Button } from './ui/Button';
-import { heroSlides } from '@/data/hero-slides';
+import { motion } from "framer-motion";
+import { ArrowRight, CheckCircle } from "lucide-react";
+import { Button } from "./ui/Button";
+import dynamic from "next/dynamic";
+
+// Dynamically import Globe to avoid SSR issues
+const World = dynamic(
+  () => import("./ui/globe").then((mod) => ({ default: mod.World })),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="w-full h-full flex items-center justify-center">
+        Loading...
+      </div>
+    ),
+  }
+);
 
 const stats = [
-  { icon: Users, value: '500+', label: 'Happy Clients' },
-  { icon: Star, value: '15+', label: 'Years Experience' },
-  { icon: Zap, value: '1000+', label: 'Projects Delivered' },
-  { icon: Shield, value: '99.9%', label: 'Uptime Guarantee' },
+  { value: "45+", label: "Skilled Personnel" },
+  { value: "2007", label: "Since Experience" },
+  { value: "60+", label: "Deployed Staff" },
+  { value: "3000+", label: "Sq. Ft. Facility" },
 ];
 
 const features = [
-  'Enterprise-grade Solutions',
-  '24/7 Technical Support', 
-  'Scalable Architecture',
-  'Data Security Compliance'
+  "Data Processing Excellence",
+  "Database Administration",
+  "Software Development",
+  "24/7 Operations Support",
+];
+
+// Cool Blue Globe configuration with dramatic tilted view
+const globeConfig = {
+  pointSize: 14,
+  globeColor: "#0f1419",
+  showAtmosphere: true,
+  atmosphereColor: "#3b82f6",
+  atmosphereAltitude: 0.35,
+  emissive: "#1d4ed8",
+  emissiveIntensity: 2.2,
+  shininess: 1.2,
+  polygonColor: "rgba(59, 130, 246, 0.9)",
+  ambientLight: "#3b82f6",
+  directionalLeftLight: "#1e40af",
+  directionalTopLight: "#2563eb",
+  pointLight: "#60a5fa",
+  arcTime: 1500,
+  arcLength: 0.95,
+  rings: 10,
+  maxRings: 15,
+  initialPosition: { lat: 25, lng: -20 }, // Cool tilted angle
+  autoRotate: true,
+  autoRotateSpeed: 0.3,
+  width: 800,
+  height: 800,
+};
+
+// Global connections with vibrant blue theme
+const globeData = [
+  // India to Major World Cities
+  {
+    order: 1,
+    startLat: 28.6139, // Delhi, India
+    startLng: 77.209,
+    endLat: 40.7128, // New York, USA
+    endLng: -74.006,
+    arcAlt: 0.4,
+    color: "#3b82f6",
+  },
+  {
+    order: 2,
+    startLat: 19.076, // Mumbai, India
+    startLng: 72.8777,
+    endLat: 51.5074, // London, UK
+    endLng: -0.1278,
+    arcAlt: 0.3,
+    color: "#1d4ed8",
+  },
+  {
+    order: 3,
+    startLat: 12.9716, // Bangalore, India
+    startLng: 77.5946,
+    endLat: 35.6762, // Tokyo, Japan
+    endLng: 139.6503,
+    arcAlt: 0.25,
+    color: "#60a5fa",
+  },
+  {
+    order: 4,
+    startLat: 23.5204, // Ranchi, India (Company HQ)
+    startLng: 85.3119,
+    endLat: -33.8688, // Sydney, Australia
+    endLng: 151.2093,
+    arcAlt: 0.5,
+    color: "#93c5fd",
+  },
+  // Cross-Continental Connections
+  {
+    order: 5,
+    startLat: 37.7749, // San Francisco, USA
+    startLng: -122.4194,
+    endLat: 55.7558, // Moscow, Russia
+    endLng: 37.6176,
+    arcAlt: 0.4,
+    color: "#1e40af",
+  },
+  {
+    order: 6,
+    startLat: 52.52, // Berlin, Germany
+    startLng: 13.405,
+    endLat: -26.2041, // Johannesburg, South Africa
+    endLng: 28.0473,
+    arcAlt: 0.35,
+    color: "#3b82f6",
+  },
+  {
+    order: 7,
+    startLat: 39.9042, // Beijing, China
+    startLng: 116.4074,
+    endLat: -23.5505, // São Paulo, Brazil
+    endLng: -46.6333,
+    arcAlt: 0.6,
+    color: "#1d4ed8",
+  },
+  {
+    order: 8,
+    startLat: 1.3521, // Singapore
+    startLng: 103.8198,
+    endLat: 48.8566, // Paris, France
+    endLng: 2.3522,
+    arcAlt: 0.3,
+    color: "#60a5fa",
+  },
+  // More Global Coverage
+  {
+    order: 9,
+    startLat: 25.2048, // Dubai, UAE
+    startLng: 55.2708,
+    endLat: 43.6532, // Toronto, Canada
+    endLng: -79.3832,
+    arcAlt: 0.4,
+    color: "#93c5fd",
+  },
+  {
+    order: 10,
+    startLat: -34.6037, // Buenos Aires, Argentina
+    startLng: -58.3816,
+    endLat: 31.2304, // Shanghai, China
+    endLng: 121.4737,
+    arcAlt: 0.7,
+    color: "#1e40af",
+  },
+  // African and European Connections
+  {
+    order: 11,
+    startLat: 30.0444, // Cairo, Egypt
+    startLng: 31.2357,
+    endLat: 59.9139, // Oslo, Norway
+    endLng: 10.7522,
+    arcAlt: 0.25,
+    color: "#3b82f6",
+  },
+  {
+    order: 12,
+    startLat: -1.2921, // Nairobi, Kenya
+    startLng: 36.8219,
+    endLat: 37.5665, // Seoul, South Korea
+    endLng: 126.978,
+    arcAlt: 0.45,
+    color: "#1d4ed8",
+  },
 ];
 
 export function HeroSection() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  // Auto-slide functionality
-  useEffect(() => {
-    
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 5000);
-
-    return () => clearInterval(timer);
-  }, []);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
-
   return (
-    <section className="relative min-h-screen overflow-hidden">      {/* Background Image Slider */}
-      <div className="absolute inset-0 bg-black">
-        <AnimatePresence>
-          <motion.div
-            key={currentSlide}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
-            className="absolute inset-0"
-          >
-            <Image
-              src={heroSlides[currentSlide].image}
-              alt={heroSlides[currentSlide].title}
-              fill
-              className="object-cover"
-              priority
-            />
-            {/* Dark overlay for better text readability */}
-            <div className="absolute inset-0 bg-black/50"></div>
-          </motion.div>
-        </AnimatePresence>
-      </div>
+    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950">
+      {" "}
+      {/* Epic Blue Globe - Dramatic Tilted View */}
+      <div className="absolute right-[-200px] top-1/2 transform -translate-y-1/2 z-0">
+        <div className="w-[900px] h-[900px] relative flex items-center justify-center overflow-hidden">
+          {/* Intense Blue Glow Effects */}
+          <div className="absolute inset-0 bg-gradient-radial from-blue-500/40 via-indigo-500/25 to-transparent rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute inset-8 bg-gradient-radial from-blue-400/50 via-blue-500/35 to-transparent rounded-full blur-2xl"></div>
+          <div
+            className="absolute inset-16 bg-gradient-radial from-indigo-300/60 via-blue-300/40 to-transparent rounded-full blur-xl animate-pulse"
+            style={{ animationDelay: "2s" }}
+          ></div>
 
-      {/* Content Overlay */}
-      <div className="relative z-10 min-h-screen flex items-center">
-        <div className="container mx-auto px-6 lg:px-8 py-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="space-y-8 text-white"
-            >
-              {/* Badge */}              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="inline-flex items-center px-3 py-1 bg-white/20 backdrop-blur-md border border-white/30 rounded-full text-white font-medium text-sm"
-              >
-                <Zap className="w-3 h-3 mr-2" />
-                Leading IT Solutions Provider
-              </motion.div>
-
-              {/* Dynamic Heading */}              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentSlide}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -30 }}
-                  transition={{ duration: 0.6 }}
-                  className="space-y-4"
-                >
-                  <h1 className="text-3xl lg:text-5xl font-bold leading-tight">
-                    {heroSlides[currentSlide].title}
-                  </h1>
-                  <h2 className="text-lg lg:text-xl text-blue-200 font-semibold">
-                    {heroSlides[currentSlide].subtitle}
-                  </h2>
-                  <p className="text-base lg:text-lg text-gray-200 leading-relaxed max-w-2xl">
-                    {heroSlides[currentSlide].description}
-                  </p>
-                </motion.div>
-              </AnimatePresence>
-
-              {/* Features List */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 }}
-                className="grid grid-cols-2 gap-4"              >
-                {features.map((feature, index) => (
-                  <div key={index} className="flex items-center space-x-2">
-                    <CheckCircle className="w-4 h-4 text-green-400" />
-                    <span className="text-white font-medium text-sm">{feature}</span>
-                  </div>
-                ))}
-              </motion.div>
-
-              {/* CTA Buttons */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6 }}
-                className="flex flex-col sm:flex-row gap-4"
-              >
-                <Button size="lg" className="group bg-blue-600 hover:bg-blue-700">
-                  Get Started Today
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
-                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-gray-900">
-                  View Our Solutions
-                </Button>
-              </motion.div>
-
-              {/* Stats */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.7 }}
-                className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-white/20"              >
-                {stats.map((stat, index) => (
-                  <div key={index} className="text-center">
-                    <div className="flex justify-center mb-2">
-                      <stat.icon className="w-5 h-5 text-blue-400" />
-                    </div>
-                    <div className="text-lg font-bold text-white">{stat.value}</div>
-                    <div className="text-xs text-gray-300">{stat.label}</div>
-                  </div>
-                ))}
-              </motion.div>            
-              </motion.div>
+          {/* Globe Container - Big and Tilted (60% visible) */}
+          <div className="w-[800px] h-[800px] relative transform rotate-12 -translate-y-32">
+            <div className="w-full h-full overflow-hidden rounded-full relative">
+              <div className="absolute bottom-0 left-0 right-0 h-[40%] bg-gradient-to-t from-slate-950 to-transparent z-10"></div>
+              {/* Globe temporarily disabled for build */}
+              <World data={globeData} globeConfig={globeConfig} />
+              <div className="w-full h-full bg-gradient-to-br from-blue-600/20 to-indigo-600/20 rounded-full flex items-center justify-center">
+                <div className="text-blue-300 text-center">
+                  <div className="text-2xl font-bold mb-2">Global Reach</div>
+                  <div className="text-sm">6 States Coverage</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      {/* Simple gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/70 to-transparent z-10"></div>{" "}
+      {/* Content - Simple and Clean */}
+      <div className="relative z-20 min-h-screen flex items-center">
+        <div className="container mx-auto px-8 lg:px-12 py-20">
+          <div className="max-w-lg">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="space-y-6 text-white"
+            >
+              {" "}
+              {/* Small Badge */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="inline-flex items-center px-3 py-1 bg-blue-600/20 backdrop-blur-sm border border-blue-400/30 rounded-full text-blue-200 text-xs"
+              >
+                <div className="w-2 h-2 bg-blue-400 rounded-full mr-2 animate-pulse"></div>
+                Professional IT Services
+              </motion.div>
+              {/* Simple Heading */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="space-y-3"
+              >
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
+                  Sagacious Global Services
+                </h1>
+                <h2 className="text-lg md:text-xl text-blue-300 font-semibold">
+                  Truly Partnered in IT Excellence
+                </h2>
+                <p className="text-sm text-gray-300 leading-relaxed">
+                  Professional IT solutions in Data Processing, Database
+                  Administration, Software Development, Web Designing, and Back
+                  Office Activities since 2007.
+                </p>
+              </motion.div>
+              {/* Simple Features */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 }}
+                className="flex flex-wrap gap-2"
+              >
+                {features.slice(0, 2).map((feature, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center space-x-2 bg-white/5 rounded-full px-3 py-1"
+                  >
+                    <CheckCircle className="w-3 h-3 text-green-400" />
+                    <span className="text-white text-xs">{feature}</span>
+                  </div>
+                ))}
+              </motion.div>
+              {/* Simple CTA */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8 }}
+                className="flex gap-3"
+              >
+                {" "}
+                <Button
+                  size="sm"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 text-sm"
+                >
+                  Get Started
+                  <ArrowRight className="w-3 h-3 ml-1" />
+                </Button>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="border border-white/30 text-white hover:bg-white/10 px-4 py-2 text-sm"
+                >
+                  Learn More
+                </Button>
+              </motion.div>
+              {/* Simple Stats */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1 }}
+                className="flex gap-4 pt-4 border-t border-white/10"
+              >
+                {stats.slice(0, 2).map((stat, index) => (
+                  <div key={index} className="text-left">
+                    <div className="text-lg font-bold text-white">
+                      {stat.value}
+                    </div>
+                    <div className="text-xs text-gray-400">{stat.label}</div>
+                  </div>
+                ))}
+              </motion.div>
+            </motion.div>
+          </div>
 
-      {/* Slider Controls */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
-        <div className="flex items-center space-x-4">
-          {/* Previous Button */}
-          <button
-            onClick={prevSlide}
-            className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/30 text-white hover:bg-white/30 transition-colors"
+          {/* Simple Status */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.2 }}
+            className="absolute bottom-6 left-8 bg-black/20 backdrop-blur-sm rounded-lg p-2 border border-white/10"
           >
-            <ChevronLeft className="w-6 h-6" />
-          </button>
-
-          {/* Slide Indicators */}
-          <div className="flex space-x-2">
-            {heroSlides.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full transition-colors ${
-                  index === currentSlide ? 'bg-white' : 'bg-white/40'
-                }`}
-              />
-            ))}
-          </div>          {/* Next Button */}
-          <button
-            onClick={nextSlide}
-            className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/30 text-white hover:bg-white/30 transition-colors"
-          >
-            <ChevronRight className="w-6 h-6" />
-          </button>
+            {" "}
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+              <span className="text-white text-xs">
+                Active • 6 States Coverage
+              </span>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

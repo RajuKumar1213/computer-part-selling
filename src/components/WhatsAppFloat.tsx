@@ -4,9 +4,8 @@ import { motion } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
 import { companyInfo } from '@/data/products';
 
-export function WhatsAppFloat() {
-  const handleWhatsAppClick = () => {
-    const message = "Hi! I'm interested in your computer parts. Can you help me?";
+export function WhatsAppFloat() {  const handleWhatsAppClick = () => {
+    const message = "Hi! I'm interested in your IT services. Can you provide more information about your data processing and software development solutions?";
     const whatsappUrl = `https://wa.me/${companyInfo.whatsappNumber.replace('+', '')}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };

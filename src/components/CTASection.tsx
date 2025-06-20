@@ -15,43 +15,42 @@ export function CTASection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="text-white"
-          >
-            <h2 className="text-4xl font-bold mb-6">
-              Ready to Transform Your Business?
+          >            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+              Ready to Partner with Us?
             </h2>
-            <p className="text-xl text-blue-100 leading-relaxed mb-8">
-              Join 500+ businesses who have already upgraded their operations with our POS systems 
-              and billing solutions. Get started today with a free consultation.
+            <p className="text-lg text-blue-100 leading-relaxed mb-6">
+              Join government and corporate clients who trust our professional IT services. 
+              Get started with quality data processing, software development, and comprehensive back office solutions.
             </p>
 
-            <div className="space-y-4 mb-8">
+            <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                  <Phone className="w-5 h-5 text-white" />
+                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                  <Phone className="w-4 h-4 text-white" />
                 </div>
                 <div>
-                  <div className="font-semibold">Call us now</div>
-                  <div className="text-blue-100">+91 98765 43210</div>
+                  <div className="font-semibold text-sm">Call Mr. Irfan Parvez</div>
+                  <div className="text-blue-100 text-sm">+91 9835 439 197</div>
                 </div>
               </div>
               
               <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                  <Mail className="w-5 h-5 text-white" />
+                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                  <Mail className="w-4 h-4 text-white" />
                 </div>
                 <div>
-                  <div className="font-semibold">Email us</div>
-                  <div className="text-blue-100">info@sagaciousglobal.com</div>
+                  <div className="font-semibold text-sm">Email us</div>
+                  <div className="text-blue-100 text-sm">sagaciousglobals@gmail.com</div>
                 </div>
               </div>
               
               <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                  <MapPin className="w-5 h-5 text-white" />
+                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                  <MapPin className="w-4 h-4 text-white" />
                 </div>
                 <div>
-                  <div className="font-semibold">Visit our office</div>
-                  <div className="text-blue-100">50+ cities across India</div>
+                  <div className="font-semibold text-sm">Visit our office</div>
+                  <div className="text-blue-100 text-sm">Ranchi, Jharkhand & Patna, Bihar</div>
                 </div>
               </div>
             </div>
@@ -74,9 +73,8 @@ export function CTASection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-white rounded-2xl p-8 shadow-2xl"
-          >
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              Get Quick Quote
+          >            <h3 className="text-xl font-bold text-gray-900 mb-4">
+              Get Project Quote
             </h3>
             
             <form className="space-y-6">
@@ -128,13 +126,14 @@ export function CTASection() {
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Service Needed
-                </label>
-                <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                </label>                <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
                   <option>Select a service</option>
-                  <option>POS System</option>
-                  <option>Billing Software</option>
-                  <option>Computer Hardware</option>
-                  <option>Network Setup</option>
+                  <option>Data Processing</option>
+                  <option>Database Administration</option>
+                  <option>Software Development</option>
+                  <option>Web Designing</option>
+                  <option>Multimedia Production</option>
+                  <option>Back Office Activities</option>
                   <option>Other</option>
                 </select>
               </div>

@@ -6,12 +6,12 @@ import { CheckCircle, ArrowRight } from 'lucide-react';
 import { Button } from './ui/Button';
 
 const features = [
-  'Complete POS system integration',
-  'GST compliant billing software',
-  'Real-time inventory management',
-  'Multi-location support',
-  'Cloud-based data backup',
-  '24/7 technical support'
+  'Data Processing & Database Administration',
+  'Software Development & Re-engineering',
+  'Web Designing & Multimedia Production',
+  'Document Imaging & E-mailing Solutions',
+  'Back Office Activities & Support',
+  '24/7 Operations in 3 Shifts'
 ];
 
 export function AboutSection() {
@@ -24,20 +24,25 @@ export function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="space-y-8 text-center lg:text-left"
-          ><div>
-              <div className="inline-flex items-center px-4 py-2 bg-blue-50 border border-blue-200 rounded-full text-blue-700 font-medium mb-4 mx-auto lg:mx-0">
+          >            <div>
+              <div className="inline-flex items-center px-3 py-1 bg-blue-50 border border-blue-200 rounded-full text-blue-700 font-medium text-sm mb-4 mx-auto lg:mx-0">
                 About Sagacious Global Services
               </div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6 text-center lg:text-left">
-                We help businesses grow with technology
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 text-center lg:text-left">
+                Truly Partnered in IT Excellence
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed mb-6 text-center lg:text-left">
-                Sagacious Global Services is a leading provider of POS systems, billing solutions, and computer hardware. 
-                We specialize in helping businesses streamline their operations with cutting-edge technology solutions.
+              <p className="text-sm lg:text-base text-gray-600 leading-relaxed mb-4 text-center lg:text-left">
+                Sagacious Global Services is a team of professionals who served the IT industry for a long time. 
+                We contribute our skills and experiences in Data Processing, Database Administration, Software Development, 
+                Web Designing, and Back Office Activities.
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed text-center lg:text-left">
-                With over 15 years of experience in the industry, we have successfully served 500+ businesses across 
-                50+ cities in India, providing them with reliable, efficient, and cost-effective solutions.
+              <p className="text-sm lg:text-base text-gray-600 leading-relaxed mb-4 text-center lg:text-left">
+                Although formally started in <strong>2019</strong>, we have been serving the IT industry since <strong>2007</strong> 
+                across <strong>Chhattisgarh, Odisha, Uttar Pradesh, Rajasthan, Bihar, and Jharkhand</strong>.
+              </p>
+              <p className="text-sm lg:text-base text-gray-600 leading-relaxed text-center lg:text-left">
+                We are a group of <strong>young, dynamic and committed individuals</strong> who have always delivered quality results on time. 
+                <strong>Work ethics and integrity</strong> are our guiding principles.
               </p>
             </div>
 
@@ -78,34 +83,33 @@ export function AboutSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative"
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                alt="Modern office environment with POS systems"
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">              <Image
+                src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Professional IT team working on data processing and software development"
                 width={600}
                 height={400}
                 className="w-full h-auto"
               />
               
               {/* Overlay Card */}
-              <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl p-6 shadow-lg">
+              <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg">
                 <div className="flex items-center justify-between">
                   <div>
-                    <div className="text-2xl font-bold text-gray-900">50+ Cities</div>
-                    <div className="text-sm text-gray-600">Pan India Presence</div>
+                    <div className="text-xl font-bold text-gray-900">45+ Personnel</div>
+                    <div className="text-xs text-gray-600">Skilled Professionals</div>
                   </div>
-                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
-                    <CheckCircle className="w-6 h-6 text-white" />
+                  <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
+                    <CheckCircle className="w-5 h-5 text-white" />
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Floating Elements */}
-            <div className="absolute -top-4 -right-4 w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center shadow-lg">
+            <div className="absolute -top-4 -right-4 w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center shadow-lg">
               <div className="text-white text-center">
-                <div className="text-lg font-bold">15+</div>
-                <div className="text-xs">Years</div>
+                <div className="text-sm font-bold">2007</div>
+                <div className="text-xs">Since</div>
               </div>
             </div>
           </motion.div>

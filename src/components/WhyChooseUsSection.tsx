@@ -6,59 +6,59 @@ import { Award, Clock, Shield, Users, Headphones, Zap, CheckCircle, Star } from 
 const advantages = [
   {
     icon: Award,
-    title: 'Industry Expertise',
-    description: 'Over 10 years of experience serving businesses across diverse industries with proven solutions.',
-    stats: '1000+ Projects Completed'
+    title: 'Work Ethics & Integrity',
+    description: 'Our guiding principles ensure transparent and honest business relationships with all clients.',
+    stats: 'Trusted Partner'
   },
   {
     icon: Clock,
-    title: 'Quick Deployment',
-    description: 'Rapid implementation and setup to get your business running with minimal downtime.',
-    stats: '48-Hour Setup'
+    title: 'Quick Team Building',
+    description: 'Proven ability to scale teams rapidly - built 3,500+ member team in just 2 months.',
+    stats: 'Rapid Scaling'
   },
   {
     icon: Shield,
-    title: 'Reliable & Secure',
-    description: 'Enterprise-grade security and 99.9% uptime guarantee for all our systems and services.',
-    stats: '99.9% Uptime'
+    title: 'Quality Results',
+    description: 'Young, dynamic, and committed individuals who have always delivered quality results on time.',
+    stats: 'On-Time Delivery'
   },
   {
     icon: Users,
-    title: 'Dedicated Support',
-    description: 'Personal account managers and dedicated support team available when you need assistance.',
-    stats: '24/7 Support'
+    title: 'Skilled Professionals',
+    description: 'Highly skilled, experienced, and multilingual professionals fluent in English.',
+    stats: '45+ Personnel'
   },
   {
     icon: Headphones,
-    title: 'Comprehensive Training',
-    description: 'Complete training programs to ensure your team can effectively use all our solutions.',
-    stats: 'Free Training'
+    title: '24/7 Operations',
+    description: 'Round-the-clock operations with three shifts to meet your project deadlines.',
+    stats: '3 Shifts Coverage'
   },
   {
     icon: Zap,
-    title: 'Scalable Solutions',
-    description: 'Systems that grow with your business, from single location to multi-branch operations.',
-    stats: 'Unlimited Scale'
+    title: 'Onsite Deployment',
+    description: 'Flexible onsite deployment capabilities with qualified staff for immediate project needs.',
+    stats: 'Flexible Deployment'
   }
 ];
 
 const testimonialHighlights = [
   {
-    quote: "SGS transformed our retail operations completely. The POS system is intuitive and their support is exceptional.",
-    author: "Rajesh Kumar",
-    position: "Store Owner",
+    quote: "Sagacious Global Services delivered exceptional results for our SECC project. Their team building capability is remarkable.",
+    author: "Government Official",
+    position: "Project Manager",
     rating: 5
   },
   {
-    quote: "Best investment we made for our restaurant. The billing system handles everything seamlessly.",
-    author: "Priya Sharma",
-    position: "Restaurant Manager", 
+    quote: "Professional service with integrity. They understand client needs quickly and deliver quality results.",
+    author: "Corporate Client",
+    position: "IT Director", 
     rating: 5
   },
   {
-    quote: "Professional service, quality products, and ongoing support. Highly recommended for any business.",
-    author: "Amit Patel",
-    position: "Business Owner",
+    quote: "Reliable partner for large-scale data processing projects. Their 24/7 operations ensure project success.",
+    author: "Project Coordinator",
+    position: "Operations Head",
     rating: 5
   }
 ];
@@ -76,12 +76,12 @@ export function WhyChooseUsSection() {
           <div className="inline-flex items-center px-4 py-2 bg-emerald-50 border border-emerald-200 rounded-full text-emerald-700 font-medium mb-4">
             <CheckCircle className="w-4 h-4 mr-2" />
             Why Choose Us
-          </div>
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Your Success is Our Priority
+          </div>          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            Truly Partnered in Excellence
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We don&apos;t just sell products – we build long-term partnerships. Here&apos;s what makes us the preferred choice for businesses.
+          <p className="text-sm lg:text-base text-gray-600 max-w-3xl mx-auto">
+            We are a group of young, dynamic and committed individuals who have always delivered quality results on time. 
+            Work ethics and integrity are our guiding principles.
           </p>
         </motion.div>
 

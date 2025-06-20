@@ -15,6 +15,19 @@ export interface Product {
   deliveryTime?: string;
   brand?: string;
   model?: string;
+  detailedSpecs?: DetailedSpecification[];
+  features?: Feature[];
+}
+
+export interface DetailedSpecification {
+  label: string;
+  value: string;
+}
+
+export interface Feature {
+  title: string;
+  description: string;
+  icon?: string;
 }
 
 export interface Specification {

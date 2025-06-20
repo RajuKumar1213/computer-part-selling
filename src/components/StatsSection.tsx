@@ -6,39 +6,39 @@ import { Users, Award, Clock, Shield, TrendingUp, Globe } from 'lucide-react';
 const stats = [
   {
     icon: Users,
-    number: '500+',
-    label: 'Happy Customers',
-    description: 'Businesses trust us'
+    number: '45+',
+    label: 'Skilled Personnel',
+    description: 'Highly qualified professionals'
   },
   {
     icon: Award,
-    number: '15+',
-    label: 'Years Experience',
-    description: 'In the industry'
+    number: '2007',
+    label: 'Experience Since',
+    description: 'Years of industry expertise'
   },
   {
     icon: TrendingUp,
-    number: '1000+',
-    label: 'Projects Completed',
-    description: 'Successfully delivered'
+    number: '60+',
+    label: 'Deployed Staff',
+    description: 'Across multiple states'
   },
   {
     icon: Shield,
-    number: '99.9%',
-    label: 'Uptime Guarantee',
-    description: 'Reliable systems'
+    number: '3000+',
+    label: 'Sq. Ft. Facility',
+    description: 'State-of-the-art infrastructure'
   },
   {
     icon: Clock,
     number: '24/7',
-    label: 'Support Available',
-    description: 'Always here to help'
+    label: 'Operations',
+    description: 'Three shift coverage'
   },
   {
     icon: Globe,
-    number: '50+',
-    label: 'Cities Covered',
-    description: 'Pan India presence'
+    number: '6',
+    label: 'States Coverage',
+    description: 'Chhattisgarh, Odisha, UP, Rajasthan, Bihar, Jharkhand'
   }
 ];
 
@@ -51,12 +51,12 @@ export function StatsSection() {
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.4 }}
           className="text-center mb-16"
-        >
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
-            Numbers That Speak for Themselves
+        >          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            Our Infrastructure & Capabilities
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Over the years, we have built a strong reputation in the industry with our commitment to quality and customer satisfaction.
+          <p className="text-sm lg:text-base text-gray-600 max-w-3xl mx-auto">
+            With our state-of-the-art facilities and skilled manpower, we deliver quality IT solutions 
+            across multiple states with 24/7 operational capability.
           </p>
         </motion.div>
 

@@ -6,35 +6,35 @@ import Image from 'next/image';
 
 const testimonials = [
     {
-        name: 'Rajesh Kumar',
-        business: 'Kumar Electronics',
-        location: 'Mumbai',
+        name: 'Government Official',
+        business: 'SECC Project',
+        location: 'Jharkhand',
         rating: 5,
-        text: 'Sagacious Global Services transformed our billing process completely. The POS system is incredibly user-friendly and has reduced our billing time by 70%. Excellent service and support!',
+        text: 'Sagacious Global Services demonstrated exceptional capability in building and managing a team of 3,500+ members for our census project. Their professionalism and delivery on tight deadlines was remarkable.',
         image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80'
     },
     {
-        name: 'Priya Sharma',
-        business: 'Fashion Hub',
-        location: 'Delhi',
+        name: 'Project Manager',
+        business: 'UIDAI Project',
+        location: 'Bihar',
         rating: 5,
-        text: 'The inventory management feature is amazing. We can track our stock in real-time across multiple stores. The team is very responsive and provides great technical support.',
+        text: 'The team at Sagacious Global Services showed excellent coordination and technical expertise in implementing our biometric enrollment project across multiple states. Highly professional service.',
         image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80'
     },
     {
-        name: 'Amit Patel',
-        business: 'Patel General Store',
-        location: 'Ahmedabad',
+        name: 'IT Director',
+        business: 'Corporate Client',
+        location: 'Ranchi',
         rating: 5,
-        text: 'Best investment for our business! The GST compliance feature saved us so much hassle during tax filing. The barcode scanner works perfectly and billing is now super fast.',
+        text: 'Their database administration and software development services are top-notch. The team understands client requirements quickly and delivers quality results with complete integrity.',
         image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80'
     },
     {
-        name: 'Sneha Reddy',
-        business: 'Café Delight',
-        location: 'Bangalore',
+        name: 'Operations Head',
+        business: 'NPR Project',
+        location: 'Chhattisgarh',
         rating: 5,
-        text: 'Perfect for our restaurant business. The table management and kitchen order system integration is seamless. Our customers love the quick service now. Highly recommended!',
+        text: 'Outstanding data processing capabilities with multilingual support. Their 24/7 operations and skilled professionals make them a truly reliable partner for large-scale projects.',
         image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80'
     }
 ];
@@ -53,12 +53,12 @@ export function TestimonialsSection() {
                 <div className="inline-flex items-center px-4 py-2 bg-blue-50 border border-blue-200 rounded-full text-blue-700 font-medium mb-4">
                     <Quote className="w-4 h-4 mr-2" />
                     Client Testimonials
-                </div>
-                <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                    What Our Customers Say
+                </div>                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                    What Our Clients Say
                 </h2>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Don&apos;t just take our word for it. Here&apos;s what business owners have to say about our solutions.
+                <p className="text-sm lg:text-base text-gray-600 max-w-3xl mx-auto">
+                    Feedback from government and corporate clients who have experienced our quality service delivery 
+                    and professional project management capabilities.
                 </p>
             </motion.div>
 

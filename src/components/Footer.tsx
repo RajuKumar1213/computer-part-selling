@@ -5,20 +5,20 @@ import { MapPin, Phone, Mail, Clock, Facebook, Twitter, Linkedin, Instagram, Arr
 
 const footerLinks = {
   services: [
-    { name: 'POS Systems', href: '/services/pos' },
-    { name: 'Billing Solutions', href: '/services/billing' },
-    { name: 'Computer Hardware', href: '/services/hardware' },
-    { name: 'Data Solutions', href: '/services/data' },
-    { name: 'Network Setup', href: '/services/network' },
-    { name: 'Technical Support', href: '/services/support' }
+    { name: 'Data Processing', href: '/services/data-processing' },
+    { name: 'Database Administration', href: '/services/database' },
+    { name: 'Software Development', href: '/services/software' },
+    { name: 'Web Designing', href: '/services/web' },
+    { name: 'Multimedia Production', href: '/services/multimedia' },
+    { name: 'Back Office Activities', href: '/services/backoffice' }
   ],
   company: [
     { name: 'About Us', href: '/about' },
-    { name: 'Our Team', href: '/team' },
+    { name: 'Our Projects', href: '/projects' },
     { name: 'Careers', href: '/careers' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'Infrastructure', href: '/infrastructure' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Branch Office', href: '/branch' }
   ],
   support: [
     { name: 'Help Center', href: '/help' },
@@ -26,30 +26,30 @@ const footerLinks = {
     { name: 'System Status', href: '/status' },
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' },
-    { name: 'Cookie Policy', href: '/cookies' }
+    { name: 'GSTIN: 20BDGPP6667Q1ZV', href: '#' }
   ]
 };
 
 const contactInfo = [
   {
     icon: MapPin,
-    title: 'Address',
-    details: ['123 Business District', 'Tech City, TC 12345', 'India']
+    title: 'Registered Office',
+    details: ['1st Floor, Jainul Manzil', 'Near Jain Mandir, Doranda', 'Ranchi, Jharkhand']
   },
   {
     icon: Phone,
-    title: 'Phone',
-    details: ['+91 12345 67890', '+91 98765 43210']
+    title: 'Contact',
+    details: ['+91 9835 439 197', 'Mr. Irfan Parvez (Proprietor)']
   },
   {
     icon: Mail,
     title: 'Email',
-    details: ['info@sgs.com', 'support@sgs.com']
+    details: ['sagaciousglobals@gmail.com']
   },
   {
     icon: Clock,
     title: 'Business Hours',
-    details: ['Mon - Fri: 9:00 AM - 6:00 PM', 'Sat: 10:00 AM - 4:00 PM']
+    details: ['Mon - Sat: 9:00 AM - 7:00 PM', '24/7 Operations (3 Shifts)']
   }
 ];
 
@@ -76,9 +76,9 @@ export function Footer() {
             >
               <h3 className="text-2xl font-bold mb-4">
                 Sagacious Global Services
-              </h3>
-              <p className="text-gray-400 mb-6 leading-relaxed">
-                Your trusted partner for complete business solutions. From POS systems to computer hardware, we provide everything your business needs to operate efficiently and grow successfully.
+              </h3>              <p className="text-gray-400 mb-6 leading-relaxed text-sm">
+                A team of professionals delivering quality IT solutions in Data Processing, Database Administration, 
+                Software Development, Web Designing, and Back Office Activities since 2007. Truly Partnered in IT Excellence.
               </p>
               
               {/* Social Links */}

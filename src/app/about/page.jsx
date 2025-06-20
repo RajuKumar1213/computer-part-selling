@@ -1,680 +1,603 @@
-
 'use client';
-import { useState } from 'react';
-import Image from 'next/image';
+
 import { motion } from 'framer-motion';
-import { Award, Users, Calendar, CheckCircle, Globe, Briefcase, Target, Star, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
-import {Header} from '@/components/Header';
-import { companyInfo } from '@/data/products';
+import { ArrowRight, CheckCircle, Users, Calendar, Globe, Target, Award, Briefcase, Star, TrendingUp } from 'lucide-react';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
 
 export default function AboutPage() {
-  const [zoomState, setZoomState] = useState({
-    isVisible: false,
-    x: 0,
-    y: 0,
-    offsetX: 0,
-    offsetY: 0
-  });
+  const services = [
+    { name: 'GIS Survey', icon: '🗺️', color: 'bg-orange-500' },
+    { name: 'Scanning Digitization', icon: '📱', color: 'bg-orange-500' },
+    { name: 'Baseline Survey', icon: '📊', color: 'bg-orange-500' },
+    { name: 'AMC FMS', icon: '🔧', color: 'bg-orange-500' },
+    { name: 'Software Development', icon: '💻', color: 'bg-orange-500' },
+    { name: 'HR Services', icon: '👥', color: 'bg-orange-500' }
+  ];
 
-  const handleMouseMove = (e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    
-    // Calculate the position relative to the image (accounting for padding)
-    const imageRect = {
-      left: 16, // p-4 = 16px
-      top: 16,
-      width: rect.width - 32,
-      height: rect.height - 32
-    };
-    
-    const offsetX = ((x - imageRect.left) / imageRect.width) * 100;
-    const offsetY = ((y - imageRect.top) / imageRect.height) * 100;
-    
-    setZoomState({
-      isVisible: true,
-      x: e.clientX,
-      y: e.clientY,
-      offsetX: Math.max(0, Math.min(100, offsetX)),
-      offsetY: Math.max(0, Math.min(100, offsetY))
-    });
-  };
+  const achievements = [
+    { value: '16+', label: 'Years Experience', desc: 'Serving since 2007' },
+    { value: '6', label: 'States Coverage', desc: 'Multi-state operations' },
+    { value: '500+', label: 'Projects Delivered', desc: 'Successful completions' },
+    { value: '50+', label: 'Happy Clients', desc: 'Trusted partnerships' }
+  ];
 
-  const handleMouseLeave = () => {
-    setZoomState(prev => ({ ...prev, isVisible: false }));
-  };
-
-  const handleWhatsAppContact = () => {
-    const message = "Hi! I'd like to know more about Sagacious Global Services and your offerings.";
-    const url = `https://wa.me/${companyInfo.whatsappNumber}?text=${encodeURIComponent(message)}`;
-    window.open(url, '_blank');
-  };
+  const whyChooseUs = [
+    {
+      title: 'Constant Growth',
+      description: 'Continuous expansion and innovation in digital transformation',
+      icon: TrendingUp,
+      color: 'text-yellow-500'
+    },
+    {
+      title: 'Digital Transforming',
+      description: 'Leading the way in modernizing business processes',
+      icon: Globe,
+      color: 'text-yellow-500'
+    },
+    {
+      title: 'Proven Excellence',
+      description: 'Track record of successful government and private sector projects',
+      icon: Award,
+      color: 'text-blue-500'
+    },
+    {
+      title: 'Expert Team',
+      description: 'Skilled professionals with deep industry experience',
+      icon: Users,
+      color: 'text-green-500'
+    }
+  ];
 
   return (
     <>
       <Header />
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
-        
-        {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20 px-4">
-          <div className="container mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="max-w-4xl mx-auto"
-            >
-              <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6">
-                About Sagacious Global Services
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 opacity-90">
-                Your trusted partner in digital transformation and IT solutions since 2007
-              </p>
-              <div className="flex flex-wrap justify-center gap-6 text-sm">
-                <div className="flex items-center gap-2">
-                  <Calendar className="w-5 h-5" />
-                  <span>Established 2019 (Serving since 2007)</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Globe className="w-5 h-5" />
-                  <span>Multi-State Operations</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Award className="w-5 h-5" />
-                  <span>MSME Certified</span>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
+      
+      {/* Hero Section */}
+      <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-purple-900/20"></div>
+        </div>
 
-        {/* Company Overview */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="relative z-10 min-h-screen flex items-center">
+          <div className="container mx-auto px-8 lg:px-12 py-20">
+            <div className="max-w-4xl mx-auto text-center">
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="space-y-8"
               >
-                <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 dark:text-white mb-6">
-                  Our Story
-                </h2>
-                <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
-                  <p>
-                    <strong>Sagacious Global Services</strong> is a team of professionals who have served the IT industry 
-                    for a long time and are now contributing their skills and experiences in the field of 
-                    digitization, data processing, software development, software re-engineering/testing, 
-                    web designing, multimedia production, high volume document imaging/conversion, and back office activities.
-                  </p>
-                  <p>
-                    Although the company formally started in 2019 as Sagacious Global Services, we have been 
-                    serving the IT industry since 2007 across Chhattisgarh, Odisha, Uttar Pradesh, Rajasthan, 
-                    Bihar, and Jharkhand.
-                  </p>
-                  <p>
-                    Our team has successfully served many organizations in several projects such as MG-NREGA, 
-                    UID, SECC 2011, NPR, Financial Inclusion, Aajeevika, and more from government and 
-                    non-government organizations to handle their IT/ITES Operations.
-                  </p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="relative"
-              >                <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl bg-white dark:bg-gray-800">
-                  <Image
-                    src="https://5.imimg.com/data5/SELLER/Default/2025/6/518008699/WM/KQ/DX/246340611/tto-1000x1000.jpeg"
-                    alt="Sagacious Global Services Office"
-                    fill
-                    className="object-contain p-4"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Why Choose Us */}
-        <section className="py-16 px-4 bg-gray-50 dark:bg-gray-800">
-          <div className="container mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 dark:text-white mb-4">
-                Why Choose Us?
-              </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                Our organizational structure, operational efficiency, and commitment to quality has fostered 
-                healthy partnerships with our clients
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-                className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all"
-              >
-                <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mb-6">
-                  <Star className="w-8 h-8 text-blue-600 dark:text-blue-400" />
-                </div>
-                <h3 className="text-xl font-heading font-bold text-gray-900 dark:text-white mb-4">
-                  Proven Expertise & Experience
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  With roots in the IT/ITES sector since 2007, we bring over a decade of hands-on 
-                  experience across major government and private sector projects including MGNREGA, 
-                  UID, SECC 2011, NPR, and more.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all"
-              >
-                <div className="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mb-6">
-                  <Briefcase className="w-8 h-8 text-green-600 dark:text-green-400" />
-                </div>
-                <h3 className="text-xl font-heading font-bold text-gray-900 dark:text-white mb-4">
-                  Comprehensive Digital Solutions
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  From data processing, software development, and re-engineering/testing to web 
-                  design, multimedia production, and document imaging—our full-service offerings 
-                  ensure seamless digital transformation.
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
-                className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all"
-              >
-                <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mb-6">
-                  <Target className="w-8 h-8 text-purple-600 dark:text-purple-400" />
-                </div>
-                <h3 className="text-xl font-heading font-bold text-gray-900 dark:text-white mb-4">
-                  Client-Centric Approach
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  Our structured operations, skilled team, and dedication to quality have earned 
-                  us long-standing partnerships and the reputation of being a "truly partnered" 
-                  service provider.
-                </p>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Company Gallery */}
-        <section className="py-16 px-4 bg-gray-50 dark:bg-gray-800">
-          <div className="container mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 dark:text-white mb-4">
-                Company Gallery
-              </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-300">
-                A glimpse into our office, infrastructure, and work environment
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  src: "https://5.imimg.com/data5/NSDMERP/Board/2025/5/513843978/CM/ZV/OZ/246340611/246340611-board-1748264782072-1000x1000.png",
-                  alt: "Company Board - Sagacious Global Services",
-                  title: "Company Information Board"
-                },
-                {
-                  src: "https://5.imimg.com/data5/NSDMERP/Board/2025/5/512547855/VU/LJ/LT/246340611/246340611-board-1747826228118-1000x1000.png",
-                  alt: "Office Board Display",
-                  title: "Office Information Display"
-                },
-                {
-                  src: "https://5.imimg.com/data5/NSDMERP/Board/2025/6/515905549/DQ/VO/QS/246340611/246340611-board-1748937760196-1000x1000.png",
-                  alt: "Corporate Board",
-                  title: "Corporate Information"
-                },
-                {
-                  src: "https://5.imimg.com/data5/NSDMERP/Location/2025/5/512547935/LW/PF/VO/246340611/246340611-location-1747826228128-1000x1000.png",
-                  alt: "Office Location - Doranda, Ranchi",
-                  title: "Office Location"
-                },
-                {
-                  src: "https://5.imimg.com/data5/NSDMERP/Location/2025/5/512547928/KV/FH/YZ/246340611/246340611-location-1747826228125-1000x1000.png",
-                  alt: "Business Location Map",
-                  title: "Business Location"
-                },
-                {
-                  src: "https://5.imimg.com/data5/NSDMERP/Location/2025/5/512547926/TM/CD/JL/246340611/246340611-location-1747826228122-1000x1000.png",
-                  alt: "Office Address Details",
-                  title: "Address Information"
-                }
-              ].map((image, index) => (
+                {/* Company Badge */}
                 <motion.div
-                  key={index}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.2 }}
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-yellow-400/20 to-orange-400/20 backdrop-blur-sm border border-yellow-400/30 rounded-full text-yellow-200"
+                >
+                  <Star className="w-5 h-5 mr-2 text-yellow-400" />
+                  <span className="font-semibold">SAGACIOUS GLOBAL SERVICES</span>
+                </motion.div>
+
+                {/* Main Heading */}
+                <motion.h1
                   initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="group"
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4 }}
+                  className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight"
                 >
-                  <div className="relative h-80 bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
-                    <Image
-                      src={image.src}
-                      alt={image.alt}
-                      fill
-                      className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
-                  </div>
-                  <div className="mt-4 text-center">
-                    <h3 className="font-heading font-semibold text-gray-900 dark:text-white">
-                      {image.title}
-                    </h3>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+                  Driving Digital
+                  <span className="block bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+                    Transformation
+                  </span>
+                </motion.h1>
 
-        {/* Services Overview */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 dark:text-white mb-4">
-                Our Services
-              </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-300">
-                Comprehensive IT solutions under one roof
-              </p>
-            </motion.div>
+                {/* Description */}
+                <motion.p
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.6 }}
+                  className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
+                >
+                  A team of professionals serving the IT industry since 2007, specializing in digitalization, 
+                  data processing, software development, and comprehensive digital solutions.
+                </motion.p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                { name: 'Billing Machine', count: '3 products', icon: '💻' },
-                { name: 'Survey Service', count: '2 products', icon: '📊' },
-                { name: 'Software Development', count: '1 product', icon: '⚙️' },
-                { name: 'AMC Service', count: '1 product', icon: '🔧' },
-                { name: 'Data Entry Projects', count: '1 product', icon: '📝' },
-                { name: 'Scanning Service', count: '1 product', icon: '📄' },
-                { name: 'HR Consultancy', count: '1 product', icon: '👥' },
-                { name: 'Scanning Digitization', count: '1 product', icon: '🔄' },
-              ].map((service, index) => (
+                {/* Key Stats */}
                 <motion.div
-                  key={service.name}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.8 }}
+                  className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto"
                 >
-                  <div className="text-3xl mb-3">{service.icon}</div>
-                  <h3 className="font-heading font-semibold text-gray-900 dark:text-white mb-2">
-                    {service.name}
-                  </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">{service.count}</p>
+                  {achievements.map((achievement, index) => (
+                    <div key={index} className="text-center">
+                      <div className="text-3xl font-bold text-white mb-1">{achievement.value}</div>
+                      <div className="text-sm text-yellow-400 font-semibold mb-1">{achievement.label}</div>
+                      <div className="text-xs text-gray-400">{achievement.desc}</div>
+                    </div>
+                  ))}
                 </motion.div>
-              ))}
+
+                {/* CTA Buttons */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1 }}
+                  className="flex flex-col sm:flex-row gap-4 justify-center"
+                >
+                  <button className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-black font-semibold rounded-full hover:shadow-2xl hover:shadow-yellow-500/25 transition-all duration-300 flex items-center justify-center">
+                    Explore Our Services
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </button>
+                  <button className="px-8 py-4 border border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300">
+                    Contact Us Today
+                  </button>
+                </motion.div>
+              </motion.div>
             </div>
           </div>
-        </section>        {/* Company Facts */}
-        <section className="py-16 px-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <div className="container mx-auto">
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Content */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className="space-y-8"
             >
-              <h2 className="text-3xl md:text-4xl font-heading font-bold mb-4">
-                Business Profile & Registration Details
-              </h2>
-              <p className="text-xl opacity-90">
-                Complete business information and statutory compliance details
-              </p>
-            </motion.div>
+              <div>
+                <h2 className="text-4xl font-bold text-gray-900 mb-6">About Our Company</h2>
+                <div className="space-y-6 text-gray-600 leading-relaxed">
+                  <p>
+                    <strong className="text-gray-900">Sagacious Global Services</strong> is a team of professionals 
+                    who have served the IT industry for a long time and are now contributing their skill and 
+                    experiences in the field of digitalization, data processing, software development, 
+                    software re-engineering/testing, web designing, multimedia production, high volume 
+                    document imaging/conversion and back office activities under a roof.
+                  </p>
+                  
+                  <p>
+                    Although the company formally started in year 2019 as Sagacious Global Services but we 
+                    are serving the IT industry since 2007 in Chhattisgarh, Odisha, Uttar Pradesh, Rajasthan, 
+                    Bihar and Jharkhand. Our team has served many company in several projects such as 
+                    MG-NREGA, UID, SECC 2011, NPR, FINANCIAL INCLUSION, AAJEEVIKA, NIC etc from government 
+                    & Non-government organization to handle their IT/ITES Operations.
+                  </p>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Briefcase className="w-8 h-8" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Nature of Business</h3>
-                <p className="opacity-90">Service Provider & Others</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Team Size</h3>
-                <p className="opacity-90">Up to 10 People</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Award className="w-8 h-8" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2">GST Registration</h3>
-                <p className="opacity-90">25-08-2020</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.4 }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-8 h-8" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Legal Status</h3>
-                <p className="opacity-90">Proprietorship</p>
-              </motion.div>
-            </div>
-
-            {/* Detailed Business Information */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8"
-            >
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                {/* Business Operations */}
-                <div className="space-y-4">
-                  <h4 className="text-lg font-heading font-semibold mb-4 border-b border-white/20 pb-2">
-                    Business Operations
-                  </h4>
-                  <div className="space-y-3 text-sm">
-                    <div className="flex justify-between items-start">
-                      <span className="opacity-80 flex-shrink-0 w-24">Nature:</span>
-                      <span className="font-medium text-right">Service Provider & Others</span>
-                    </div>
-                    <div className="flex justify-between items-start">
-                      <span className="opacity-80 flex-shrink-0 w-24">Additional:</span>
-                      <span className="font-medium text-right">Supplier of Services</span>
-                    </div>
-                    <div className="flex justify-between items-start">
-                      <span className="opacity-80 flex-shrink-0 w-24">Type:</span>
-                      <span className="font-medium text-right">Office/Sale Office</span>
-                    </div>
-                    <div className="flex justify-between items-start">
-                      <span className="opacity-80 flex-shrink-0 w-24">Business:</span>
-                      <span className="font-medium text-right">Retail Business</span>
-                    </div>
-                    <div className="flex justify-between items-start">
-                      <span className="opacity-80 flex-shrink-0 w-24">Contract:</span>
-                      <span className="font-medium text-right">Works Contract</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Leadership & Finance */}
-                <div className="space-y-4">
-                  <h4 className="text-lg font-heading font-semibold mb-4 border-b border-white/20 pb-2">
-                    Leadership & Finance
-                  </h4>
-                  <div className="space-y-3 text-sm">
-                    <div className="flex justify-between items-start">
-                      <span className="opacity-80 flex-shrink-0 w-24">CEO:</span>
-                      <span className="font-medium text-right">Irfan Parvez</span>
-                    </div>
-                    <div className="flex justify-between items-start">
-                      <span className="opacity-80 flex-shrink-0 w-24">GST Partner:</span>
-                      <span className="font-medium text-right">Irfan Parvez</span>
-                    </div>
-                    <div className="flex justify-between items-start">
-                      <span className="opacity-80 flex-shrink-0 w-24">Turnover:</span>
-                      <span className="font-medium text-right">₹0 - 40 Lakhs</span>
-                    </div>
-                    <div className="flex justify-between items-start">
-                      <span className="opacity-80 flex-shrink-0 w-24">Employees:</span>
-                      <span className="font-medium text-right">Up to 10 People</span>
-                    </div>
-                    <div className="flex justify-between items-start">
-                      <span className="opacity-80 flex-shrink-0 w-24">Banking:</span>
-                      <span className="font-medium text-right">Indian Bank</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Statutory Profile */}
-                <div className="space-y-4">
-                  <h4 className="text-lg font-heading font-semibold mb-4 border-b border-white/20 pb-2">
-                    Statutory Profile
-                  </h4>
-                  <div className="space-y-3 text-sm">
-                    <div className="flex justify-between items-start">
-                      <span className="opacity-80 flex-shrink-0 w-24">GST No:</span>
-                      <span className="font-medium font-mono text-right text-xs">20BDGPP6667Q1ZV</span>
-                    </div>
-                    <div className="flex justify-between items-start">
-                      <span className="opacity-80 flex-shrink-0 w-24">GST Date:</span>
-                      <span className="font-medium text-right">25-08-2020</span>
-                    </div>
-                    <div className="flex justify-between items-start">
-                      <span className="opacity-80 flex-shrink-0 w-24">Legal Status:</span>
-                      <span className="font-medium text-right">Proprietorship</span>
-                    </div>
-                    <div className="flex justify-between items-start">
-                      <span className="opacity-80 flex-shrink-0 w-24">Banker:</span>
-                      <span className="font-medium text-right">Indian Bank</span>
-                    </div>
-                    <div className="flex justify-between items-start">
-                      <span className="opacity-80 flex-shrink-0 w-24">Net Banking:</span>
-                      <span className="font-medium text-right">✓ Enabled</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Business Summary */}
-              <div className="mt-8 pt-8 border-t border-white/20">
-                <div className="text-center">
-                  <h4 className="text-lg font-heading font-semibold mb-4">Business Summary</h4>
-                  <p className="opacity-90 max-w-4xl mx-auto leading-relaxed">
-                    Sagacious Global Services is a GST-registered proprietorship firm established in 2019, 
-                    led by CEO <strong>Irfan Parvez</strong>. We operate as a comprehensive service provider 
-                    with operations including office/sale office, retail business, and works contract. 
-                    Our team of up to 10 professionals delivers quality IT solutions with an annual 
-                    turnover of ₹0-40 Lakhs, supported by Indian Bank's banking services.
+                  <p>
+                    Our organizational structure, operational efficiency and our commitment to quality has 
+                    fostered into a healthy partnership between our company and our clients. Such is our 
+                    reputation amongst our clients the Sagacious Global Services has earned the title 
+                    <strong className="text-gray-900">"Truly partnered"</strong>.
                   </p>
                 </div>
               </div>
+
+              {/* Company Highlights */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="flex items-center space-x-3 p-4 bg-blue-50 rounded-lg">
+                  <Calendar className="w-6 h-6 text-blue-600" />
+                  <div>
+                    <div className="font-semibold text-gray-900">Established 2019</div>
+                    <div className="text-sm text-gray-600">Serving since 2007</div>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-3 p-4 bg-green-50 rounded-lg">
+                  <Globe className="w-6 h-6 text-green-600" />
+                  <div>
+                    <div className="font-semibold text-gray-900">6 States</div>
+                    <div className="text-sm text-gray-600">Multi-state operations</div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Image */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="relative h-96 bg-gradient-to-br from-blue-500 to-purple-600 rounded-3xl overflow-hidden shadow-2xl">
+                <div className="absolute inset-0 bg-black/20"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center text-white p-8">
+                    <Globe className="w-16 h-16 mx-auto mb-4 opacity-80" />
+                    <h3 className="text-2xl font-bold mb-2">Global Reach</h3>
+                    <p className="text-blue-100">Connecting businesses across multiple states</p>
+                  </div>
+                </div>
+              </div>
             </motion.div>
           </div>
-        </section>
+        </div>
+      </section>      {/* Products Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Products</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Advanced POS Billing Machines designed to streamline your business operations
+            </p>
+          </motion.div>
 
-        {/* Certifications */}
-        <section className="py-16 px-4">
-          <div className="container mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* POS Billing Machine Aspire */}
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
+              className="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300"
             >
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 dark:text-white mb-4">
-                Our Certifications
-              </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-300">
-                Recognized and certified by government authorities
-              </p>
-            </motion.div>            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="max-w-md mx-auto relative"
-            >
-              <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg text-center border border-gray-200 dark:border-gray-700">
-                <div 
-                  className="relative h-80 mb-6 bg-gray-50 dark:bg-gray-700 rounded-xl overflow-hidden cursor-crosshair"
-                  onMouseMove={handleMouseMove}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <Image
-                    src="https://5.imimg.com/data5/SELLER/Default/2025/6/518008354/KI/VD/OM/246340611/saga-500x500.jpeg"
-                    alt="MSME Certificate - Sagacious Global Services"
-                    fill
-                    className="object-contain p-4"
-                    sizes="400px"
-                  />
-                  
-                  {/* Hover instruction overlay */}
-                  <div className="absolute inset-0 bg-black/10 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
-                    <div className="bg-white/90 dark:bg-gray-800/90 px-3 py-1 rounded-lg text-sm font-medium text-gray-900 dark:text-white">
-                      🔍 Move cursor to zoom
+              <div className="relative h-64 bg-gradient-to-br from-blue-500 to-blue-700">
+                <div className="absolute inset-0 bg-black/20"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <div className="w-24 h-24 bg-white/20 rounded-2xl mx-auto mb-4 flex items-center justify-center backdrop-blur-sm">
+                      <span className="text-4xl">💻</span>
                     </div>
+                    <h3 className="text-2xl font-bold">POS Aspire</h3>
                   </div>
                 </div>
-                <h3 className="text-xl font-heading font-bold text-gray-900 dark:text-white mb-2">
-                  MSME Certificate
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  Certified Micro, Small & Medium Enterprise
-                </p>
-                <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
-                  Hover over the certificate to see details
-                </p>
               </div>
-
-              {/* Magnifying Glass Zoom */}
-              {zoomState.isVisible && (
-                <div
-                  className="fixed pointer-events-none z-[9999] w-48 h-48 border-4 border-blue-500 rounded-full shadow-2xl overflow-hidden bg-white dark:bg-gray-800"
-                  style={{
-                    left: zoomState.x - 96, // Center the 192px (w-48) magnifier
-                    top: zoomState.y - 96,
-                    transform: 'translate(20px, -20px)' // Offset to avoid cursor blocking
-                  }}
-                >
-                  <div
-                    className="w-[600px] h-[600px] relative"
-                    style={{
-                      backgroundImage: `url(https://5.imimg.com/data5/SELLER/Default/2025/6/518008354/KI/VD/OM/246340611/saga-500x500.jpeg)`,
-                      backgroundSize: '600px 600px',
-                      backgroundRepeat: 'no-repeat',
-                      backgroundPosition: `-${(zoomState.offsetX / 100) * 600 - 96}px -${(zoomState.offsetY / 100) * 600 - 96}px`,
-                      transform: 'scale(2.5)' // 2.5x zoom
-                    }}
-                  />
-                  
-                  {/* Magnifier border glow */}
-                  <div className="absolute inset-0 rounded-full border-2 border-white/50 shadow-inner"></div>
-                  
-                  {/* Center crosshair */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-4 h-4 border border-blue-500 rounded-full bg-blue-500/20"></div>
-                  </div>
+              <div className="p-8">
+                <div className="mb-6">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">POS Billing Machine Aspire</h3>
+                  <div className="text-3xl font-bold text-blue-600 mb-4">₹39,999/Piece</div>
+                  <p className="text-gray-600 mb-4">Advanced 11.6" touchscreen POS system with Android 9, perfect for small to medium businesses.</p>
                 </div>
-              )}
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Contact CTA */}
-        <section className="py-16 px-4 bg-gray-50 dark:bg-gray-800">
-          <div className="container mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
-              <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 dark:text-white mb-6">
-                Ready to Partner with Us?
-              </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-                Let's discuss how our expertise can help transform your business with cutting-edge 
-                digital solutions and reliable IT services.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-                <button
-                  onClick={handleWhatsAppContact}
-                  className="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-semibold transition-all hover:scale-105 shadow-lg"
-                >
-                  <Phone className="w-5 h-5" />
-                  Contact on WhatsApp
-                </button>
                 
-                <a
-                  href="https://www.indiamart.com/sagacious-globalservices/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all hover:scale-105 shadow-lg"
-                >
-                  <ExternalLink className="w-5 h-5" />
-                  View on IndiaMART
-                </a>
-              </div>
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-sm">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <span>11.6" Capacitive Touch Display (1366 x 768)</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <span>RK 3288 Chipset, 2GB RAM, 8GB Storage</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <span>Built-in 2" Thermal Printer</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <span>Android 9, WiFi, USB & RS232 Ports</span>
+                  </div>
+                </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                <div className="flex items-center justify-center gap-3 text-gray-600 dark:text-gray-300">
-                  <MapPin className="w-5 h-5 text-blue-600" />
-                  <span>Ranchi, Jharkhand</span>
+                <button className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-full hover:shadow-lg transition-all duration-300">
+                  Get Quote
+                </button>
+              </div>
+            </motion.div>
+
+            {/* POS Billing Machine Elite A */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300"
+            >
+              <div className="relative h-64 bg-gradient-to-br from-purple-500 to-purple-700">
+                <div className="absolute inset-0 bg-black/20"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <div className="w-24 h-24 bg-white/20 rounded-2xl mx-auto mb-4 flex items-center justify-center backdrop-blur-sm">
+                      <span className="text-4xl">🖥️</span>
+                    </div>
+                    <h3 className="text-2xl font-bold">POS Elite-A</h3>
+                  </div>
                 </div>
-                <div className="flex items-center justify-center gap-3 text-gray-600 dark:text-gray-300">
-                  <Phone className="w-5 h-5 text-green-600" />
-                  <span>+91 9234567890</span>
+              </div>
+              <div className="p-8">
+                <div className="mb-6">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">POS Billing Machine Elite-A</h3>
+                  <div className="text-3xl font-bold text-purple-600 mb-4">₹57,200/Piece</div>
+                  <p className="text-gray-600 mb-4">Premium dual-screen POS system with Android 13, ideal for high-volume retail operations.</p>
                 </div>
-                <div className="flex items-center justify-center gap-3 text-gray-600 dark:text-gray-300">
-                  <Mail className="w-5 h-5 text-purple-600" />
-                  <span>irfan@sagaciousglobal.com</span>
+                
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-sm">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <span>14" Dual Display (Each Screen 14")</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <span>RK 3399 Chipset, 4GB RAM, 16GB Storage</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <span>Android 13, 4 USB Ports, RS232</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <span>Cash Drawer Port, Bluetooth, WiFi</span>
+                  </div>
                 </div>
+
+                <button className="w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-purple-600 text-white font-semibold rounded-full hover:shadow-lg transition-all duration-300">
+                  Get Quote
+                </button>
+              </div>
+            </motion.div>
+
+            {/* POS Billing Machine Pro 2 */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300"
+            >
+              <div className="relative h-64 bg-gradient-to-br from-green-500 to-green-700">
+                <div className="absolute inset-0 bg-black/20"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <div className="w-24 h-24 bg-white/20 rounded-2xl mx-auto mb-4 flex items-center justify-center backdrop-blur-sm">
+                      <span className="text-4xl">📱</span>
+                    </div>
+                    <h3 className="text-2xl font-bold">POS Pro 2</h3>
+                  </div>
+                </div>
+              </div>
+              <div className="p-8">
+                <div className="mb-6">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">POS Billing Machine Pro 2</h3>
+                  <div className="text-3xl font-bold text-green-600 mb-4">₹50,200/Piece</div>
+                  <p className="text-gray-600 mb-4">Professional 15.6" Full HD POS system with Android 11, designed for modern retail environments.</p>
+                </div>
+                
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-sm">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <span>15.6" Full HD Display (1920x1080)</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <span>RK 3288 Chipset, 2GB RAM, 16GB Storage</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <span>Android 11, 4 USB Ports, RJ45, RJ11</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <span>Bluetooth, WiFi, Capacitive Touch</span>
+                  </div>
+                </div>
+
+                <button className="w-full px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 text-white font-semibold rounded-full hover:shadow-lg transition-all duration-300">
+                  Get Quote
+                </button>
+              </div>
+            </motion.div>
+
+            {/* Retail Billing Machine */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="bg-white rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300"
+            >
+              <div className="relative h-64 bg-gradient-to-br from-orange-500 to-orange-700">
+                <div className="absolute inset-0 bg-black/20"></div>
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <div className="w-24 h-24 bg-white/20 rounded-2xl mx-auto mb-4 flex items-center justify-center backdrop-blur-sm">
+                      <span className="text-4xl">🏪</span>
+                    </div>
+                    <h3 className="text-2xl font-bold">Retail Billing</h3>
+                  </div>
+                </div>
+              </div>
+              <div className="p-8">
+                <div className="mb-6">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Retail Billing Machine</h3>
+                  <div className="text-3xl font-bold text-orange-600 mb-4">₹57,200/Piece</div>
+                  <p className="text-gray-600 mb-4">Complete retail billing solution with advanced features for comprehensive business management.</p>
+                </div>
+                
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center text-sm">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <span>Complete Billing & Cash Management</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <span>Advanced Inventory Management</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <span>Sales Reports & Analytics</span>
+                  </div>
+                  <div className="flex items-center text-sm">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                    <span>Multiple Counter Support</span>
+                  </div>
+                </div>
+
+                <button className="w-full px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-full hover:shadow-lg transition-all duration-300">
+                  Get Quote
+                </button>
               </div>
             </motion.div>
           </div>
-        </section>
-      </div>
+
+          {/* Key Features Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-20"
+          >
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-3xl p-12">
+              <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">Key Features of Our POS Systems</h3>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl">💳</span>
+                  </div>
+                  <h4 className="font-bold text-gray-900 mb-2">Billing & Cash Management</h4>
+                  <p className="text-gray-600 text-sm">Streamline billing process, generate physical or e-receipts and manage cash efficiently</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl">📦</span>
+                  </div>
+                  <h4 className="font-bold text-gray-900 mb-2">Inventory Management</h4>
+                  <p className="text-gray-600 text-sm">Smart inventory tracking with alerts, purchase orders, and goods receiving notes</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl">📊</span>
+                  </div>
+                  <h4 className="font-bold text-gray-900 mb-2">Sales Analytics</h4>
+                  <p className="text-gray-600 text-sm">Comprehensive sales reports, financial projections, and business analytics</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl">🎯</span>
+                  </div>
+                  <h4 className="font-bold text-gray-900 mb-2">Smart Suggestions</h4>
+                  <p className="text-gray-600 text-sm">AI-powered up-sell and cross-sell suggestions based on customer behavior</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl">💖</span>
+                  </div>
+                  <h4 className="font-bold text-gray-900 mb-2">Loyalty Programs</h4>
+                  <p className="text-gray-600 text-sm">Enable customer loyalty programs to improve retention and engagement</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl">🌐</span>
+                  </div>
+                  <h4 className="font-bold text-gray-900 mb-2">Online Store Front</h4>
+                  <p className="text-gray-600 text-sm">Create mobile store front and sell online instantly with integrated solutions</p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Services</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive digital solutions tailored to meet your business needs
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:bg-white"
+              >
+                <div className={`w-16 h-16 ${service.color} rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                  <span className="text-2xl text-white">{service.icon}</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{service.name}</h3>
+                <p className="text-gray-600">Professional {service.name.toLowerCase()} services tailored to your requirements</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>      {/* Why Choose Us */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">Why Choose Us?</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our commitment to excellence and proven track record sets us apart
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {whyChooseUs.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="text-center p-6 group"
+              >
+                <div className={`w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-gray-200 transition-colors`}>
+                  <item.icon className={`w-10 h-10 ${item.color}`} />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{item.title}</h3>
+                <p className="text-gray-600">{item.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact CTA */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+        <div className="container mx-auto px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-3xl mx-auto"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Let's discuss how Sagacious Global Services can help drive your digital transformation
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-full hover:shadow-xl transition-all duration-300">
+                Get Started Today
+              </button>
+              <button className="px-8 py-4 border border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300">
+                Schedule Consultation
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <Footer />
     </>
   );
 }
