@@ -19,7 +19,7 @@ const navItems = [
       { name: 'Back Office Activities', href: '/services/backoffice' },
     ]
   },
-  { name: 'Projects', href: '/projects' },
+  { name: 'Products', href: '/products' },
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
 ];

@@ -5,14 +5,49 @@ import { ArrowRight, CheckCircle, Users, Calendar, Globe, Target, Award, Briefca
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 
-export default function AboutPage() {
-  const services = [
-    { name: 'GIS Survey', icon: '🗺️', color: 'bg-orange-500' },
-    { name: 'Scanning Digitization', icon: '📱', color: 'bg-orange-500' },
-    { name: 'Baseline Survey', icon: '📊', color: 'bg-orange-500' },
-    { name: 'AMC FMS', icon: '🔧', color: 'bg-orange-500' },
-    { name: 'Software Development', icon: '💻', color: 'bg-orange-500' },
-    { name: 'HR Services', icon: '👥', color: 'bg-orange-500' }
+export default function AboutPage() {  const services = [
+    { 
+      name: 'GIS Survey', 
+      icon: '🗺️', 
+      color: 'bg-orange-500',
+      image: '/products/i9-13900k.jpg',
+      description: 'Advanced GIS survey solutions for accurate geographical data collection and mapping'
+    },
+    { 
+      name: 'Scanning Digitization', 
+      icon: '📱', 
+      color: 'bg-orange-500',
+      image: '/products/rtx-4090.jpg',
+      description: 'High-quality document scanning and digitization services for seamless data conversion'
+    },
+    { 
+      name: 'Baseline Survey', 
+      icon: '📊', 
+      color: 'bg-orange-500',
+      image: '/products/samsung-980-pro.jpg',
+      description: 'Comprehensive baseline surveys for project planning and development'
+    },
+    { 
+      name: 'AMC FMS', 
+      icon: '🔧', 
+      color: 'bg-orange-500',
+      image: '/products/cnf2mtmgpphphnkxhzxw.webp',
+      description: 'Annual Maintenance Contract and Facility Management Services'
+    },
+    { 
+      name: 'Software Development', 
+      icon: '💻', 
+      color: 'bg-orange-500',
+      image: '/products/nscogempbmq9invpa0xz.webp',
+      description: 'Custom software development solutions tailored to your business needs'
+    },
+    { 
+      name: 'HR Services', 
+      icon: '👥', 
+      color: 'bg-orange-500',
+      image: '/products/wvjyau3spijzdfmxtvpx.webp',
+      description: 'Professional HR services including recruitment, training, and management'
+    }
   ];
 
   const achievements = [
@@ -515,9 +550,7 @@ export default function AboutPage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Comprehensive digital solutions tailored to meet your business needs
             </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          </motion.div>          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={index}
@@ -525,13 +558,25 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group hover:bg-white"
+                className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group border border-gray-100"
               >
-                <div className={`w-16 h-16 ${service.color} rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                  <span className="text-2xl text-white">{service.icon}</span>
+                {/* Square Product Image */}
+                <div className="relative w-full aspect-square mb-6 rounded-xl overflow-hidden bg-gray-100">
+                  <img
+                    src={service.image}
+                    alt={service.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  {/* Icon Overlay */}
+                  <div className={`absolute top-3 right-3 w-10 h-10 ${service.color} rounded-full flex items-center justify-center shadow-lg`}>
+                    <span className="text-lg text-white">{service.icon}</span>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{service.name}</h3>
-                <p className="text-gray-600">Professional {service.name.toLowerCase()} services tailored to your requirements</p>
+                
+                <div className="space-y-3">
+                  <h3 className="text-xl font-bold text-gray-900">{service.name}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
+                </div>
               </motion.div>
             ))}
           </div>

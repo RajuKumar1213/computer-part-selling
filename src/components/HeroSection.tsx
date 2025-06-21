@@ -32,33 +32,33 @@ const features = [
   "24/7 Operations Support",
 ];
 
-// Cool Blue Globe configuration with dramatic tilted view
+// Earth-like Globe configuration with natural colors from space
 const globeConfig = {
-  pointSize: 14,
-  globeColor: "#0f1419",
+  pointSize: 12,
+  globeColor: "#0a1e2e", // Deep ocean blue
   showAtmosphere: true,
-  atmosphereColor: "#3b82f6",
-  atmosphereAltitude: 0.35,
-  emissive: "#1d4ed8",
-  emissiveIntensity: 2.2,
-  shininess: 1.2,
-  polygonColor: "rgba(59, 130, 246, 0.9)",
-  ambientLight: "#3b82f6",
-  directionalLeftLight: "#1e40af",
-  directionalTopLight: "#2563eb",
-  pointLight: "#60a5fa",
-  arcTime: 1500,
-  arcLength: 0.95,
-  rings: 10,
-  maxRings: 15,
+  atmosphereColor: "#4f9cff", // Natural Earth atmosphere blue
+  atmosphereAltitude: 0.25,
+  emissive: "#1a4d66",
+  emissiveIntensity: 1.8,
+  shininess: 0.9,
+  polygonColor: "rgba(34, 139, 34, 0.8)", // Natural land green
+  ambientLight: "#2d5aa0",
+  directionalLeftLight: "#1e3a5f",
+  directionalTopLight: "#2e5984",
+  pointLight: "#87ceeb",
+  arcTime: 2000,
+  arcLength: 0.9,
+  rings: 8,
+  maxRings: 12,
   initialPosition: { lat: 25, lng: -20 }, // Cool tilted angle
   autoRotate: true,
-  autoRotateSpeed: 0.3,
+  autoRotateSpeed: 0.2,
   width: 800,
   height: 800,
 };
 
-// Global connections with vibrant blue theme
+// Global connections with natural Earth-like colors
 const globeData = [
   // India to Major World Cities
   {
@@ -68,7 +68,7 @@ const globeData = [
     endLat: 40.7128, // New York, USA
     endLng: -74.006,
     arcAlt: 0.4,
-    color: "#3b82f6",
+    color: "#4f9cff",
   },
   {
     order: 2,
@@ -77,7 +77,7 @@ const globeData = [
     endLat: 51.5074, // London, UK
     endLng: -0.1278,
     arcAlt: 0.3,
-    color: "#1d4ed8",
+    color: "#6bb6ff",
   },
   {
     order: 3,
@@ -86,7 +86,7 @@ const globeData = [
     endLat: 35.6762, // Tokyo, Japan
     endLng: 139.6503,
     arcAlt: 0.25,
-    color: "#60a5fa",
+    color: "#87ceeb",
   },
   {
     order: 4,
@@ -95,7 +95,7 @@ const globeData = [
     endLat: -33.8688, // Sydney, Australia
     endLng: 151.2093,
     arcAlt: 0.5,
-    color: "#93c5fd",
+    color: "#add8e6",
   },
   // Cross-Continental Connections
   {
@@ -105,7 +105,7 @@ const globeData = [
     endLat: 55.7558, // Moscow, Russia
     endLng: 37.6176,
     arcAlt: 0.4,
-    color: "#1e40af",
+    color: "#2d5aa0",
   },
   {
     order: 6,
@@ -114,7 +114,7 @@ const globeData = [
     endLat: -26.2041, // Johannesburg, South Africa
     endLng: 28.0473,
     arcAlt: 0.35,
-    color: "#3b82f6",
+    color: "#4f9cff",
   },
   {
     order: 7,
@@ -123,7 +123,7 @@ const globeData = [
     endLat: -23.5505, // São Paulo, Brazil
     endLng: -46.6333,
     arcAlt: 0.6,
-    color: "#1d4ed8",
+    color: "#6bb6ff",
   },
   {
     order: 8,
@@ -132,7 +132,7 @@ const globeData = [
     endLat: 48.8566, // Paris, France
     endLng: 2.3522,
     arcAlt: 0.3,
-    color: "#60a5fa",
+    color: "#87ceeb",
   },
   // More Global Coverage
   {
@@ -142,7 +142,7 @@ const globeData = [
     endLat: 43.6532, // Toronto, Canada
     endLng: -79.3832,
     arcAlt: 0.4,
-    color: "#93c5fd",
+    color: "#add8e6",
   },
   {
     order: 10,
@@ -151,7 +151,7 @@ const globeData = [
     endLat: 31.2304, // Shanghai, China
     endLng: 121.4737,
     arcAlt: 0.7,
-    color: "#1e40af",
+    color: "#2d5aa0",
   },
   // African and European Connections
   {
@@ -161,7 +161,7 @@ const globeData = [
     endLat: 59.9139, // Oslo, Norway
     endLng: 10.7522,
     arcAlt: 0.25,
-    color: "#3b82f6",
+    color: "#4f9cff",
   },
   {
     order: 12,
@@ -170,33 +170,28 @@ const globeData = [
     endLat: 37.5665, // Seoul, South Korea
     endLng: 126.978,
     arcAlt: 0.45,
-    color: "#1d4ed8",
+    color: "#6bb6ff",
   },
 ];
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950">
-      {" "}
-      {/* Epic Blue Globe - Dramatic Tilted View */}
+    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950">      {" "}
+      {/* Natural Earth Globe - As Seen From Space */}
       <div className="absolute right-[-200px] top-1/2 transform -translate-y-1/2 z-0">
-        <div className="w-[900px] h-[900px] relative flex items-center justify-center overflow-hidden">
-          {/* Intense Blue Glow Effects */}
-          <div className="absolute inset-0 bg-gradient-radial from-blue-500/40 via-indigo-500/25 to-transparent rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute inset-8 bg-gradient-radial from-blue-400/50 via-blue-500/35 to-transparent rounded-full blur-2xl"></div>
+        <div className="w-[900px] h-[900px] relative flex items-center justify-center overflow-hidden">            {/* Natural Earth Atmosphere Glow Effects */}
+          <div className="absolute inset-0 bg-gradient-radial from-blue-400/30 via-blue-500/15 to-transparent rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute inset-8 bg-gradient-radial from-blue-300/40 via-blue-400/20 to-transparent rounded-full blur-2xl"></div>
           <div
-            className="absolute inset-16 bg-gradient-radial from-indigo-300/60 via-blue-300/40 to-transparent rounded-full blur-xl animate-pulse"
+            className="absolute inset-16 bg-gradient-radial from-blue-200/50 via-blue-300/25 to-transparent rounded-full blur-xl animate-pulse"
             style={{ animationDelay: "2s" }}
-          ></div>
-
-          {/* Globe Container - Big and Tilted (60% visible) */}
-          <div className="w-[800px] h-[800px] relative transform rotate-12 -translate-y-32">
+          ></div>{/* Globe Container - Big and Tilted (more visible, bottom hidden) */}
+          <div className="w-[800px] h-[800px] relative transform rotate-12 translate-y-4">
             <div className="w-full h-full overflow-hidden rounded-full relative">
-              <div className="absolute bottom-0 left-0 right-0 h-[40%] bg-gradient-to-t from-slate-950 to-transparent z-10"></div>
+              <div className="absolute bottom-0 left-0 right-0 h-[15%] bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent z-10"></div>
               {/* Globe temporarily disabled for build */}
-              <World data={globeData} globeConfig={globeConfig} />
-              <div className="w-full h-full bg-gradient-to-br from-blue-600/20 to-indigo-600/20 rounded-full flex items-center justify-center">
-                <div className="text-blue-300 text-center">
+              <World data={globeData} globeConfig={globeConfig} />              <div className="w-full h-full bg-gradient-to-br from-blue-800/15 to-blue-900/15 rounded-full flex items-center justify-center">
+                <div className="text-blue-200 text-center">
                   <div className="text-2xl font-bold mb-2">Global Reach</div>
                   <div className="text-sm">6 States Coverage</div>
                 </div>
