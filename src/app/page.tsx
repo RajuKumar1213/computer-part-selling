@@ -4,10 +4,8 @@ import { ServicesSection } from '@/components/ServicesSection';
 import { StatsSection } from '@/components/StatsSection';
 import { ServiceBenefitsSection } from '@/components/ServiceBenefitsSection';
 import { InfrastructureSection } from '@/components/InfrastructureSection';
-import { PrestigiousProjectsSection } from '@/components/PrestigiousProjectsSection';
 import { WhyChooseUsSection } from '@/components/WhyChooseUsSection';
 import { AboutSection } from '@/components/AboutSection';
-import { TestimonialsSection } from '@/components/TestimonialsSection';
 import { CTASection } from '@/components/CTASection';
 import { Footer } from '@/components/Footer';
 import { WhatsAppFloat } from '@/components/WhatsAppFloat';
@@ -21,10 +19,10 @@ export default function Home() {
       <ServiceBenefitsSection />
       <StatsSection />
       <InfrastructureSection />
-      <PrestigiousProjectsSection />
+      {/* <PrestigiousProjectsSection /> */}
       <WhyChooseUsSection />
       <AboutSection />
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
       <CTASection />
       <Footer />
       <WhatsAppFloat />

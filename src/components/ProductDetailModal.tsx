@@ -109,7 +109,7 @@ export default function ProductDetailModal({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 items-end z-50 flex md:items-center md:justify-center md:p-4 bg-black/80 backdrop-blur-sm"
+          className="fixed inset-0 items-end z-50 flex md:items-center md:justify-center md:p-4 bg-black/70 backdrop-blur-sm"
           onClick={onClose}
         >
           {" "}
@@ -399,37 +399,7 @@ export default function ProductDetailModal({
                   </div>
                   {/* Action Buttons */}{" "}
                   <div className="space-y-3 md:space-y-4 pt-4 md:pt-6 border-t dark:border-gray-700">
-                    {/* Product Brochure and Video Buttons */}
-                    <div className="grid grid-cols-2 gap-3">
-                      <button className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-medium text-xs transition-all duration-300">
-                        <svg
-                          className="w-3 h-3"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                          />
-                        </svg>
-                        Product Brochure
-                      </button>
-                      <button
-                        onClick={() =>
-                          product.videos &&
-                          product.videos.length > 0 &&
-                          setIsPlaying(true)
-                        }
-                        className="flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white py-2 rounded-lg font-medium text-xs transition-all duration-300"
-                      >
-                        <Play className="w-3 h-3" />
-                        Watch Video
-                      </button>
-                    </div>
-
+                   
                     {/* Main Contact Buttons */}
                     <div className="grid grid-cols-2 gap-3 md:gap-4">
                       <button
@@ -450,10 +420,15 @@ export default function ProductDetailModal({
                         Call Now
                       </button>
                     </div>
-                    <button className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white py-2.5 md:py-3 rounded-xl font-semibold text-xs md:text-sm transition-all hover:scale-105 shadow-lg">
+                    <a
+                      href="https://www.indiamart.com/sagacious-globalservices/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white py-2.5 md:py-3 rounded-xl font-semibold text-xs md:text-sm transition-all hover:scale-105 shadow-lg"
+                    >
                       <ShoppingCart className="w-3 h-3 md:w-4 md:h-4" />
                       Get Best Quote
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>

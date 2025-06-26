@@ -1,4 +1,5 @@
 // Modern office with computers and technology
+export const heroImage3 = "https://www.techycomp.com/wp-content/uploads/2023/04/The-Latest-Trends-and-Innovations-in-the-Software-Industry.webp";
 // https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80
 export const heroImage1 = "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80";
 
@@ -7,8 +8,7 @@ export const heroImage1 = "https://images.unsplash.com/photo-1497366216548-37526
 export const heroImage2 = "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80";
 
 // Data center and servers
-// https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80
-export const heroImage3 = "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80";
+// https://www.techycomp.com/wp-content/uploads/2023/04/The-Latest-Trends-and-Innovations-in-the-Software-Industry.webp
 
 // Business meeting with laptops
 // https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80
@@ -18,29 +18,29 @@ export const heroSlides = [
   {
     id: 1,
     image: heroImage1,
-    title: "Modern IT Infrastructure",
-    subtitle: "Cutting-edge technology solutions for your business",
-    description: "Transform your workplace with our comprehensive IT services and support"
+    title: "Data Processing Excellence",
+    subtitle: "Professional database administration and processing",
+    description: "Trusted experts in government and enterprise data management solutions"
   },
   {
     id: 2,
     image: heroImage2,
-    title: "Expert Team Collaboration",
-    subtitle: "Professional IT consulting and development services",
-    description: "Our experienced team delivers innovative solutions tailored to your needs"
+    title: "Software Development & Testing",
+    subtitle: "Quality software solutions with comprehensive testing",
+    description: "Custom software development and re-engineering services for your business needs"
   },
   {
     id: 3,
     image: heroImage3,
-    title: "Enterprise Data Solutions",
-    subtitle: "Secure, scalable, and reliable infrastructure",
-    description: "Advanced data management and security solutions for enterprise growth"
+    title: "Digital Solutions Provider",
+    subtitle: "Web design, multimedia, and e-mailing solutions",
+    description: "Complete digital transformation services including web development and multimedia production"
   },
   {
     id: 4,
     image: heroImage4,
-    title: "Business Technology Partners",
-    subtitle: "Strategic IT planning and implementation",
-    description: "Partner with us for complete digital transformation and business growth"
+    title: "Government IT Partner",
+    subtitle: "Proven track record with government projects",
+    description: "Served major government initiatives across 6 states with integrity and excellence"
   }
 ];

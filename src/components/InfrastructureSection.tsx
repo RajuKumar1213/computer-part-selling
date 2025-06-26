@@ -50,7 +50,7 @@ const manpowerCapabilities = [
 const locationData = [
   {
     location: 'Ranchi, Jharkhand',
-    type: 'Registered Office',
+    type: 'Corporate Office',
     address: '1st Floor, Jainul Manzil, Near Jain Mandir, Doranda',
     icon: Building
   },

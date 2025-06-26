@@ -5,25 +5,23 @@ import { MapPin, Phone, Mail, Clock, Facebook, Twitter, Linkedin, Instagram, Arr
 
 const footerLinks = {
   services: [
-    { name: 'Data Processing', href: '/services/data-processing' },
-    { name: 'Database Administration', href: '/services/database' },
-    { name: 'Software Development', href: '/services/software' },
-    { name: 'Web Designing', href: '/services/web' },
-    { name: 'Multimedia Production', href: '/services/multimedia' },
-    { name: 'Back Office Activities', href: '/services/backoffice' }
+    { name: 'GIS Survey', href: '/services/gis-survey' },
+    { name: 'Scanning Digitization', href: '/services/scanning-digitization' },
+    { name: 'Baseline Survey', href: '/services/baseline-survey' },
+    { name: 'AMC FMC', href: '/services/amc-fmc' },
+    { name: 'Software Development', href: '/services/software-development' },
+    { name: 'HR Services', href: '/services/hr-services' }
   ],
   company: [
     { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/about#team' },
     { name: 'Our Projects', href: '/projects' },
     { name: 'Careers', href: '/careers' },
     { name: 'Infrastructure', href: '/infrastructure' },
     { name: 'Contact', href: '/contact' },
-    { name: 'Branch Office', href: '/branch' }
   ],
   support: [
     { name: 'Help Center', href: '/help' },
-    { name: 'Documentation', href: '/docs' },
-    { name: 'System Status', href: '/status' },
     { name: 'Privacy Policy', href: '/privacy' },
     { name: 'Terms of Service', href: '/terms' },
     { name: 'GSTIN: 20BDGPP6667Q1ZV', href: '#' }
@@ -33,7 +31,7 @@ const footerLinks = {
 const contactInfo = [
   {
     icon: MapPin,
-    title: 'Registered Office',
+    title: 'Corporate Office',
     details: ['1st Floor, Jainul Manzil', 'Near Jain Mandir, Doranda', 'Ranchi, Jharkhand']
   },
   {
@@ -54,7 +52,7 @@ const contactInfo = [
 ];
 
 const socialLinks = [
-  { icon: Facebook, href: 'https://facebook.com', label: 'Facebook' },
+  { icon: Facebook, href: 'https://www.facebook.com/sgsrnc', label: 'Facebook' },
   { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
   { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
   { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' }
@@ -65,7 +63,7 @@ export function Footer() {
     <footer className="bg-gray-900 text-white">
       {/* Main Footer */}
       <div className="container mx-auto px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 ">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <motion.div

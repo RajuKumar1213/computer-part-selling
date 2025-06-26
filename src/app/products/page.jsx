@@ -50,7 +50,7 @@ export default function ProductPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950">
+      <section className="relative min-h-screen mt-20 overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-purple-900/20"></div>
@@ -81,7 +81,7 @@ export default function ProductPage() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
-                  className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight"
+                  className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight"
                 >
                   Premium POS
                   <span className="block bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
@@ -92,7 +92,7 @@ export default function ProductPage() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6 }}
-                  className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
+                  className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed"
                 >
                   Discover our premium collection of POS systems and billing solutions 
                   designed to transform your business operations with cutting-edge technology.
@@ -105,7 +105,7 @@ export default function ProductPage() {
                   transition={{ delay: 0.7 }}
                   className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 max-w-4xl mx-auto"
                 >
-                  <h3 className="text-2xl font-bold text-white mb-4">Billing Machine</h3>
+                  <h3 className="text-xl font-bold text-white mb-4">Billing Machine</h3>
                   <p className="text-blue-100 leading-relaxed">
                     Our product range includes a wide range of <strong className="text-white">POS Billing Machine Aspire Nukkad Shop</strong>, <strong className="text-white">POS Billing Machine Pro 2 Nukkad Shop</strong> and <strong className="text-white">POS Billing Machine Elite A Nukkad Shop</strong>.
                   </p>
@@ -295,10 +295,15 @@ export default function ProductPage() {
                           WhatsApp
                         </button>
 
-                        <button className="flex items-center justify-center gap-1 bg-orange-500 hover:bg-orange-600 text-white py-2 rounded-lg font-medium text-xs transition-all duration-300">
+                        <a
+                          href="https://www.indiamart.com/sagacious-globalservices/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center gap-1 bg-orange-500 hover:bg-orange-600 text-white py-2 rounded-lg font-medium text-xs transition-all duration-300"
+                        >
                           <ShoppingCart className="w-3 h-3" />
                           Quote
-                        </button>
+                        </a>
                       </div>
                     </div>
                   </div>

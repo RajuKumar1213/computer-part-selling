@@ -304,7 +304,7 @@ export const contactInfo: ContactInfo = {
 export const companyInfo = {
   name: 'Sagacious Global Services',
   description: 'A team of professionals delivering quality IT solutions in Data Processing, Database Administration, Software Development, Web Designing, and Back Office Activities since 2007.',
-  whatsappNumber: '+919835439197',
+  whatsappNumber: '+917879518211',
   gstin: '20BDGPP6667Q1ZV',
   pan: 'BDGPP6667Q',
   proprietor: 'Mr. Irfan Parvez',
