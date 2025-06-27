@@ -37,6 +37,14 @@ export function ClientSection() {
       desktopSize: { width: 220, height: 180 },
       mobileSize: { width: 180, height: 130 }
     },
+    {
+      name: "Nukkad Shop",
+      logo: "/nukkad.jpg",
+      description: "Nukkad Shop",
+      color: "from-purple-500 to-indigo-500",
+      desktopSize: { width: 240, height: 180 },
+      mobileSize: { width: 180, height: 130 }
+    },
   ];
 
   // Auto-scroll carousel

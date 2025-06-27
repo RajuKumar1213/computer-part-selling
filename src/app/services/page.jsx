@@ -204,7 +204,7 @@ export default function ServicesPage() {
               </motion.div>
             </div>
           </div>
-        </div>
+        </div>  
       </section>
 
       {/* Services Grid Section */}

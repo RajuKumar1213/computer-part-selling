@@ -399,9 +399,9 @@ export default function AboutPage() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                <div className="absolute -bottom-5 left-1/2 transform -translate-x-1/2">
                   <div className="px-3 py-1 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs font-semibold rounded-full">
-                    Team Head
+                  CO-FOUNDER & TEAM HEAD
                   </div>
                 </div>
               </div>
