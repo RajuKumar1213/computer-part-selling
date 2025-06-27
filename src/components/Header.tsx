@@ -10,7 +10,7 @@ const navItems = [
   { name: "About", href: "/about" },
   {
     name: "Services",
-    href: "#",
+    href: "/services",
     submenu: [
       { name: "Scanning Digitization", href: "/services/scanning-digitization" },
       { name: "GIS Survey", href: "/services/gis-survey" },
