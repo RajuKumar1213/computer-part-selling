@@ -232,14 +232,14 @@ export default function ServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="group relative overflow-hidden bg-white rounded-3xl border border-gray-200 hover:border-blue-300 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-4">
+                className="group relative overflow-hidden bg-white rounded-3xl border border-gray-200 hover:border-blue-300 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-4 hover:bg-gradient-to-br hover:from-blue-50 hover:to-indigo-50">
                 {/* Card Content */}
                 <div
-                  className={`relative bg-gradient-to-br ${service.bgGradient} transition-all duration-500 ease-out`}>
+                  className={`relative bg-gradient-to-br ${service.bgGradient} group-hover:opacity-80 transition-all duration-500 ease-out`}>
                   {/* Collapsed Content */}
-                  <div className="p-8 min-h-[300px] flex flex-col group-hover:pb-4 transition-all duration-500">
+                  <div className="p-8 min-h-[350px] flex flex-col group-hover:pb-4 transition-all duration-500">
                     {/* Background Pattern */}
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-white/20 to-transparent rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 transition-transform duration-700"></div>
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-white/30 to-blue-100/20 rounded-full -translate-y-16 translate-x-16 group-hover:scale-150 group-hover:from-blue-200/40 group-hover:to-indigo-200/30 transition-all duration-700"></div>
 
                     {/* Category Badge */}
                     <div className="absolute top-4 right-4 px-3 py-1 bg-white/80 backdrop-blur-sm rounded-full text-xs font-medium text-gray-600 group-hover:bg-white/90 transition-all duration-300">
@@ -265,7 +265,7 @@ export default function ServicesPage() {
                   </div>
 
                   {/* Expanded Content - Slides up from bottom */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-t-2 border-blue-200/60 px-8 pt-12 pb-6 transform translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-out rounded-b-3xl shadow-lg mt-2">
+                  <div className="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-t-2 border-blue-200/60 px-8 pt-12 pb-6 min-h-[280px] transform translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-out rounded-b-3xl shadow-lg mt-2">
 
                     {/* Spacer line for visual separation */}
                     <div className="w-16 h-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full mx-auto mb-6"></div>
@@ -300,7 +300,7 @@ export default function ServicesPage() {
                   </div>
 
                   {/* Gradient Overlay for smooth transition */}
-                  <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white/20 via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                  <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-blue-100/30 via-blue-50/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                 </div>
               </motion.div>
             ))}
