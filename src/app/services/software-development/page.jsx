@@ -112,9 +112,9 @@ export default function SoftwareDevelopmentPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen mt-20 overflow-hidden bg-gradient-to-br from-slate-950 via-indigo-950 to-purple-950">
+      <section className="relative min-h-screen mt-20 overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 to-purple-900/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-blue-900/20"></div>
         </div>
 
         <div className="relative z-10 min-h-screen flex items-center">
@@ -130,9 +130,9 @@ export default function SoftwareDevelopmentPage() {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.2 }}
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-400/20 to-purple-400/20 backdrop-blur-sm border border-indigo-400/30 rounded-full text-indigo-200"
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-400/20 to-blue-600/20 backdrop-blur-sm border border-blue-400/30 rounded-full text-blue-200"
                 >
-                  <Code className="w-5 h-5 mr-2 text-indigo-400" />
+                  <Code className="w-5 h-5 mr-2 text-blue-400" />
                   <span className="font-semibold">SOFTWARE DEVELOPMENT</span>
                 </motion.div>
 
@@ -143,7 +143,7 @@ export default function SoftwareDevelopmentPage() {
                   className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight"
                 >
                   Custom Software
-                  <span className="block bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
+                  <span className="block bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
                     Development Services
                   </span>
                 </motion.h1>
@@ -165,7 +165,7 @@ export default function SoftwareDevelopmentPage() {
                   transition={{ delay: 0.8 }}
                   className="flex flex-col sm:flex-row gap-4 justify-center"
                 >
-                  <button className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-full hover:shadow-2xl hover:shadow-indigo-500/25 transition-all duration-300 flex items-center justify-center">
+                  <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-full hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center">
                     Start Your Project
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </button>
@@ -202,9 +202,9 @@ export default function SoftwareDevelopmentPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="text-center p-6 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl hover:shadow-lg transition-all duration-300"
+                className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl hover:shadow-lg transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
@@ -241,7 +241,7 @@ export default function SoftwareDevelopmentPage() {
                 className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 text-center"
               >
                 <h4 className="font-bold text-gray-900 mb-1">{tech.name}</h4>
-                <span className="text-xs text-indigo-600 bg-indigo-50 px-2 py-1 rounded-full">
+                <span className="text-xs text-blue-600 bg-blue-50 px-2 py-1 rounded-full">
                   {tech.category}
                 </span>
               </motion.div>
@@ -273,9 +273,9 @@ export default function SoftwareDevelopmentPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="text-center p-6 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl"
+                className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-white font-bold text-lg">{process.step}</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{process.title}</h3>
@@ -323,7 +323,7 @@ export default function SoftwareDevelopmentPage() {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="relative h-96 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-3xl overflow-hidden shadow-2xl">
+              <div className="relative h-96 bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl overflow-hidden shadow-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                   alt="Software Development Team"
@@ -365,9 +365,9 @@ export default function SoftwareDevelopmentPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2 }}
-                className="text-center p-8 bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl"
+                className="text-center p-8 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{benefit.title}</h3>
@@ -379,7 +379,7 @@ export default function SoftwareDevelopmentPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600">
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700">
         <div className="container mx-auto px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -394,7 +394,7 @@ export default function SoftwareDevelopmentPage() {
               Let's discuss your project requirements and create a custom software solution for your business
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-white text-indigo-600 font-semibold rounded-full hover:shadow-xl transition-all duration-300">
+              <button className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-full hover:shadow-xl transition-all duration-300">
                 Start Your Project
               </button>
               <button className="px-8 py-4 border border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300">

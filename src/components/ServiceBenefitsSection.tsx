@@ -36,15 +36,6 @@ const serviceBenefits = [
   }
 ];
 
-const additionalBenefits = [
-  'Increased shareholder value',
-  'Improved levels of service',
-  'Meet changing customer demand',
-  'Quick understanding of client needs',
-  'Reduce pressure on support staff',
-  'Improve business performance'
-];
-
 export function ServiceBenefitsSection() {
   return (
     <section className="py-16 bg-white">
@@ -95,7 +86,7 @@ export function ServiceBenefitsSection() {
         </div>
 
         {/* Additional Benefits */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.1 }}
@@ -120,7 +111,7 @@ export function ServiceBenefitsSection() {
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

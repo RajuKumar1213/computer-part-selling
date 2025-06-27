@@ -111,31 +111,7 @@ export function WhyChooseUsSection() {
           ))}
         </div>
   
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-center mt-16">
-          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-12 text-white">
-            <h3 className="text-3xl font-bold mb-4">
-              Ready to Transform Your Business?
-            </h3>
-            <p className="text-xl mb-8 opacity-90">
-              Join hundreds of satisfied businesses who chose SGS for their
-              technology needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors duration-300 font-medium">
-                Get Free Consultation
-              </button>
-              <button className="px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-medium">
-                View Case Studies
-              </button>
-            </div>
-          </div>
-        </motion.div>
+  
       </div>
     </section>
   );

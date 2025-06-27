@@ -97,9 +97,9 @@ export default function ScanningDigitizationPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen mt-20 overflow-hidden bg-gradient-to-br from-slate-950 via-purple-950 to-indigo-950">
+      <section className="relative min-h-screen mt-20 overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-blue-900/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-blue-900/20"></div>
         </div>
 
         <div className="relative z-10 min-h-screen flex items-center">
@@ -115,9 +115,9 @@ export default function ScanningDigitizationPage() {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.2 }}
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-400/20 to-blue-400/20 backdrop-blur-sm border border-purple-400/30 rounded-full text-purple-200"
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-400/20 to-blue-600/20 backdrop-blur-sm border border-blue-400/30 rounded-full text-blue-200"
                 >
-                  <Scan className="w-5 h-5 mr-2 text-purple-400" />
+                  <Scan className="w-5 h-5 mr-2 text-blue-400" />
                   <span className="font-semibold">SCANNING & DIGITIZATION</span>
                 </motion.div>
 
@@ -128,7 +128,7 @@ export default function ScanningDigitizationPage() {
                   className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight"
                 >
                   Document Scanning &
-                  <span className="block bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">
+                  <span className="block bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
                     Digitization Services
                   </span>
                 </motion.h1>
@@ -150,7 +150,7 @@ export default function ScanningDigitizationPage() {
                   transition={{ delay: 0.8 }}
                   className="flex flex-col sm:flex-row gap-4 justify-center"
                 >
-                  <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold rounded-full hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 flex items-center justify-center">
+                  <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-full hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center">
                     Start Digitization
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </button>
@@ -187,9 +187,9 @@ export default function ScanningDigitizationPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="text-center p-6 bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl hover:shadow-lg transition-all duration-300"
+                className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl hover:shadow-lg transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
@@ -225,7 +225,7 @@ export default function ScanningDigitizationPage() {
                 transition={{ delay: index * 0.1 }}
                 className="text-center p-6 bg-white rounded-2xl shadow-lg"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-white font-bold text-lg">{process.step}</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{process.title}</h3>
@@ -246,7 +246,7 @@ export default function ScanningDigitizationPage() {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="relative h-96 bg-gradient-to-br from-purple-500 to-blue-600 rounded-3xl overflow-hidden shadow-2xl">
+              <div className="relative h-96 bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl overflow-hidden shadow-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                   alt="Document Scanning Process"
@@ -317,7 +317,7 @@ export default function ScanningDigitizationPage() {
                 transition={{ delay: index * 0.2 }}
                 className="text-center p-8 bg-white rounded-2xl shadow-lg"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{benefit.title}</h3>
@@ -329,7 +329,7 @@ export default function ScanningDigitizationPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-blue-600">
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700">
         <div className="container mx-auto px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -344,7 +344,7 @@ export default function ScanningDigitizationPage() {
               Transform your document management with our professional digitization services
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-white text-purple-600 font-semibold rounded-full hover:shadow-xl transition-all duration-300">
+              <button className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-full hover:shadow-xl transition-all duration-300">
                 Get Free Quote
               </button>
               <button className="px-8 py-4 border border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300">

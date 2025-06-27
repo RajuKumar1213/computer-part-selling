@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import Image from "next/image";
 
 export default function AboutPage() {
   const services = [
@@ -225,13 +226,14 @@ export default function AboutPage() {
 
               {/* Mission Statement Image */}
               <div className="relative">
-                <div className="relative h-96 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 rounded-2xl overflow-hidden shadow-2xl">
+                <div className="relative min-h-screen bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 rounded-2xl overflow-hidden shadow-2xl">
                   <div className="absolute inset-0 bg-black/20"></div>
                   {/* Professional IT Team Image */}
-                  <img
+                  <Image
                     src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                     alt="Professional IT Team Working"
                     className="w-full h-full object-cover"
+                    layout="fill"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                   <div className="absolute bottom-6 left-6 right-6 text-white">
@@ -363,6 +365,552 @@ export default function AboutPage() {
         </div>
       </section>
   
+      {/* Meet Our Team */}
+      <section className="py-20 bg-gradient-to-br from-gray-900 to-gray-800">
+        <div className="container mx-auto px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Meet Our Expert Team
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experienced professionals driving innovation and excellence in every project
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            {/* CEO */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 group">
+              <div className="relative mb-6">
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-blue-500/20 group-hover:ring-blue-500/40 transition-all duration-300">
+                  <Image
+                    src="/team-head.jpg"
+                    alt="CEO"
+                    width={128}
+                    height={128}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                  <div className="px-3 py-1 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs font-semibold rounded-full">
+                    Team Head
+                  </div>
+                </div>
+              </div>
+              <div className="text-center">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Wasim Khan</h3>
+                
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Visionary Team Head with 15+ years of experience in IT industry and business development.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* CTO */}
+            {/* <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 group">
+              <div className="relative mb-6">
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-green-500/20 group-hover:ring-green-500/40 transition-all duration-300">
+                  <Image
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                    alt="CTO"
+                    width={128}
+                    height={128}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                  <div className="px-3 py-1 bg-gradient-to-r from-green-500 to-teal-600 text-white text-xs font-semibold rounded-full">
+                    CTO
+                  </div>
+                </div>
+              </div>
+              <div className="text-center">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Amit Sharma</h3>
+                <p className="text-sm text-green-600 font-medium mb-3">Chief Technology Officer</p>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Technology expert specializing in software architecture and digital transformation.
+                </p>
+              </div>
+            </motion.div> */}
+
+            {/* Project Manager */}
+            {/* <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 group">
+              <div className="relative mb-6">
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-purple-500/20 group-hover:ring-purple-500/40 transition-all duration-300">
+                  <Image
+                    src="https://images.unsplash.com/photo-1494790108755-2616b612b77c?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                    alt="Project Manager"
+                    width={128}
+                    height={128}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                  <div className="px-3 py-1 bg-gradient-to-r from-purple-500 to-pink-600 text-white text-xs font-semibold rounded-full">
+                    PM
+                  </div>
+                </div>
+              </div>
+              <div className="text-center">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Priya Singh</h3>
+                <p className="text-sm text-purple-600 font-medium mb-3">Senior Project Manager</p>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Expert in managing large-scale government and enterprise projects across multiple states.
+                </p>
+              </div>
+            </motion.div> */}
+
+            {/* Team Lead - Development */}
+            {/* <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 group">
+              <div className="relative mb-6">
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-orange-500/20 group-hover:ring-orange-500/40 transition-all duration-300">
+                  <Image
+                    src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                    alt="Development Team Lead"
+                    width={128}
+                    height={128}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                  <div className="px-3 py-1 bg-gradient-to-r from-orange-500 to-red-600 text-white text-xs font-semibold rounded-full">
+                    LEAD
+                  </div>
+                </div>
+              </div>
+              <div className="text-center">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Vikash Gupta</h3>
+                <p className="text-sm text-orange-600 font-medium mb-3">Development Team Lead</p>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Leading development team with expertise in full-stack technologies and system architecture.
+                </p>
+              </div>
+            </motion.div> */}
+
+            {/* GIS Specialist */}
+            {/* <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5 }}
+              className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 group">
+              <div className="relative mb-6">
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-cyan-500/20 group-hover:ring-cyan-500/40 transition-all duration-300">
+                  <Image
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                    alt="GIS Specialist"
+                    width={128}
+                    height={128}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                  <div className="px-3 py-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs font-semibold rounded-full">
+                    GIS
+                  </div>
+                </div>
+              </div>
+              <div className="text-center">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Sneha Patel</h3>
+                <p className="text-sm text-cyan-600 font-medium mb-3">Senior GIS Specialist</p>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Expert in geographical information systems, mapping, and spatial data analysis.
+                </p>
+              </div>
+            </motion.div> */}
+
+            {/* HR Manager */}
+            {/* <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6 }}
+              className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 group">
+              <div className="relative mb-6">
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-pink-500/20 group-hover:ring-pink-500/40 transition-all duration-300">
+                  <Image
+                    src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                    alt="HR Manager"
+                    width={128}
+                    height={128}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                  <div className="px-3 py-1 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs font-semibold rounded-full">
+                    HR
+                  </div>
+                </div>
+              </div>
+              <div className="text-center">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Anita Kumari</h3>
+                <p className="text-sm text-pink-600 font-medium mb-3">HR Manager</p>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Managing human resources, recruitment, and training programs for multi-state operations.
+                </p>
+              </div>
+            </motion.div> */}
+
+            {/* Data Analyst */}
+            {/* <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.7 }}
+              className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 group">
+              <div className="relative mb-6">
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-indigo-500/20 group-hover:ring-indigo-500/40 transition-all duration-300">
+                  <Image
+                    src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                    alt="Data Analyst"
+                    width={128}
+                    height={128}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                  <div className="px-3 py-1 bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-xs font-semibold rounded-full">
+                    DATA
+                  </div>
+                </div>
+              </div>
+              <div className="text-center">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Rohit Jha</h3>
+                <p className="text-sm text-indigo-600 font-medium mb-3">Senior Data Analyst</p>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Specializing in data processing, analytics, and database management for large-scale projects.
+                </p>
+              </div>
+            </motion.div> */}
+
+            {/* Quality Assurance */}
+            {/* <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.8 }}
+              className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 group">
+              <div className="relative mb-6">
+                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-teal-500/20 group-hover:ring-teal-500/40 transition-all duration-300">
+                  <Image
+                    src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                    alt="Quality Assurance Lead"
+                    width={128}
+                    height={128}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                  <div className="px-3 py-1 bg-gradient-to-r from-teal-500 to-green-600 text-white text-xs font-semibold rounded-full">
+                    QA
+                  </div>
+                </div>
+              </div>
+              <div className="text-center">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Kavita Singh</h3>
+                <p className="text-sm text-teal-600 font-medium mb-3">QA Team Lead</p>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Ensuring quality standards and testing protocols across all project deliverables.
+                </p>
+              </div>
+            </motion.div> */}
+          </div>
+
+          {/* Team Stats */}
+          {/* <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white">
+              <div>
+                <div className="text-3xl font-bold mb-2">45+</div>
+                <div className="text-sm opacity-90">Team Members</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold mb-2">15+</div>
+                <div className="text-sm opacity-90">Years Experience</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold mb-2">6</div>
+                <div className="text-sm opacity-90">States Coverage</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold mb-2">24/7</div>
+                <div className="text-sm opacity-90">Support Available</div>
+              </div>
+            </div>
+          </motion.div> */}
+        </div>
+      </section>
+
+      {/* State-wise Teams Gallery */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Our Teams Across States
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Dedicated teams deployed across multiple states, delivering excellence in every project
+            </p>
+          </motion.div>
+
+          {/* Two Teams Row */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
+            
+            {/* Team Ramgarh */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="space-y-6">
+              {/* Team Header */}
+              <div className="text-center">
+                <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 backdrop-blur-sm border border-orange-500/30 rounded-full text-orange-600 mb-4">
+                  <Globe className="w-4 h-4 mr-2" />
+                  <span className="font-semibold text-sm">TEAM RAMGARH</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Jharkhand Operations</h3>
+                <p className="text-gray-600">
+                  Data collection and survey operations team
+                </p>
+              </div>
+
+              {/* Single Image */}
+              <div className="relative h-80 overflow-hidden group cursor-pointer">
+                <Image
+                  src="https://scontent.fpat2-5.fna.fbcdn.net/v/t39.30808-6/470192634_466492003141344_7800479170594568180_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=8n-k2ItT_ikQ7kNvwFrc2ff&_nc_oc=Adl_o1uBM-_KjBrHLESMf4iunmKQ9Yi0z5_VKwUgFAf5O4DGciYU60Ba99K7mAAAiA2vJ64_h6_HV5RvGCmcofhW&_nc_zt=23&_nc_ht=scontent.fpat2-5.fna&_nc_gid=ZPz5jDFXgDAIQLGSNua_8Q&oh=00_AfMn_vXdNuYnMxvGEj9LL42MbEVOyYHu5bVwMBmAe7hNVw&oe=6863FECD"
+                  alt="Team Ramgarh Operations"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-6 left-6 right-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h4 className="text-lg font-bold mb-2">Team Ramgarh in Action</h4>
+                  <p className="text-sm text-gray-200">
+                    Field operations and project execution
+                  </p>
+                </div>
+              </div>
+
+          
+            </motion.div>
+
+            {/* Team A G Office Ranchi */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="space-y-6">
+              {/* Team Header */}
+              <div className="text-center">
+                <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm border border-blue-500/30 rounded-full text-blue-600 mb-4">
+                  <Globe className="w-4 h-4 mr-2" />
+                  <span className="font-semibold text-sm">TEAM A G OFFICE</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Ranchi Headquarters</h3>
+                <p className="text-gray-600">
+                  Administrative and coordination team
+                </p>
+              </div>
+
+              {/* Two Images Grid */}
+              <div className="space-y-4">
+                <div className="relative h-40 overflow-hidden group cursor-pointer">
+                  <Image
+                    src="https://scontent.fpat2-7.fna.fbcdn.net/v/t39.30808-6/470076772_464414946682383_2720910171639936896_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=KyGbN06EjwsQ7kNvwF7GfCu&_nc_oc=Adl6XT_UwwEO5HLvJsjLWIx6fWI2O3KwMuF-d2gitM7XRfU7fsy4EjhWiYAfR08e033vggfM7rVUQbAjG_X6oWar&_nc_zt=23&_nc_ht=scontent.fpat2-7.fna&_nc_gid=s2Jg_HH_LqeJBft9sQGNxg&oh=00_AfNbqQmqQZdfp35gMj8gqdoTFxKilZLdgkR3j9aZvixcJg&oe=68640F9B"
+                    alt="A G Office Team - Office Operations"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <h5 className="font-semibold mb-1">Office Operations</h5>
+                    <p className="text-xs text-gray-200">Administrative coordination</p>
+                  </div>
+                </div>
+
+                <div className="relative h-40 overflow-hidden group cursor-pointer">
+                  <Image
+                    src="https://scontent.fpat2-4.fna.fbcdn.net/v/t39.30808-6/470120974_464414716682406_7699217653799957253_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=AS8PG2uu4XIQ7kNvwHa0BcO&_nc_oc=AdkU34q19YoPyrjHSLe_dUp2xEMQM8kV32oiv_hxVEi-ETYQv2fafJUbLzkA6OsdrgKjkFe4fRH-xRpwLOvez5if&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&_nc_gid=s2Jg_HH_LqeJBft9sQGNxg&oh=00_AfPP2fRxWgGf-pqT5f8FJuRkh4wSNDEgbqnQ8WQWxm50jA&oe=6864062E"
+                    alt="A G Office Team - Team Collaboration"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <h5 className="font-semibold mb-1">Team Collaboration</h5>
+                    <p className="text-xs text-gray-200">Strategic planning session</p>
+                  </div>
+                </div>
+              </div>
+
+             
+            </motion.div>
+          </div>
+
+          {/* Team Chhattisgarh - Full Width Row */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-16 max-w-4xl mx-auto">
+            {/* Team Header */}
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-teal-500/20 backdrop-blur-sm border border-green-500/30 rounded-full text-green-600 mb-4">
+                <Globe className="w-4 h-4 mr-2" />
+                <span className="font-semibold text-sm">TEAM CHHATTISGARH</span>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">Regional Operations</h3>
+              <p className="text-gray-600">
+                Multi-state coordination and project management team
+              </p>
+            </div>
+
+            {/* Three Images Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+              <div className="relative h-64 overflow-hidden group cursor-pointer">
+                <Image
+                  src="https://scontent.fpat2-2.fna.fbcdn.net/v/t39.30808-6/486852070_3051877818314705_8931193882290261326_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Z_4E4m7aXJ4Q7kNvwFAFqxT&_nc_oc=AdnZkjY03ULzxOlrZ4DP6QAlhBzSGBnWbx65-gDlQ5JJz6MbhWS5bcNY2NPGZhmaQsgCbpgIRQLwGWfxCk7irojk&_nc_zt=23&_nc_ht=scontent.fpat2-2.fna&_nc_gid=s2Jg_HH_LqeJBft9sQGNxg&oh=00_AfOrCBDNoA9vjPwjHY4u8qnbS0RwZEwMJ0t_A9XnD7RvrA&oe=686403E0"
+                  alt="Team Chhattisgarh - Field Operations"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h5 className="font-semibold mb-1">Field Operations</h5>
+                  <p className="text-xs text-gray-200">Data collection and surveys</p>
+                </div>
+              </div>
+
+              <div className="relative h-64 overflow-hidden group cursor-pointer">
+                <Image
+                  src="https://scontent.fpat2-4.fna.fbcdn.net/v/t39.30808-6/487397164_3051877938314693_5880860208558751064_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=bWEFxiS6rz8Q7kNvwFoXnqz&_nc_oc=AdnqbAYzyXZ7VwoXXIvMwGvWAagEYB0EdiMqgbbEnHX95i4it0OjkQon1c4ccB9zYjaumg95eodEG9KGB1qmOjv7&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&_nc_gid=s2Jg_HH_LqeJBft9sQGNxg&oh=00_AfOJaenL_N4bc5YyxVdzY46-NVDDzRc36ufBN8IoJ2Ca4Q&oe=6863FD7F"
+                  alt="Team Chhattisgarh - Team Meeting"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h5 className="font-semibold mb-1">Team Coordination</h5>
+                  <p className="text-xs text-gray-200">Project planning and execution</p>
+                </div>
+              </div>
+
+              <div className="relative h-64 overflow-hidden group cursor-pointer">
+                <Image
+                  src="https://scontent.fpat2-4.fna.fbcdn.net/v/t39.30808-6/487397164_3051877938314693_5880860208558751064_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=bWEFxiS6rz8Q7kNvwFoXnqz&_nc_oc=AdnqbAYzyXZ7VwoXXIvMwGvWAagEYB0EdiMqgbbEnHX95i4it0OjkQon1c4ccB9zYjaumg95eodEG9KGB1qmOjv7&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&_nc_gid=s2Jg_HH_LqeJBft9sQGNxg&oh=00_AfOJaenL_N4bc5YyxVdzY46-NVDDzRc36ufBN8IoJ2Ca4Q&oe=6863FD7F"
+                  alt="Team Chhattisgarh - Strategic Planning"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h5 className="font-semibold mb-1">Strategic Planning</h5>
+                  <p className="text-xs text-gray-200">Regional coordination</p>
+                </div>
+              </div>
+            </div>
+
+           
+          </motion.div>
+
+          {/* Team Bhubaneshwar - Full Width Row */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-16 max-w-4xl mx-auto">
+            {/* Team Header */}
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-indigo-500/20 backdrop-blur-sm border border-purple-500/30 rounded-full text-purple-600 mb-4">
+                <Globe className="w-4 h-4 mr-2" />
+                <span className="font-semibold text-sm">TEAM BHUBANESHWAR</span>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">Odisha Operations</h3>
+              <p className="text-gray-600">
+                Regional development and implementation team
+              </p>
+            </div>
+
+            {/* Three Images Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+              <div className="relative h-64 overflow-hidden group cursor-pointer">
+                <Image
+                  src="https://scontent.fpat2-4.fna.fbcdn.net/v/t39.30808-6/470073587_464416943348850_8810529119886131419_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=kZZCSBZuJqUQ7kNvwG5Mr9f&_nc_oc=AdnJeu8VfIdxrX1dLnuiEZDcvE1rm6SaGhPz6SPbB_qNsk9szen2Ar6noPBeocLav78eQSA73D3Pbpxkt3UNS7YC&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&_nc_gid=RHTiuLVKL70Fa41djF-fqQ&oh=00_AfO_ziIUHkf_h_5e-LjBEOEVQAvqZe9VdDMukm41n19CEg&oe=6863F811"
+                  alt="Team Bhubaneshwar - Project Management"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h5 className="font-semibold mb-1">Project Management</h5>
+                  <p className="text-xs text-gray-200">Strategic oversight and coordination</p>
+                </div>
+              </div>
+
+              <div className="relative h-64 overflow-hidden group cursor-pointer">
+                <Image
+                  src="https://scontent.fpat2-1.fna.fbcdn.net/v/t39.30808-6/469896178_464417063348838_7430837654979796490_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=s6EJbDBfzTMQ7kNvwFAYE5t&_nc_oc=AdnVaoTQ5VtIYeAMBK3UUNqid7G6J03RJNETyy_mW4PmAsjldQQfeCmkOXhokt5CzThmtf9dG5htQlpnG1sWuejX&_nc_zt=23&_nc_ht=scontent.fpat2-1.fna&_nc_gid=URAqAOxGoFMsMCwPcHRE2w&oh=00_AfOgKo2x39-iUbHof2KbCjlSLKO7ieSxHX1HBxFk291yFA&oe=68640B98"
+                  alt="Team Bhubaneshwar - Team Collaboration"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h5 className="font-semibold mb-1">Team Collaboration</h5>
+                  <p className="text-xs text-gray-200">Cross-functional teamwork</p>
+                </div>
+              </div>
+
+              <div className="relative h-64 overflow-hidden group cursor-pointer">
+                <Image
+                  src="https://scontent.fpat2-4.fna.fbcdn.net/v/t39.30808-6/470109815_464416926682185_8208749327283033721_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=gZ9BtuX-6bYQ7kNvwGu1YW1&_nc_oc=AdlQsawn7SYi0fMytoh4M1z2gQe7QTlaQqvSUB16YkF3cj97FRDCcpUEvNM2f1MDsgNey1741nTSi1XXwN9fe9tr&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&_nc_gid=RHTiuLVKL70Fa41djF-fqQ&oh=00_AfMGrKeDLuZSfVjXa3zUqDi_kijU9xcOQ9B9K3KHIdOE4w&oe=68640976"
+                  alt="Team Bhubaneshwar - Technical Implementation"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <h5 className="font-semibold mb-1">Technical Implementation</h5>
+                  <p className="text-xs text-gray-200">Solution development and deployment</p>
+                </div>
+              </div>
+            </div>
+
+          
+          </motion.div>
+        </div>
+      </section>
+
       {/* Why Choose Us */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-8">
@@ -401,6 +949,191 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* Office Locations */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Our Office Locations
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Visit us at our professional offices for consultations and business discussions
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {/* Corporate Office */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 border-l-4 border-blue-500">
+              <div className="flex items-start mb-6">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Corporate Office</h3>
+                  <div className="inline-flex items-center px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">
+                    Primary Location
+                  </div>
+                </div>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <svg className="w-5 h-5 text-gray-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <div>
+                    <p className="text-gray-900 font-medium mb-1">Address:</p>
+                    <p className="text-gray-700 leading-relaxed">
+                      Shop No 08, 2nd Floor, Mukti Tower,<br />
+                      Opposite Ashoka Hotel, Circular Road,<br />
+                      Ranchi, Jharkhand - 834001
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center">
+                  <svg className="w-5 h-5 text-gray-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  <div>
+                    <p className="text-gray-900 font-medium">Phone:</p>
+                    <p className="text-gray-700">+91 9308899616</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center">
+                  <svg className="w-5 h-5 text-gray-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  <div>
+                    <p className="text-gray-900 font-medium">Email:</p>
+                    <p className="text-gray-700">info@sagaciousglobal.com</p>
+                  </div>
+                </div>
+
+                <div className="mt-6 pt-6 border-t border-gray-200">
+                  <div className="flex items-center text-sm text-gray-600">
+                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Business Hours: Mon-Sat 9:00 AM - 6:00 PM</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Branch Office */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 border-l-4 border-green-500">
+              <div className="flex items-start mb-6">
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                  <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Branch Office</h3>
+                  <div className="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
+                    Regional Office
+                  </div>
+                </div>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <svg className="w-5 h-5 text-gray-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <div>
+                    <p className="text-gray-900 font-medium mb-1">Address:</p>
+                    <p className="text-gray-700 leading-relaxed">
+                      Near L S College, Muzaffarpur,<br />
+                      Bihar - 842001
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center">
+                  <svg className="w-5 h-5 text-gray-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  <div>
+                    <p className="text-gray-900 font-medium">Phone:</p>
+                    <p className="text-gray-700">+91 8969222014</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center">
+                  <svg className="w-5 h-5 text-gray-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  <div>
+                    <p className="text-gray-900 font-medium">Email:</p>
+                    <p className="text-gray-700">branch@sagaciousglobal.com</p>
+                  </div>
+                </div>
+
+                <div className="mt-6 pt-6 border-t border-gray-200">
+                  <div className="flex items-center text-sm text-gray-600">
+                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <span>Business Hours: Mon-Sat 9:00 AM - 6:00 PM</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Additional Contact Information */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-12 max-w-4xl mx-auto">
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 text-center">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Get in Touch
+              </h3>
+              <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+                Have questions about our services? Ready to start your next project? 
+                Our team is here to help you achieve your business goals.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center">
+                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  Call Us Now
+                </button>
+                <button className="px-6 py-3 border border-gray-300 text-gray-700 font-semibold rounded-full hover:bg-gray-50 transition-all duration-300 flex items-center justify-center">
+                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  Send Email
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Contact CTA */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="container mx-auto px-8 text-center">

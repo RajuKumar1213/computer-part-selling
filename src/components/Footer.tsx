@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, Facebook, Twitter, Linkedin, Instagram, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 
 const footerLinks = {
   services: [
@@ -16,7 +17,6 @@ const footerLinks = {
     { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/about#team' },
     { name: 'Our Projects', href: '/projects' },
-    { name: 'Careers', href: '/careers' },
     { name: 'Infrastructure', href: '/infrastructure' },
     { name: 'Contact', href: '/contact' },
   ],
@@ -170,6 +170,25 @@ export function Footer() {
                     </a>
                   </li>
                 ))}
+                <div className='flex justify-between items-center px-4 bg-white rounded-md'>
+                  <li>
+                    <Image
+                      src="/msme.jpg"
+                      alt="Sagacious Global Services Logo"
+                      width={30}
+                      height={10}
+                      className="h-8 w-auto"
+                    />
+                  </li>
+                  <li><Image
+                      src="/gem.jpg"
+                      alt="Sagacious Global Services Logo"
+                      width={50}
+                      height={50}
+                      className="h-8 w-auto"
+                    /></li>
+
+                </div>
               </ul>
             </motion.div>
           </div>

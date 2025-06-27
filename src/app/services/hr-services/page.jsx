@@ -92,9 +92,9 @@ export default function HRServicesPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen mt-20 overflow-hidden bg-gradient-to-br from-slate-950 via-purple-950 to-indigo-950">
+      <section className="relative min-h-screen mt-20 overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-pink-900/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-blue-900/20"></div>
         </div>
 
         <div className="relative z-10 min-h-screen flex items-center">
@@ -110,9 +110,9 @@ export default function HRServicesPage() {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.2 }}
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-400/20 to-pink-400/20 backdrop-blur-sm border border-purple-400/30 rounded-full text-purple-200"
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-400/20 to-blue-600/20 backdrop-blur-sm border border-blue-400/30 rounded-full text-blue-200"
                 >
-                  <Users className="w-5 h-5 mr-2 text-purple-400" />
+                  <Users className="w-5 h-5 mr-2 text-blue-400" />
                   <span className="font-semibold">HR SERVICES</span>
                 </motion.div>
 
@@ -123,7 +123,7 @@ export default function HRServicesPage() {
                   className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight"
                 >
                   Comprehensive HR
-                  <span className="block bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+                  <span className="block bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
                     Solutions
                   </span>
                 </motion.h1>
@@ -148,7 +148,7 @@ export default function HRServicesPage() {
                     href="https://www.indiamart.com/sagacious-global-services/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-full hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 flex items-center justify-center"
+                    className="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-full hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center"
                   >
                     Get HR Quote
                     <ArrowRight className="w-5 h-5 ml-2" />
@@ -186,9 +186,9 @@ export default function HRServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="text-center p-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl hover:shadow-lg transition-all duration-300"
+                className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl hover:shadow-lg transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
@@ -242,7 +242,7 @@ export default function HRServicesPage() {
                   alt="HR Services Team"
                   className="w-full h-[400px] object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6">
                   <h3 className="text-white text-xl font-bold mb-2">Professional HR Team</h3>
                   <p className="text-white/90">Experienced professionals delivering quality HR solutions</p>
@@ -278,7 +278,7 @@ export default function HRServicesPage() {
                 transition={{ delay: index * 0.1 }}
                 className="text-center p-6 border border-gray-200 rounded-2xl hover:border-purple-300 hover:shadow-lg transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-purple-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>
@@ -327,7 +327,7 @@ export default function HRServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-pink-600">
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700">
         <div className="container mx-auto px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -346,14 +346,14 @@ export default function HRServicesPage() {
                 href="https://www.indiamart.com/sagacious-global-services/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-4 bg-white text-purple-600 font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"
+                className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 flex items-center justify-center"
               >
                 Get HR Quote
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
               <a
                 href="/contact"
-                className="px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-purple-600 transition-all duration-300"
+                className="px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-blue-600 transition-all duration-300"
               >
                 Contact Us
               </a>

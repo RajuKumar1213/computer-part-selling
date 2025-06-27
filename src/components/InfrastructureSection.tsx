@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Building, Users, Globe, Wifi, Shield, Monitor, Coffee } from 'lucide-react';
+import { Building, Wifi, Shield, Monitor, Coffee } from 'lucide-react';
 
 const facilities = [
   {
@@ -36,31 +36,7 @@ const facilities = [
   }
 ];
 
-const manpowerCapabilities = [
-  'Highly skilled and experienced personnel',
-  'Fluent in English communication',
-  'Multilingual data processing capabilities',
-  '24/7 operations in 3 shifts',
-  'Qualified manual staff for proofreading',
-  'Onsite deployment possible',
-  'Quick scaling and team building',
-  'Professional training programs'
-];
 
-const locationData = [
-  {
-    location: 'Ranchi, Jharkhand',
-    type: 'Corporate Office',
-    address: '1st Floor, Jainul Manzil, Near Jain Mandir, Doranda',
-    icon: Building
-  },
-  {
-    location: 'Patna, Bihar',
-    type: 'Branch Office',
-    address: 'Suman Punj, 201, 2nd Floor, Jagdeopath',
-    icon: Globe
-  }
-];
 
 export function InfrastructureSection() {
   return (
@@ -114,68 +90,8 @@ export function InfrastructureSection() {
           ))}
         </div>
 
-        {/* Manpower Capabilities */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.1 }}
-          transition={{ duration: 0.4, delay: 0.3 }}
-          className="bg-white rounded-xl p-8 mb-12"
-        >
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center px-3 py-1 bg-green-100 border border-green-300 rounded-full text-green-800 font-medium text-sm mb-4">
-              <Users className="w-4 h-4 mr-2" />
-              Manpower Strength
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">
-              45+ Skilled Personnel
-            </h3>
-            <p className="text-sm text-gray-600">
-              60+ manpower currently deployed across Bihar, Chhattisgarh, Jharkhand, Odisha
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {manpowerCapabilities.map((capability, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.1 }}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
-                className="flex items-center space-x-3"
-              >
-                <div className="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"></div>
-                <span className="text-sm text-gray-700">{capability}</span>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+      
 
-        {/* Locations */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {locationData.map((location, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.1 }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="bg-gradient-to-br from-blue-600 to-indigo-600 text-white rounded-xl p-6"
-            >
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
-                  <location.icon className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <div className="text-sm text-blue-100 mb-1">{location.type}</div>
-                  <h3 className="text-xl font-bold mb-2">{location.location}</h3>
-                  <p className="text-sm text-blue-100 leading-relaxed">{location.address}</p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
       </div>
     </section>
   );

@@ -12,8 +12,8 @@ const navItems = [
     name: "Services",
     href: "#",
     submenu: [
-      { name: "GIS Survey", href: "/services/gis-survey" },
       { name: "Scanning Digitization", href: "/services/scanning-digitization" },
+      { name: "GIS Survey", href: "/services/gis-survey" },
       { name: "Baseline Survey", href: "/services/baseline-survey" },
       { name: "AMC FMC", href: "/services/amc-fmc" },
       { name: "Software Development", href: "/services/software-development" },
@@ -21,7 +21,6 @@ const navItems = [
     ],
   },
   { name: "Products", href: "/products" },
-  { name: "Careers", href: "/careers" },
 
   { name: "Contact", href: "/contact" },
 ];
@@ -37,7 +36,7 @@ export function Header() {
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2">
               <Phone className="w-3 h-3" />
-              <span>+91 9835 439 197</span>
+              <span>+917879518211 </span>
             </div>
             <div className="flex items-center space-x-2">
               <Mail className="w-3 h-3" />
@@ -119,7 +118,9 @@ export function Header() {
             {/* CTA Buttons & Mobile Menu */}
             <div className="flex items-center space-x-4">
               <div className="hidden md:flex items-center space-x-3">
-                <Button>Contact Us</Button>
+                <Link href="/contact">
+                  <Button>Contact Us</Button>
+                </Link>
               </div>
 
               {/* Mobile Menu Button */}
@@ -171,10 +172,14 @@ export function Header() {
                   ))}
                 </nav>
                 <div className="flex flex-col space-y-3 mt-6 pt-6 border-t border-gray-200">
-                  <Button variant="outline" className="w-full">
-                    Get Quote
-                  </Button>
-                  <Button className="w-full">Contact Us</Button>
+                  <Link href="/contact">
+                    <Button variant="outline" className="w-full">
+                      Get Quote
+                    </Button>
+                  </Link>
+                  <Link href="/contact">
+                    <Button className="w-full">Contact Us</Button>
+                  </Link>
                 </div>
               </div>
             </motion.div>

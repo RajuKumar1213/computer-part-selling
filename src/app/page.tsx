@@ -9,6 +9,7 @@ import { AboutSection } from '@/components/AboutSection';
 import { CTASection } from '@/components/CTASection';
 import { Footer } from '@/components/Footer';
 import { WhatsAppFloat } from '@/components/WhatsAppFloat';
+import { ClientSection } from '@/components/ClientSection';
 
 export default function Home() {
   return (
@@ -17,12 +18,12 @@ export default function Home() {
       <HeroSection />
       <ServicesSection />
       <ServiceBenefitsSection />
+      <ClientSection/>
       <StatsSection />
       <InfrastructureSection />
       {/* <PrestigiousProjectsSection /> */}
       <WhyChooseUsSection />
       <AboutSection />
-      {/* <TestimonialsSection /> */}
       <CTASection />
       <Footer />
       <WhatsAppFloat />

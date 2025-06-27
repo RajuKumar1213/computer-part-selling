@@ -110,9 +110,9 @@ export default function AMCFMCPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative min-h-screen mt-20 overflow-hidden bg-gradient-to-br from-slate-950 via-emerald-950 to-teal-950">
+      <section className="relative min-h-screen mt-20 overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/20 to-teal-900/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 to-blue-900/20"></div>
         </div>
 
         <div className="relative z-10 min-h-screen flex items-center">
@@ -128,9 +128,9 @@ export default function AMCFMCPage() {
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.2 }}
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-400/20 to-teal-400/20 backdrop-blur-sm border border-emerald-400/30 rounded-full text-emerald-200"
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-400/20 to-blue-600/20 backdrop-blur-sm border border-blue-400/30 rounded-full text-blue-200"
                 >
-                  <Settings className="w-5 h-5 mr-2 text-emerald-400" />
+                  <Settings className="w-5 h-5 mr-2 text-blue-400" />
                   <span className="font-semibold">AMC & FMS SERVICES</span>
                 </motion.div>
 
@@ -141,7 +141,7 @@ export default function AMCFMCPage() {
                   className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight"
                 >
                   Annual Maintenance Contract &
-                  <span className="block bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent">
+                  <span className="block bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
                     Facility Management
                   </span>
                 </motion.h1>
@@ -162,7 +162,7 @@ export default function AMCFMCPage() {
                   transition={{ delay: 0.8 }}
                   className="flex flex-col sm:flex-row gap-4 justify-center"
                 >
-                  <button className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-full hover:shadow-2xl hover:shadow-emerald-500/25 transition-all duration-300 flex items-center justify-center">
+                  <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-full hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center">
                     Get AMC Quote
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </button>
@@ -199,9 +199,9 @@ export default function AMCFMCPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="text-center p-6 bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl hover:shadow-lg transition-all duration-300"
+                className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl hover:shadow-lg transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
@@ -249,7 +249,7 @@ export default function AMCFMCPage() {
                   ))}
                 </div>
                 
-                <button className="w-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                <button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
                   Choose Package
                 </button>
               </motion.div>
@@ -280,7 +280,7 @@ export default function AMCFMCPage() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
-                    className="flex items-center space-x-3 p-4 bg-gradient-to-r from-emerald-50 to-teal-50 rounded-lg"
+                    className="flex items-center space-x-3 p-4 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg"
                   >
                     <CheckCircle className="w-5 h-5 text-emerald-500 flex-shrink-0" />
                     <span className="font-medium text-gray-800">{service}</span>
@@ -295,7 +295,7 @@ export default function AMCFMCPage() {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="relative h-96 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-3xl overflow-hidden shadow-2xl">
+              <div className="relative h-96 bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl overflow-hidden shadow-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                   alt="IT Maintenance Services"
@@ -339,7 +339,7 @@ export default function AMCFMCPage() {
                 transition={{ delay: index * 0.2 }}
                 className="text-center p-8 bg-white rounded-2xl shadow-lg"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{benefit.title}</h3>
@@ -351,7 +351,7 @@ export default function AMCFMCPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-emerald-600 to-teal-600">
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700">
         <div className="container mx-auto px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -366,7 +366,7 @@ export default function AMCFMCPage() {
               Protect your IT investments with our comprehensive annual maintenance contracts
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-white text-emerald-600 font-semibold rounded-full hover:shadow-xl transition-all duration-300">
+              <button className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-full hover:shadow-xl transition-all duration-300">
                 Get Custom Quote
               </button>
               <button className="px-8 py-4 border border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300">

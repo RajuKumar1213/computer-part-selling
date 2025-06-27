@@ -295,7 +295,7 @@ export const products: Product[] = [  {
 ];
 
 export const contactInfo: ContactInfo = {
-  phone: '+919835439197',
+  phone: '+917879518211',
   email: 'sagaciousglobals@gmail.com',
   address: '1st Floor, Jainul Manzil, Near Jain Mandir, Doranda, Ranchi, Jharkhand',
   workingHours: 'Mon-Sat: 9AM-7PM'
