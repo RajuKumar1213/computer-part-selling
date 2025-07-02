@@ -9,9 +9,7 @@ import {
   Users,
   Shield,
   Scan,
-  ArrowRight,
   CheckCircle,
-  Sparkles,
   ExternalLink,
 } from "lucide-react";
 
