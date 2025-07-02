@@ -31,7 +31,7 @@ export function ClientSection() {
     },
     {
       name: "Techinfy",
-      logo: "/techinfy_logo.jfif",
+      logo: "/techinfy_logo.jpg",
       description: "Digital Innovation",
       color: "from-purple-500 to-indigo-500",
       desktopSize: { width: 220, height: 180 },
