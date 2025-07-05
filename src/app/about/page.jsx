@@ -70,7 +70,7 @@ export default function AboutPage() {
   ];
 
   const achievements = [
-    { value: "16+", label: "Years Experience", desc: "Serving since 2007" },
+    { value: "16+", label: "Years Experience", desc: "Serving since 2020" },
     { value: "6", label: "States Coverage", desc: "Multi-state operations" },
     {
       value: "500+",
@@ -127,8 +127,6 @@ export default function AboutPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 className="space-y-8">
-                
-
                 {/* Main Heading */}
                 <motion.h1
                   initial={{ opacity: 0, y: 30 }}
@@ -147,7 +145,7 @@ export default function AboutPage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.6 }}
                   className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                  A team of professionals serving the IT industry since 2007,
+                  A team of professionals serving the IT industry since 2020,
                   specializing in digitalization, data processing, software
                   development, and comprehensive digital solutions.
                 </motion.p>
@@ -210,16 +208,37 @@ export default function AboutPage() {
                 </h3>
                 <div className="space-y-4 text-gray-700 leading-relaxed">
                   <p>
-                    Sagacious Global Services is a team of professionals who have served the IT industry for a long time and now they are contributing their skill and experiences in the field of Data Processing, Database Administration, Software Development, Software re-engineering/Testing, Web Designing, Multimedia Production, E-Mailing Solutions, document imaging and back office activities under a roof.
+                    Sagacious Global Services is a team of professionals who
+                    have served the IT industry for a long time and now they are
+                    contributing their skill and experiences in the field of
+                    Data Processing, Database Administration, Software
+                    Development, Software re-engineering/Testing, Web Designing,
+                    Multimedia Production, E-Mailing Solutions, document imaging
+                    and back office activities under a roof.
                   </p>
                   <p>
-                    Although the company has formally started in year 2019 as Sagacious Global Services but we are serving the IT industry since 2007, in Chhattisgarh, Odisha, Uttar Pradesh, Rajasthan, Bihar and Jharkhand. Our team has served many companies in several projects such as MG-NREGA, UID, SECC 2011, NPR, FINANCIAL INCLUSION, AAJEEVIKA etc from government & non-government organizations to handle their IT/ITES Operations.
+                    Although the company has formally started in year 2019 as
+                    Sagacious Global Services but we are serving the IT industry
+                    since 2020, in Chhattisgarh, Odisha, Uttar Pradesh,
+                    Rajasthan, Bihar and Jharkhand. Our team has served many
+                    companies in several projects such as MG-NREGA, UID, 
+                    NPR, FINANCIAL INCLUSION, AAJEEVIKA etc from
+                    government & non-government organizations to handle their
+                    IT/ITES Operations.
                   </p>
                   <p>
-                    We are a group of young, dynamic and committed individuals, who have always delivered quality results on time. Work ethics and integrity are our guiding principles in work.
+                    We are a group of young, dynamic and committed individuals,
+                    who have always delivered quality results on time. Work
+                    ethics and integrity are our guiding principles in work.
                   </p>
                   <p>
-                    Our organizational structure, operational efficiency and our commitment to quality has fostered a healthy partnership between our company and our clients. Such is our reputation amongst our clients that Sagacious Global Services has earned the title <strong className="text-blue-800">'truly partnered'</strong>.
+                    Our organizational structure, operational efficiency and our
+                    commitment to quality has fostered a healthy partnership
+                    between our company and our clients. Such is our reputation
+                    amongst our clients that Sagacious Global Services has
+                    earned the title{" "}
+                    <strong className="text-blue-800">'truly partnered'</strong>
+                    .
                   </p>
                 </div>
               </div>
@@ -237,9 +256,12 @@ export default function AboutPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                   <div className="absolute bottom-6 left-6 right-6 text-white">
-                    <h4 className="text-xl font-bold mb-2">Professional Excellence</h4>
+                    <h4 className="text-xl font-bold mb-2">
+                      Professional Excellence
+                    </h4>
                     <p className="text-blue-100 text-sm">
-                      Delivering quality IT solutions with expertise and integrity since 2007
+                      Delivering quality IT solutions with expertise and
+                      integrity since 2020
                     </p>
                   </div>
                 </div>
@@ -254,7 +276,8 @@ export default function AboutPage() {
                   Manpower & Strength
                 </h3>
                 <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                  Our dedicated team of professionals forms the backbone of our success
+                  Our dedicated team of professionals forms the backbone of our
+                  success
                 </p>
               </div>
 
@@ -263,22 +286,34 @@ export default function AboutPage() {
                 <div className="bg-white p-6 rounded-xl shadow-lg">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                      <span className="text-2xl font-bold text-green-600">45+</span>
+                      <span className="text-2xl font-bold text-green-600">
+                        45+
+                      </span>
                     </div>
-                    <h4 className="text-xl font-bold text-gray-900">Personnel Capability</h4>
+                    <h4 className="text-xl font-bold text-gray-900">
+                      Personnel Capability
+                    </h4>
                   </div>
                   <div className="space-y-3 text-gray-700">
                     <div className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Ability to employ highly skilled personnel within one week</span>
+                      <span>
+                        Ability to employ highly skilled personnel within one
+                        week
+                      </span>
                     </div>
                     <div className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Highly skilled and experienced personnel, well conversant in English language</span>
+                      <span>
+                        Highly skilled and experienced personnel, well
+                        conversant in English language
+                      </span>
                     </div>
                     <div className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Capable of processing data in multiple languages</span>
+                      <span>
+                        Capable of processing data in multiple languages
+                      </span>
                     </div>
                     <div className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
@@ -286,7 +321,9 @@ export default function AboutPage() {
                     </div>
                     <div className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Round the clock work in 3 shifts on 24/7 basis</span>
+                      <span>
+                        Round the clock work in 3 shifts on 24/7 basis
+                      </span>
                     </div>
                     <div className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
@@ -294,7 +331,9 @@ export default function AboutPage() {
                     </div>
                     <div className="flex items-start">
                       <CheckCircle className="w-5 h-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
-                      <span>Possibility to deploy manpower at customer site</span>
+                      <span>
+                        Possibility to deploy manpower at customer site
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -303,13 +342,18 @@ export default function AboutPage() {
                 <div className="bg-white p-6 rounded-xl shadow-lg">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                      <span className="text-2xl font-bold text-blue-600">60+</span>
+                      <span className="text-2xl font-bold text-blue-600">
+                        60+
+                      </span>
                     </div>
-                    <h4 className="text-xl font-bold text-gray-900">Current Deployment</h4>
+                    <h4 className="text-xl font-bold text-gray-900">
+                      Current Deployment
+                    </h4>
                   </div>
                   <div className="space-y-4">
                     <p className="text-gray-700 leading-relaxed">
-                      Experienced manpower currently deployed in different projects across multiple states:
+                      Experienced manpower currently deployed in different
+                      projects across multiple states:
                     </p>
                     <div className="grid grid-cols-2 gap-3">
                       <div className="flex items-center p-3 bg-blue-50 rounded-lg">
@@ -318,20 +362,28 @@ export default function AboutPage() {
                       </div>
                       <div className="flex items-center p-3 bg-blue-50 rounded-lg">
                         <Globe className="w-5 h-5 text-blue-600 mr-2" />
-                        <span className="font-medium text-gray-800">Chhattisgarh</span>
+                        <span className="font-medium text-gray-800">
+                          Chhattisgarh
+                        </span>
                       </div>
                       <div className="flex items-center p-3 bg-blue-50 rounded-lg">
                         <Globe className="w-5 h-5 text-blue-600 mr-2" />
-                        <span className="font-medium text-gray-800">Jharkhand</span>
+                        <span className="font-medium text-gray-800">
+                          Jharkhand
+                        </span>
                       </div>
                       <div className="flex items-center p-3 bg-blue-50 rounded-lg">
                         <Globe className="w-5 h-5 text-blue-600 mr-2" />
-                        <span className="font-medium text-gray-800">Odisha</span>
+                        <span className="font-medium text-gray-800">
+                          Odisha
+                        </span>
                       </div>
                     </div>
                     <div className="mt-4 p-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg text-white text-center">
                       <div className="text-2xl font-bold">24/7</div>
-                      <div className="text-sm opacity-90">Operations Support</div>
+                      <div className="text-sm opacity-90">
+                        Operations Support
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -347,7 +399,7 @@ export default function AboutPage() {
                     Established 2019
                   </div>
                   <div className="text-sm text-gray-600">
-                    Serving since 2007
+                    Serving since 2020
                   </div>
                 </div>
               </div>
@@ -364,7 +416,7 @@ export default function AboutPage() {
           </motion.div>
         </div>
       </section>
-  
+
       {/* Meet Our Team */}
       <section className="py-20 bg-gradient-to-br from-gray-900 to-gray-800">
         <div className="container mx-auto px-8">
@@ -377,7 +429,8 @@ export default function AboutPage() {
               Meet Our Expert Team
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experienced professionals driving innovation and excellence in every project
+              Experienced professionals driving innovation and excellence in
+              every project
             </p>
           </motion.div>
 
@@ -390,26 +443,31 @@ export default function AboutPage() {
               transition={{ delay: 0.1 }}
               className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 group">
               <div className="relative mb-6">
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-blue-500/20 group-hover:ring-blue-500/40 transition-all duration-300">
+                <div className="flex items-center justify-center rounded-full ">
+
                   <Image
                     src="/team-head.jpg"
                     alt="CEO"
                     width={128}
                     height={128}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="absolute -bottom-5 left-1/2 transform -translate-x-1/2">
-                  <div className="px-3 py-1 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs font-semibold rounded-full">
-                  CO-FOUNDER & TEAM HEAD
+                    className="h-44 w-44 rounded-full items-center ring-4 ring-blue-500/20 group-hover:ring-blue-500/40 transition-all duration-300 object-cover"
+                    />
+                    </div>
+               
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                  <div className="px-3 py-1  bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs font-semibold rounded-full">
+                    CO-FOUNDER & TEAM HEAD
                   </div>
                 </div>
               </div>
               <div className="text-center">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Wasim Akram</h3>
-                
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  Wasim Akram
+                </h3>
+
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Visionary Team Head with 15+ years of experience in IT industry and business development.
+                  Visionary Team Head with 15+ years of experience in IT
+                  industry and business development.
                 </p>
               </div>
             </motion.div>
@@ -679,50 +737,15 @@ export default function AboutPage() {
               Our Teams Across States
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Dedicated teams deployed across multiple states, delivering excellence in every project
+              Dedicated teams deployed across multiple states, delivering
+              excellence in every project
             </p>
           </motion.div>
 
           {/* Two Teams Row */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
-            
+          <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 max-w-7xl mx-auto">
             {/* Team Ramgarh */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="space-y-6">
-              {/* Team Header */}
-              <div className="text-center">
-                <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 backdrop-blur-sm border border-orange-500/30 rounded-full text-orange-600 mb-4">
-                  <Globe className="w-4 h-4 mr-2" />
-                  <span className="font-semibold text-sm">TEAM RAMGARH</span>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">Jharkhand Operations</h3>
-                <p className="text-gray-600">
-                  Data collection and survey operations team
-                </p>
-              </div>
 
-              {/* Single Image */}
-              <div className="relative h-80 overflow-hidden group cursor-pointer">
-                <Image
-                  src="https://scontent.fpat2-5.fna.fbcdn.net/v/t39.30808-6/470192634_466492003141344_7800479170594568180_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=8n-k2ItT_ikQ7kNvwFrc2ff&_nc_oc=Adl_o1uBM-_KjBrHLESMf4iunmKQ9Yi0z5_VKwUgFAf5O4DGciYU60Ba99K7mAAAiA2vJ64_h6_HV5RvGCmcofhW&_nc_zt=23&_nc_ht=scontent.fpat2-5.fna&_nc_gid=ZPz5jDFXgDAIQLGSNua_8Q&oh=00_AfMn_vXdNuYnMxvGEj9LL42MbEVOyYHu5bVwMBmAe7hNVw&oe=6863FECD"
-                  alt="Team Ramgarh Operations"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-6 left-6 right-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h4 className="text-lg font-bold mb-2">Team Ramgarh in Action</h4>
-                  <p className="text-sm text-gray-200">
-                    Field operations and project execution
-                  </p>
-                </div>
-              </div>
-
-          
-            </motion.div>
 
             {/* Team A G Office Ranchi */}
             <motion.div
@@ -736,15 +759,17 @@ export default function AboutPage() {
                   <Globe className="w-4 h-4 mr-2" />
                   <span className="font-semibold text-sm">TEAM A G OFFICE</span>
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-3">Ranchi Headquarters</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  Ranchi Headquarters
+                </h3>
                 <p className="text-gray-600">
                   Administrative and coordination team
                 </p>
               </div>
 
               {/* Two Images Grid */}
-              <div className="space-y-4">
-                <div className="relative h-40 overflow-hidden group cursor-pointer">
+              <div className=" grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="relative h-80 overflow-hidden group cursor-pointer">
                   <Image
                     src="https://scontent.fpat2-7.fna.fbcdn.net/v/t39.30808-6/470076772_464414946682383_2720910171639936896_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=KyGbN06EjwsQ7kNvwF7GfCu&_nc_oc=Adl6XT_UwwEO5HLvJsjLWIx6fWI2O3KwMuF-d2gitM7XRfU7fsy4EjhWiYAfR08e033vggfM7rVUQbAjG_X6oWar&_nc_zt=23&_nc_ht=scontent.fpat2-7.fna&_nc_gid=s2Jg_HH_LqeJBft9sQGNxg&oh=00_AfNbqQmqQZdfp35gMj8gqdoTFxKilZLdgkR3j9aZvixcJg&oe=68640F9B"
                     alt="A G Office Team - Office Operations"
@@ -754,11 +779,13 @@ export default function AboutPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <h5 className="font-semibold mb-1">Office Operations</h5>
-                    <p className="text-xs text-gray-200">Administrative coordination</p>
+                    <p className="text-xs text-gray-200">
+                      Administrative coordination
+                    </p>
                   </div>
                 </div>
 
-                <div className="relative h-40 overflow-hidden group cursor-pointer">
+                <div className="relative h-80 overflow-hidden group cursor-pointer">
                   <Image
                     src="https://scontent.fpat2-4.fna.fbcdn.net/v/t39.30808-6/470120974_464414716682406_7699217653799957253_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=AS8PG2uu4XIQ7kNvwHa0BcO&_nc_oc=AdkU34q19YoPyrjHSLe_dUp2xEMQM8kV32oiv_hxVEi-ETYQv2fafJUbLzkA6OsdrgKjkFe4fRH-xRpwLOvez5if&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&_nc_gid=s2Jg_HH_LqeJBft9sQGNxg&oh=00_AfPP2fRxWgGf-pqT5f8FJuRkh4wSNDEgbqnQ8WQWxm50jA&oe=6864062E"
                     alt="A G Office Team - Team Collaboration"
@@ -768,28 +795,28 @@ export default function AboutPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <h5 className="font-semibold mb-1">Team Collaboration</h5>
-                    <p className="text-xs text-gray-200">Strategic planning session</p>
+                    <p className="text-xs text-gray-200">
+                      Strategic planning session
+                    </p>
                   </div>
                 </div>
               </div>
-
-             
             </motion.div>
-          </div>
-
           {/* Team Chhattisgarh - Full Width Row */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-16 max-w-4xl mx-auto">
+            className="mt-16 ">
             {/* Team Header */}
             <div className="text-center mb-8">
               <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-teal-500/20 backdrop-blur-sm border border-green-500/30 rounded-full text-green-600 mb-4">
                 <Globe className="w-4 h-4 mr-2" />
                 <span className="font-semibold text-sm">TEAM CHHATTISGARH</span>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">Regional Operations</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                Regional Operations
+              </h3>
               <p className="text-gray-600">
                 Multi-state coordination and project management team
               </p>
@@ -807,7 +834,9 @@ export default function AboutPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <h5 className="font-semibold mb-1">Field Operations</h5>
-                  <p className="text-xs text-gray-200">Data collection and surveys</p>
+                  <p className="text-xs text-gray-200">
+                    Data collection and surveys
+                  </p>
                 </div>
               </div>
 
@@ -821,13 +850,15 @@ export default function AboutPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <h5 className="font-semibold mb-1">Team Coordination</h5>
-                  <p className="text-xs text-gray-200">Project planning and execution</p>
+                  <p className="text-xs text-gray-200">
+                    Project planning and execution
+                  </p>
                 </div>
               </div>
 
               <div className="relative h-64 overflow-hidden group cursor-pointer">
                 <Image
-                  src="https://scontent.fpat2-4.fna.fbcdn.net/v/t39.30808-6/487397164_3051877938314693_5880860208558751064_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=bWEFxiS6rz8Q7kNvwFoXnqz&_nc_oc=AdnqbAYzyXZ7VwoXXIvMwGvWAagEYB0EdiMqgbbEnHX95i4it0OjkQon1c4ccB9zYjaumg95eodEG9KGB1qmOjv7&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&_nc_gid=s2Jg_HH_LqeJBft9sQGNxg&oh=00_AfOJaenL_N4bc5YyxVdzY46-NVDDzRc36ufBN8IoJ2Ca4Q&oe=6863FD7F"
+                  src="https://scontent.fpat2-5.fna.fbcdn.net/v/t39.30808-6/470192634_466492003141344_7800479170594568180_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=8n-k2ItT_ikQ7kNvwFrc2ff&_nc_oc=Adl_o1uBM-_KjBrHLESMf4iunmKQ9Yi0z5_VKwUgFAf5O4DGciYU60Ba99K7mAAAiA2vJ64_h6_HV5RvGCmcofhW&_nc_zt=23&_nc_ht=scontent.fpat2-5.fna&_nc_gid=ZPz5jDFXgDAIQLGSNua_8Q&oh=00_AfMn_vXdNuYnMxvGEj9LL42MbEVOyYHu5bVwMBmAe7hNVw&oe=6863FECD"
                   alt="Team Chhattisgarh - Strategic Planning"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -839,23 +870,25 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
-
-           
           </motion.div>
+          </div>
+
 
           {/* Team Bhubaneshwar - Full Width Row */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-16 max-w-4xl mx-auto">
+            className="mt-16  mx-auto">
             {/* Team Header */}
             <div className="text-center mb-8">
               <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-indigo-500/20 backdrop-blur-sm border border-purple-500/30 rounded-full text-purple-600 mb-4">
                 <Globe className="w-4 h-4 mr-2" />
                 <span className="font-semibold text-sm">TEAM BHUBANESHWAR</span>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">Odisha Operations</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                Odisha Operations
+              </h3>
               <p className="text-gray-600">
                 Regional development and implementation team
               </p>
@@ -873,7 +906,9 @@ export default function AboutPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <h5 className="font-semibold mb-1">Project Management</h5>
-                  <p className="text-xs text-gray-200">Strategic oversight and coordination</p>
+                  <p className="text-xs text-gray-200">
+                    Strategic oversight and coordination
+                  </p>
                 </div>
               </div>
 
@@ -887,7 +922,9 @@ export default function AboutPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <h5 className="font-semibold mb-1">Team Collaboration</h5>
-                  <p className="text-xs text-gray-200">Cross-functional teamwork</p>
+                  <p className="text-xs text-gray-200">
+                    Cross-functional teamwork
+                  </p>
                 </div>
               </div>
 
@@ -900,13 +937,15 @@ export default function AboutPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h5 className="font-semibold mb-1">Technical Implementation</h5>
-                  <p className="text-xs text-gray-200">Solution development and deployment</p>
+                  <h5 className="font-semibold mb-1">
+                    Technical Implementation
+                  </h5>
+                  <p className="text-xs text-gray-200">
+                    Solution development and deployment
+                  </p>
                 </div>
               </div>
             </div>
-
-          
           </motion.div>
         </div>
       </section>
@@ -962,7 +1001,8 @@ export default function AboutPage() {
               Our Office Locations
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Visit us at our professional offices for consultations and business discussions
+              Visit us at our professional offices for consultations and
+              business discussions
             </p>
           </motion.div>
 
@@ -975,37 +1015,73 @@ export default function AboutPage() {
               className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 border-l-4 border-blue-500">
               <div className="flex items-start mb-6">
                 <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                  <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  <svg
+                    className="w-6 h-6 text-blue-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                    />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Corporate Office</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    Corporate Office
+                  </h3>
                   <div className="inline-flex items-center px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">
                     Primary Location
                   </div>
                 </div>
               </div>
-              
+
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <svg className="w-5 h-5 text-gray-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <svg
+                    className="w-5 h-5 text-gray-500 mr-3 mt-1 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
                   </svg>
                   <div>
                     <p className="text-gray-900 font-medium mb-1">Address:</p>
                     <p className="text-gray-700 leading-relaxed">
-                      Shop No 08, 2nd Floor, Mukti Tower,<br />
-                      Opposite Ashoka Hotel, Circular Road,<br />
+                      Shop No 08, 2nd Floor, Mukti Tower,
+                      <br />
+                      Opposite Ashoka Hotel, Circular Road,
+                      <br />
                       Ranchi, Jharkhand - 834001
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-center">
-                  <svg className="w-5 h-5 text-gray-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  <svg
+                    className="w-5 h-5 text-gray-500 mr-3 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    />
                   </svg>
                   <div>
                     <p className="text-gray-900 font-medium">Phone:</p>
@@ -1014,8 +1090,17 @@ export default function AboutPage() {
                 </div>
 
                 <div className="flex items-center">
-                  <svg className="w-5 h-5 text-gray-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  <svg
+                    className="w-5 h-5 text-gray-500 mr-3 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
                   </svg>
                   <div>
                     <p className="text-gray-900 font-medium">Email:</p>
@@ -1025,8 +1110,17 @@ export default function AboutPage() {
 
                 <div className="mt-6 pt-6 border-t border-gray-200">
                   <div className="flex items-center text-sm text-gray-600">
-                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <svg
+                      className="w-4 h-4 mr-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
                     </svg>
                     <span>Business Hours: Mon-Sat 9:00 AM - 6:00 PM</span>
                   </div>
@@ -1042,36 +1136,71 @@ export default function AboutPage() {
               className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 border-l-4 border-green-500">
               <div className="flex items-start mb-6">
                 <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
-                  <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  <svg
+                    className="w-6 h-6 text-green-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                    />
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Branch Office</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    Branch Office
+                  </h3>
                   <div className="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
                     Regional Office
                   </div>
                 </div>
               </div>
-              
+
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <svg className="w-5 h-5 text-gray-500 mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <svg
+                    className="w-5 h-5 text-gray-500 mr-3 mt-1 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
                   </svg>
                   <div>
                     <p className="text-gray-900 font-medium mb-1">Address:</p>
                     <p className="text-gray-700 leading-relaxed">
-                      Near L S College, Muzaffarpur,<br />
+                      Near L S College, Muzaffarpur,
+                      <br />
                       Bihar - 842001
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-center">
-                  <svg className="w-5 h-5 text-gray-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  <svg
+                    className="w-5 h-5 text-gray-500 mr-3 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    />
                   </svg>
                   <div>
                     <p className="text-gray-900 font-medium">Phone:</p>
@@ -1080,8 +1209,17 @@ export default function AboutPage() {
                 </div>
 
                 <div className="flex items-center">
-                  <svg className="w-5 h-5 text-gray-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  <svg
+                    className="w-5 h-5 text-gray-500 mr-3 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
                   </svg>
                   <div>
                     <p className="text-gray-900 font-medium">Email:</p>
@@ -1091,8 +1229,17 @@ export default function AboutPage() {
 
                 <div className="mt-6 pt-6 border-t border-gray-200">
                   <div className="flex items-center text-sm text-gray-600">
-                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <svg
+                      className="w-4 h-4 mr-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
                     </svg>
                     <span>Business Hours: Mon-Sat 9:00 AM - 6:00 PM</span>
                   </div>
@@ -1112,19 +1259,38 @@ export default function AboutPage() {
                 Get in Touch
               </h3>
               <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-                Have questions about our services? Ready to start your next project? 
-                Our team is here to help you achieve your business goals.
+                Have questions about our services? Ready to start your next
+                project? Our team is here to help you achieve your business
+                goals.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center">
-                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  <svg
+                    className="w-4 h-4 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    />
                   </svg>
                   Call Us Now
                 </button>
                 <button className="px-6 py-3 border border-gray-300 text-gray-700 font-semibold rounded-full hover:bg-gray-50 transition-all duration-300 flex items-center justify-center">
-                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  <svg
+                    className="w-4 h-4 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
                   </svg>
                   Send Email
                 </button>

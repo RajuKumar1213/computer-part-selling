@@ -42,8 +42,8 @@ export function AboutSection() {
               </p>
               <p className="text-sm lg:text-base text-gray-600 leading-relaxed mb-4 text-center lg:text-left">
                 Although formally started in <strong>2019</strong>, we have been
-                serving the IT industry since <strong>2007</strong>
-                across{" "}
+                serving the IT industry since <strong>2020</strong>
+                {" "}across{" "}
                 <strong>
                   Chhattisgarh, Odisha, Uttar Pradesh, Rajasthan, Bihar, and
                   Jharkhand
@@ -121,8 +121,8 @@ export function AboutSection() {
             {/* Floating Elements */}
             <div className="absolute -top-4 -right-4 w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center shadow-lg">
               <div className="text-white text-center">
-                <div className="text-sm font-bold">2007</div>
                 <div className="text-xs">Since</div>
+                <div className="text-sm font-bold">2020</div>
               </div>
             </div>
           </motion.div>

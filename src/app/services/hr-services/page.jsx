@@ -238,7 +238,7 @@ export default function HRServicesPage() {
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="/products/wvjyau3spijzdfmxtvpx.webp"
+                  src="https://imgs.search.brave.com/Z2rhzNY31By9r9ZO-OA9PUnj0JfA-3DQTcdPgyJ7OT0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAzLzI1LzkxLzg1/LzM2MF9GXzMyNTkx/ODUzMF8wTUZRRTN2/c3VhSVc4VzlLYjQ3/ZkhZVFVCUk12WnFF/UC5qcGc"
                   alt="HR Services Team"
                   className="w-full h-[400px] object-cover"
                 />

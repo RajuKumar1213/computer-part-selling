@@ -12,7 +12,10 @@ const navItems = [
     name: "Services",
     href: "/services",
     submenu: [
-      { name: "Scanning Digitization", href: "/services/scanning-digitization" },
+      {
+        name: "Scanning Digitization",
+        href: "/services/scanning-digitization",
+      },
       { name: "GIS Survey", href: "/services/gis-survey" },
       { name: "Baseline Survey", href: "/services/baseline-survey" },
       { name: "AMC FMC", href: "/services/amc-fmc" },
@@ -45,7 +48,7 @@ export function Header() {
           </div>
           <div className="hidden md:block">
             <span className="text-xs">
-              Professional IT Services | Since 2007
+              Professional IT Services | Since 2020
             </span>
           </div>
         </div>

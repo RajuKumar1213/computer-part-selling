@@ -76,7 +76,7 @@ export function Footer() {
                 Sagacious Global Services
               </h3>              <p className="text-gray-400 mb-6 leading-relaxed text-sm">
                 A team of professionals delivering quality IT solutions in Data Processing, Database Administration, 
-                Software Development, Web Designing, and Back Office Activities since 2007. Truly Partnered in IT Excellence.
+                Software Development, Web Designing, and Back Office Activities since 2020. Truly Partnered in IT Excellence.
               </p>
               
               {/* Social Links */}
