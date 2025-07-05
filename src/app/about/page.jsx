@@ -406,7 +406,7 @@ export default function AboutPage() {
                 </div>
               </div>
               <div className="text-center">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Wasim Khan</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Wasim Akram</h3>
                 
                 <p className="text-gray-600 text-sm leading-relaxed">
                   Visionary Team Head with 15+ years of experience in IT industry and business development.
