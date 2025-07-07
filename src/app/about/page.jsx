@@ -221,8 +221,7 @@ export default function AboutPage() {
                     Sagacious Global Services but we are serving the IT industry
                     since 2020, in Chhattisgarh, Odisha, Uttar Pradesh,
                     Rajasthan, Bihar and Jharkhand. Our team has served many
-                    companies in several projects such as MG-NREGA, UID, 
-                    NPR, FINANCIAL INCLUSION, AAJEEVIKA etc from
+                    companies in several projects from
                     government & non-government organizations to handle their
                     IT/ITES Operations.
                   </p>
