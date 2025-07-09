@@ -224,50 +224,14 @@ export function Footer() {
         </div>
       </div>
 
-      {/* Newsletter */}
-      <div className="border-t border-gray-800">
-        <div className="container mx-auto px-4 py-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="flex flex-col md:flex-row items-center justify-between"
-          >
-            <div className="mb-4 md:mb-0">
-              <h4 className="text-lg font-semibold mb-2">Stay Updated</h4>
-              <p className="text-gray-400">Get the latest updates on new products and services.</p>
-            </div>
-            <div className="flex w-full md:w-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 md:w-80 px-4 py-3 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-              />
-              <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-r-lg transition-colors duration-300 flex items-center">
-                <ArrowRight className="w-4 h-4" />
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </div>
+     
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between text-sm text-gray-400">
-            <p>© 2024 Sagacious Global Services. All rights reserved.</p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="/privacy" className="hover:text-white transition-colors duration-300">
-                Privacy Policy
-              </a>
-              <a href="/terms" className="hover:text-white transition-colors duration-300">
-                Terms of Service
-              </a>
-              <a href="/cookies" className="hover:text-white transition-colors duration-300">
-                Cookie Policy
-              </a>
-            </div>
+            <p>© {new Date().getFullYear()} Sagacious Global Services. All rights reserved.</p>
+            
           </div>
         </div>
       </div>

@@ -246,9 +246,9 @@ export default function ScanningDigitizationPage() {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="relative h-96 bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl overflow-hidden shadow-2xl">
+              <div className="relative h-fit bg-gradient-to-br from-blue-500 to-blue-600 rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  src="https://m.media-amazon.com/images/I/61oW+KCrRIL._AC_SL1500_.jpg"
                   alt="Document Scanning Process"
                   className="w-full h-full object-cover"
                 />

@@ -727,7 +727,7 @@ export default function ContactPage() {
               className="bg-white dark:bg-gray-900 p-4 rounded-2xl shadow-lg overflow-hidden"
             >
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3662.123456789!2d85.32826!3d23.33591!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDIwJzA5LjMiTiA4NcKwMTknNDEuNyJF!5e0!3m2!1sen!2sin!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2656.904953916792!2d85.32729189999999!3d23.3382173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f4e1b8ed3834c1%3A0xb826362808ac6566!2s88QG%2B6VG%2C%20Jain%20Mandir%20Rd%2C%20Kusai%2C%20Ranchi%2C%20Jharkhand%20834002!5e1!3m2!1sen!2sin!4v1752042861745!5m2!1sen!2sin"
                 width="100%"
                 height="450"
                 style={{ border: 0 }}

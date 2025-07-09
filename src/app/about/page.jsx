@@ -18,66 +18,19 @@ import { Footer } from "@/components/Footer";
 import Image from "next/image";
 
 export default function AboutPage() {
-  const services = [
-    {
-      name: "GIS Survey",
-      icon: "🗺️",
-      color: "bg-orange-500",
-      image: "/products/i9-13900k.jpg",
-      description:
-        "Advanced GIS survey solutions for accurate geographical data collection and mapping",
-    },
-    {
-      name: "Scanning Digitization",
-      icon: "📱",
-      color: "bg-orange-500",
-      image: "/products/rtx-4090.jpg",
-      description:
-        "High-quality document scanning and digitization services for seamless data conversion",
-    },
-    {
-      name: "Baseline Survey",
-      icon: "📊",
-      color: "bg-orange-500",
-      image: "/products/samsung-980-pro.jpg",
-      description:
-        "Comprehensive baseline surveys for project planning and development",
-    },
-    {
-      name: "AMC FMS",
-      icon: "🔧",
-      color: "bg-orange-500",
-      image: "/products/cnf2mtmgpphphnkxhzxw.webp",
-      description:
-        "Annual Maintenance Contract and Facility Management Services",
-    },
-    {
-      name: "Software Development",
-      icon: "💻",
-      color: "bg-orange-500",
-      image: "/products/nscogempbmq9invpa0xz.webp",
-      description:
-        "Custom software development solutions tailored to your business needs",
-    },
-    {
-      name: "HR Services",
-      icon: "👥",
-      color: "bg-orange-500",
-      image: "/products/wvjyau3spijzdfmxtvpx.webp",
-      description:
-        "Professional HR services including recruitment, training, and management",
-    },
-  ];
-
   const achievements = [
-    { value: "16+", label: "Years Experience", desc: "Serving since 2020" },
+    {
+      value: `${new Date().getFullYear() - 2020}`,
+      label: "Years Experience",
+      desc: "Serving since 2020",
+    },
     { value: "6", label: "States Coverage", desc: "Multi-state operations" },
     {
-      value: "500+",
+      value: "7+",
       label: "Projects Delivered",
       desc: "Successful completions",
     },
-    { value: "50+", label: "Happy Clients", desc: "Trusted partnerships" },
+    { value: "5+", label: "Happy Clients", desc: "Trusted partnerships" },
   ];
 
   const whyChooseUs = [
@@ -221,9 +174,9 @@ export default function AboutPage() {
                     Sagacious Global Services but we are serving the IT industry
                     since 2020, in Chhattisgarh, Odisha, Uttar Pradesh,
                     Rajasthan, Bihar and Jharkhand. Our team has served many
-                    companies in several projects from
-                    government & non-government organizations to handle their
-                    IT/ITES Operations.
+                    companies in several projects from government &
+                    non-government organizations to handle their IT/ITES
+                    Operations.
                   </p>
                   <p>
                     We are a group of young, dynamic and committed individuals,
@@ -443,16 +396,15 @@ export default function AboutPage() {
               className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 group">
               <div className="relative mb-6">
                 <div className="flex items-center justify-center rounded-full ">
-
                   <Image
                     src="/team-head.jpg"
                     alt="CEO"
                     width={128}
                     height={128}
                     className="h-44 w-44 rounded-full items-center ring-4 ring-blue-500/20 group-hover:ring-blue-500/40 transition-all duration-300 object-cover"
-                    />
-                    </div>
-               
+                  />
+                </div>
+
                 <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
                   <div className="px-3 py-1  bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs font-semibold rounded-full">
                     CO-FOUNDER & TEAM HEAD
@@ -465,235 +417,154 @@ export default function AboutPage() {
                 </h3>
 
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Visionary Team Head with 15+ years of experience in IT
+                  Innovative Team Head driving strategic growth in the IT
                   industry and business development.
                 </p>
               </div>
             </motion.div>
 
-            {/* CTO */}
-            {/* <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 group">
-              <div className="relative mb-6">
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-green-500/20 group-hover:ring-green-500/40 transition-all duration-300">
-                  <Image
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
-                    alt="CTO"
-                    width={128}
-                    height={128}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
-                  <div className="px-3 py-1 bg-gradient-to-r from-green-500 to-teal-600 text-white text-xs font-semibold rounded-full">
-                    CTO
-                  </div>
-                </div>
-              </div>
-              <div className="text-center">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Amit Sharma</h3>
-                <p className="text-sm text-green-600 font-medium mb-3">Chief Technology Officer</p>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Technology expert specializing in software architecture and digital transformation.
-                </p>
-              </div>
-            </motion.div> */}
+            {/* project leader 1 */}
 
-            {/* Project Manager */}
-            {/* <motion.div
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
+              transition={{ delay: 0.1 }}
               className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 group">
               <div className="relative mb-6">
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-purple-500/20 group-hover:ring-purple-500/40 transition-all duration-300">
+                <div className="flex items-center justify-center rounded-full ">
                   <Image
-                    src="https://images.unsplash.com/photo-1494790108755-2616b612b77c?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
-                    alt="Project Manager"
+                    src="/project-leader.jpg"
+                    alt="Project Leader"
                     width={128}
                     height={128}
-                    className="w-full h-full object-cover"
+                    className="h-44 w-44 rounded-full items-center ring-4 ring-blue-500/20 group-hover:ring-blue-500/40 transition-all duration-300 object-cover"
                   />
                 </div>
-                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
-                  <div className="px-3 py-1 bg-gradient-to-r from-purple-500 to-pink-600 text-white text-xs font-semibold rounded-full">
-                    PM
-                  </div>
-                </div>
-              </div>
-              <div className="text-center">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Priya Singh</h3>
-                <p className="text-sm text-purple-600 font-medium mb-3">Senior Project Manager</p>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Expert in managing large-scale government and enterprise projects across multiple states.
-                </p>
-              </div>
-            </motion.div> */}
 
-            {/* Team Lead - Development */}
-            {/* <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-              className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 group">
-              <div className="relative mb-6">
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-orange-500/20 group-hover:ring-orange-500/40 transition-all duration-300">
-                  <Image
-                    src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
-                    alt="Development Team Lead"
-                    width={128}
-                    height={128}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
                 <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
-                  <div className="px-3 py-1 bg-gradient-to-r from-orange-500 to-red-600 text-white text-xs font-semibold rounded-full">
-                    LEAD
+                  <div className="px-3 py-1 text-center  bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs font-semibold rounded-full">
+                    PROJECT LEADER
                   </div>
                 </div>
               </div>
               <div className="text-center">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Vikash Gupta</h3>
-                <p className="text-sm text-orange-600 font-medium mb-3">Development Team Lead</p>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Leading development team with expertise in full-stack technologies and system architecture.
-                </p>
-              </div>
-            </motion.div> */}
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  Manish Lathiya
+                </h3>
 
-            {/* GIS Specialist */}
-            {/* <motion.div
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Visionary Project Leader driving innovation across the IT
+                  industry and business development
+                </p>
+              </div>
+            </motion.div>
+            {/* Project Leader 2 */}
+          </div>
+          <h1 className="text-white text-3xl font-semibold mt-8 text-center">
+            WFM Team
+          </h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-8 mt-8">
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.5 }}
+              transition={{ delay: 0.1 }}
               className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 group">
               <div className="relative mb-6">
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-cyan-500/20 group-hover:ring-cyan-500/40 transition-all duration-300">
+                <div className="flex items-center justify-center rounded-full ">
                   <Image
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
-                    alt="GIS Specialist"
+                    src="/sushmita.jpg"
+                    alt="Project Leader"
                     width={128}
                     height={128}
-                    className="w-full h-full object-cover"
+                    className="h-44 w-44 rounded-full items-center ring-4 ring-blue-500/20 group-hover:ring-blue-500/40 transition-all duration-300 object-cover"
                   />
                 </div>
-                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
-                  <div className="px-3 py-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs font-semibold rounded-full">
-                    GIS
-                  </div>
-                </div>
-              </div>
-              <div className="text-center">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Sneha Patel</h3>
-                <p className="text-sm text-cyan-600 font-medium mb-3">Senior GIS Specialist</p>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Expert in geographical information systems, mapping, and spatial data analysis.
-                </p>
-              </div>
-            </motion.div> */}
 
-            {/* HR Manager */}
-            {/* <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.6 }}
-              className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 group">
-              <div className="relative mb-6">
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-pink-500/20 group-hover:ring-pink-500/40 transition-all duration-300">
-                  <Image
-                    src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
-                    alt="HR Manager"
-                    width={128}
-                    height={128}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
                 <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
-                  <div className="px-3 py-1 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs font-semibold rounded-full">
-                    HR
+                  <div className="px-3 py-1 text-center  bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs font-semibold rounded-full">
+                    WFM
                   </div>
                 </div>
               </div>
               <div className="text-center">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Anita Kumari</h3>
-                <p className="text-sm text-pink-600 font-medium mb-3">HR Manager</p>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Managing human resources, recruitment, and training programs for multi-state operations.
-                </p>
-              </div>
-            </motion.div> */}
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  Sushmita
+                </h3>
 
-            {/* Data Analyst */}
-            {/* <motion.div
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Dedicated WFM professional ensuring optimal workforce
+                  management and operational efficiency.
+                </p>
+              </div>
+            </motion.div>
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.7 }}
+              transition={{ delay: 0.1 }}
               className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 group">
               <div className="relative mb-6">
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-indigo-500/20 group-hover:ring-indigo-500/40 transition-all duration-300">
+                <div className="flex items-center justify-center rounded-full ">
                   <Image
-                    src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
-                    alt="Data Analyst"
+                    src="/jyoti.jpg"
+                    alt="Project Leader"
                     width={128}
                     height={128}
-                    className="w-full h-full object-cover"
+                    className="h-44 w-44 rounded-full items-center ring-4 ring-blue-500/20 group-hover:ring-blue-500/40 transition-all duration-300 object-cover"
                   />
                 </div>
-                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
-                  <div className="px-3 py-1 bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-xs font-semibold rounded-full">
-                    DATA
-                  </div>
-                </div>
-              </div>
-              <div className="text-center">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Rohit Jha</h3>
-                <p className="text-sm text-indigo-600 font-medium mb-3">Senior Data Analyst</p>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  Specializing in data processing, analytics, and database management for large-scale projects.
-                </p>
-              </div>
-            </motion.div> */}
 
-            {/* Quality Assurance */}
-            {/* <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.8 }}
-              className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 group">
-              <div className="relative mb-6">
-                <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden ring-4 ring-teal-500/20 group-hover:ring-teal-500/40 transition-all duration-300">
-                  <Image
-                    src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
-                    alt="Quality Assurance Lead"
-                    width={128}
-                    height={128}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
                 <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
-                  <div className="px-3 py-1 bg-gradient-to-r from-teal-500 to-green-600 text-white text-xs font-semibold rounded-full">
-                    QA
+                  <div className="px-3 py-1 text-center  bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs font-semibold rounded-full">
+                    WFM
                   </div>
                 </div>
               </div>
               <div className="text-center">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Kavita Singh</h3>
-                <p className="text-sm text-teal-600 font-medium mb-3">QA Team Lead</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Jyoti</h3>
+
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Ensuring quality standards and testing protocols across all project deliverables.
+                  Dedicated WFM professional ensuring optimal workforce
+                  management and operational efficiency.
                 </p>
               </div>
-            </motion.div> */}
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 group">
+              <div className="relative mb-6">
+                <div className="flex items-center justify-center rounded-full ">
+                  <Image
+                    src="/lokeshwar.jpg"
+                    alt="Project Leader"
+                    width={128}
+                    height={128}
+                    className="h-44 w-44 rounded-full items-center ring-4 ring-blue-500/20 group-hover:ring-blue-500/40 transition-all duration-300 object-cover"
+                  />
+                </div>
+
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                  <div className="px-3 py-1 text-center  bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs font-semibold rounded-full">
+                    WFM
+                  </div>
+                </div>
+              </div>
+              <div className="text-center">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  Lokeshwar
+                </h3>
+
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Dedicated WFM professional ensuring optimal workforce
+                  management and operational efficiency.
+                </p>
+              </div>
+            </motion.div>
           </div>
 
           {/* Team Stats */}
@@ -744,7 +615,6 @@ export default function AboutPage() {
           {/* Two Teams Row */}
           <div className="grid grid-cols-1 lg:grid-cols-1 gap-12 max-w-7xl mx-auto">
             {/* Team Ramgarh */}
-
 
             {/* Team A G Office Ranchi */}
             <motion.div
@@ -801,77 +671,80 @@ export default function AboutPage() {
                 </div>
               </div>
             </motion.div>
-          {/* Team Chhattisgarh - Full Width Row */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mt-16 ">
-            {/* Team Header */}
-            <div className="text-center mb-8">
-              <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-teal-500/20 backdrop-blur-sm border border-green-500/30 rounded-full text-green-600 mb-4">
-                <Globe className="w-4 h-4 mr-2" />
-                <span className="font-semibold text-sm">TEAM CHHATTISGARH</span>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                Regional Operations
-              </h3>
-              <p className="text-gray-600">
-                Multi-state coordination and project management team
-              </p>
-            </div>
-
-            {/* Three Images Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-              <div className="relative h-64 overflow-hidden group cursor-pointer">
-                <Image
-                  src="https://scontent.fpat2-2.fna.fbcdn.net/v/t39.30808-6/486852070_3051877818314705_8931193882290261326_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Z_4E4m7aXJ4Q7kNvwFAFqxT&_nc_oc=AdnZkjY03ULzxOlrZ4DP6QAlhBzSGBnWbx65-gDlQ5JJz6MbhWS5bcNY2NPGZhmaQsgCbpgIRQLwGWfxCk7irojk&_nc_zt=23&_nc_ht=scontent.fpat2-2.fna&_nc_gid=s2Jg_HH_LqeJBft9sQGNxg&oh=00_AfOrCBDNoA9vjPwjHY4u8qnbS0RwZEwMJ0t_A9XnD7RvrA&oe=686403E0"
-                  alt="Team Chhattisgarh - Field Operations"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h5 className="font-semibold mb-1">Field Operations</h5>
-                  <p className="text-xs text-gray-200">
-                    Data collection and surveys
-                  </p>
+            {/* Team Chhattisgarh - Full Width Row */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mt-16 ">
+              {/* Team Header */}
+              <div className="text-center mb-8">
+                <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-teal-500/20 backdrop-blur-sm border border-green-500/30 rounded-full text-green-600 mb-4">
+                  <Globe className="w-4 h-4 mr-2" />
+                  <span className="font-semibold text-sm">
+                    TEAM CHHATTISGARH
+                  </span>
                 </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  Regional Operations
+                </h3>
+                <p className="text-gray-600">
+                  Multi-state coordination and project management team
+                </p>
               </div>
 
-              <div className="relative h-64 overflow-hidden group cursor-pointer">
-                <Image
-                  src="https://scontent.fpat2-4.fna.fbcdn.net/v/t39.30808-6/487397164_3051877938314693_5880860208558751064_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=bWEFxiS6rz8Q7kNvwFoXnqz&_nc_oc=AdnqbAYzyXZ7VwoXXIvMwGvWAagEYB0EdiMqgbbEnHX95i4it0OjkQon1c4ccB9zYjaumg95eodEG9KGB1qmOjv7&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&_nc_gid=s2Jg_HH_LqeJBft9sQGNxg&oh=00_AfOJaenL_N4bc5YyxVdzY46-NVDDzRc36ufBN8IoJ2Ca4Q&oe=6863FD7F"
-                  alt="Team Chhattisgarh - Team Meeting"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h5 className="font-semibold mb-1">Team Coordination</h5>
-                  <p className="text-xs text-gray-200">
-                    Project planning and execution
-                  </p>
+              {/* Three Images Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <div className="relative h-64 overflow-hidden group cursor-pointer">
+                  <Image
+                    src="https://scontent.fpat2-2.fna.fbcdn.net/v/t39.30808-6/486852070_3051877818314705_8931193882290261326_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Z_4E4m7aXJ4Q7kNvwFAFqxT&_nc_oc=AdnZkjY03ULzxOlrZ4DP6QAlhBzSGBnWbx65-gDlQ5JJz6MbhWS5bcNY2NPGZhmaQsgCbpgIRQLwGWfxCk7irojk&_nc_zt=23&_nc_ht=scontent.fpat2-2.fna&_nc_gid=s2Jg_HH_LqeJBft9sQGNxg&oh=00_AfOrCBDNoA9vjPwjHY4u8qnbS0RwZEwMJ0t_A9XnD7RvrA&oe=686403E0"
+                    alt="Team Chhattisgarh - Field Operations"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <h5 className="font-semibold mb-1">Field Operations</h5>
+                    <p className="text-xs text-gray-200">
+                      Data collection and surveys
+                    </p>
+                  </div>
                 </div>
-              </div>
 
-              <div className="relative h-64 overflow-hidden group cursor-pointer">
-                <Image
-                  src="https://scontent.fpat2-5.fna.fbcdn.net/v/t39.30808-6/470192634_466492003141344_7800479170594568180_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=8n-k2ItT_ikQ7kNvwFrc2ff&_nc_oc=Adl_o1uBM-_KjBrHLESMf4iunmKQ9Yi0z5_VKwUgFAf5O4DGciYU60Ba99K7mAAAiA2vJ64_h6_HV5RvGCmcofhW&_nc_zt=23&_nc_ht=scontent.fpat2-5.fna&_nc_gid=ZPz5jDFXgDAIQLGSNua_8Q&oh=00_AfMn_vXdNuYnMxvGEj9LL42MbEVOyYHu5bVwMBmAe7hNVw&oe=6863FECD"
-                  alt="Team Chhattisgarh - Strategic Planning"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <h5 className="font-semibold mb-1">Strategic Planning</h5>
-                  <p className="text-xs text-gray-200">Regional coordination</p>
+                <div className="relative h-64 overflow-hidden group cursor-pointer">
+                  <Image
+                    src="https://scontent.fpat2-4.fna.fbcdn.net/v/t39.30808-6/487397164_3051877938314693_5880860208558751064_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=bWEFxiS6rz8Q7kNvwFoXnqz&_nc_oc=AdnqbAYzyXZ7VwoXXIvMwGvWAagEYB0EdiMqgbbEnHX95i4it0OjkQon1c4ccB9zYjaumg95eodEG9KGB1qmOjv7&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&_nc_gid=s2Jg_HH_LqeJBft9sQGNxg&oh=00_AfOJaenL_N4bc5YyxVdzY46-NVDDzRc36ufBN8IoJ2Ca4Q&oe=6863FD7F"
+                    alt="Team Chhattisgarh - Team Meeting"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <h5 className="font-semibold mb-1">Team Coordination</h5>
+                    <p className="text-xs text-gray-200">
+                      Project planning and execution
+                    </p>
+                  </div>
+                </div>
+
+                <div className="relative h-64 overflow-hidden group cursor-pointer">
+                  <Image
+                    src="https://scontent.fpat2-5.fna.fbcdn.net/v/t39.30808-6/470192634_466492003141344_7800479170594568180_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=8n-k2ItT_ikQ7kNvwFrc2ff&_nc_oc=Adl_o1uBM-_KjBrHLESMf4iunmKQ9Yi0z5_VKwUgFAf5O4DGciYU60Ba99K7mAAAiA2vJ64_h6_HV5RvGCmcofhW&_nc_zt=23&_nc_ht=scontent.fpat2-5.fna&_nc_gid=ZPz5jDFXgDAIQLGSNua_8Q&oh=00_AfMn_vXdNuYnMxvGEj9LL42MbEVOyYHu5bVwMBmAe7hNVw&oe=6863FECD"
+                    alt="Team Chhattisgarh - Strategic Planning"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <h5 className="font-semibold mb-1">Strategic Planning</h5>
+                    <p className="text-xs text-gray-200">
+                      Regional coordination
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
           </div>
-
 
           {/* Team Bhubaneshwar - Full Width Row */}
           <motion.div
@@ -1181,9 +1054,8 @@ export default function AboutPage() {
                   <div>
                     <p className="text-gray-900 font-medium mb-1">Address:</p>
                     <p className="text-gray-700 leading-relaxed">
-                      Near L S College, Muzaffarpur,
-                      <br />
-                      Bihar - 842001
+                      201,2nd floor,Suman Punj, Piller no-10, <br /> Jagdeo
+                      Path,Patna-800014
                     </p>
                   </div>
                 </div>
