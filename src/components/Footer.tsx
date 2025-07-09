@@ -170,7 +170,7 @@ export function Footer() {
                     </a>
                   </li>
                 ))}
-                <div className='flex justify-between items-center px-4 bg-white rounded-md'>
+                <div className='flex md:justify-between w-fit items-center px-4 bg-white rounded-md'>
                   <li>
                     <Image
                       src="/msme.jpg"

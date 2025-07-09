@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import Link from "next/link";
 
 export default function ScanningDigitizationPage() {
   const features = [
@@ -103,7 +104,7 @@ export default function ScanningDigitizationPage() {
         </div>
 
         <div className="relative z-10 min-h-screen flex items-center">
-          <div className="container mx-auto px-8 lg:px-12 py-20">
+          <div className="container mx-auto md:px-8 px-4 lg:px-12 py-20">
             <div className="max-w-4xl mx-auto text-center">
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
@@ -166,7 +167,7 @@ export default function ScanningDigitizationPage() {
 
       {/* Features Section */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto md:px-8 px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -202,7 +203,7 @@ export default function ScanningDigitizationPage() {
 
       {/* Process Section */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto md:px-8 px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -238,7 +239,7 @@ export default function ScanningDigitizationPage() {
 
       {/* Services Grid */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto md:px-8 px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -294,7 +295,7 @@ export default function ScanningDigitizationPage() {
 
       {/* Benefits Section */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto md:px-8 px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -330,7 +331,7 @@ export default function ScanningDigitizationPage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700">
-        <div className="container mx-auto px-8 text-center">
+        <div className="container mx-auto md:px-8 px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -344,12 +345,11 @@ export default function ScanningDigitizationPage() {
               Transform your document management with our professional digitization services
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-full hover:shadow-xl transition-all duration-300">
-                Get Free Quote
-              </button>
-              <button className="px-8 py-4 border border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300">
-                Schedule Demo
-              </button>
+              <Link href="/contact" className="inline-block">
+                <button className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-full hover:shadow-xl transition-all duration-300">
+                  Get Free Quote
+                </button>
+              </Link>
             </div>
           </motion.div>
         </div>

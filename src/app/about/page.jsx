@@ -9,8 +9,6 @@ import {
   Globe,
   Target,
   Award,
-  Briefcase,
-  Star,
   TrendingUp,
 } from "lucide-react";
 import { Header } from "@/components/Header";
@@ -73,7 +71,7 @@ export default function AboutPage() {
         </div>
 
         <div className="relative z-10 min-h-screen flex items-center">
-          <div className="container mx-auto px-8 lg:px-12 py-20">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-12 py-20">
             <div className="max-w-4xl mx-auto text-center">
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
@@ -145,7 +143,7 @@ export default function AboutPage() {
       </section>
       {/* About Section */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -154,7 +152,7 @@ export default function AboutPage() {
             {/* Mission Statement */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Mission Statement Content */}
-              <div className="bg-blue-50 p-8 rounded-lg">
+              <div className="bg-blue-50 md:p-8 p-2 rounded-lg">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
                   <Target className="w-6 h-6 mr-2 text-blue-600" />
                   Mission Statement
@@ -197,7 +195,7 @@ export default function AboutPage() {
 
               {/* Mission Statement Image */}
               <div className="relative">
-                <div className="relative min-h-screen bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 rounded-2xl overflow-hidden shadow-2xl">
+                <div className="relative md:min-h-screen h-80 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-600 rounded-2xl overflow-hidden shadow-2xl">
                   <div className="absolute inset-0 bg-black/20"></div>
                   {/* Professional IT Team Image */}
                   <Image
@@ -221,7 +219,7 @@ export default function AboutPage() {
             </div>
 
             {/* Manpower & Strength */}
-            <div className="bg-gradient-to-r from-green-50 to-blue-50 p-8 rounded-2xl">
+            <div className="bg-gradient-to-r from-green-50 to-blue-50 md:p-8 p-2 rounded-2xl">
               <div className="text-center mb-8">
                 <h3 className="text-3xl font-bold text-gray-900 mb-4 flex items-center justify-center">
                   <Users className="w-8 h-8 mr-3 text-green-600" />
@@ -371,7 +369,7 @@ export default function AboutPage() {
 
       {/* Meet Our Team */}
       <section className="py-20 bg-gradient-to-br from-gray-900 to-gray-800">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto md:px-8 p-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -597,7 +595,7 @@ export default function AboutPage() {
 
       {/* State-wise Teams Gallery */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto md:px-8 px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -824,7 +822,7 @@ export default function AboutPage() {
 
       {/* Why Choose Us */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto md:px-8 px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -863,7 +861,7 @@ export default function AboutPage() {
 
       {/* Office Locations */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto md:px-8 px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}

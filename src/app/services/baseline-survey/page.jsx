@@ -103,7 +103,7 @@ export default function BaselineSurveyPage() {
         </div>
 
         <div className="relative z-10 min-h-screen flex items-center">
-          <div className="container mx-auto px-8 lg:px-12 py-20">
+          <div className="container mx-auto md:px-8 px-4 lg:px-12 py-20">
             <div className="max-w-4xl mx-auto text-center">
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
@@ -150,11 +150,11 @@ export default function BaselineSurveyPage() {
                   transition={{ delay: 0.8 }}
                   className="flex flex-col sm:flex-row gap-4 justify-center"
                 >
-                  <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-full hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center">
+                  <button className="md:px-8 px-4 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-full hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center">
                     Start Survey Project
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </button>
-                  <button className="px-8 py-4 border border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300">
+                  <button className="md:px-8 px-4 py-4 border border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300">
                     View Case Studies
                   </button>
                 </motion.div>
@@ -166,7 +166,7 @@ export default function BaselineSurveyPage() {
 
       {/* Features Section */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto md:px-8 px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -202,7 +202,7 @@ export default function BaselineSurveyPage() {
 
       {/* Methodology Section */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto md:px-8 px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -238,7 +238,7 @@ export default function BaselineSurveyPage() {
 
       {/* Services Grid */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto md:px-8 px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -294,7 +294,7 @@ export default function BaselineSurveyPage() {
 
       {/* Benefits Section */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto md:px-8 px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -330,7 +330,7 @@ export default function BaselineSurveyPage() {
 
       {/* Stats Section */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto md:px-8 px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -369,7 +369,7 @@ export default function BaselineSurveyPage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700">
-        <div className="container mx-auto px-8 text-center">
+        <div className="container mx-auto md:px-8 px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -383,10 +383,10 @@ export default function BaselineSurveyPage() {
               Get accurate baseline data for your development projects with our professional survey services
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-full hover:shadow-xl transition-all duration-300">
+              <button className="md:px-8 px-4 py-4 bg-white text-blue-600 font-semibold rounded-full hover:shadow-xl transition-all duration-300">
                 Request Proposal
               </button>
-              <button className="px-8 py-4 border border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300">
+              <button className="md:px-8 px-4 py-4 border border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300">
                 Discuss Requirements
               </button>
             </div>

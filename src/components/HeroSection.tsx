@@ -17,9 +17,9 @@ import { Button } from "./ui/Button";
 import { heroSlides } from "@/data/hero-slides";
 
 const stats = [
-  { icon: Users, value: "500+", label: "Happy Clients" },
-  { icon: Star, value: "18+", label: "Years Experience" },
-  { icon: Zap, value: "1000+", label: "Projects Delivered" },
+  { icon: Users, value: "5+", label: "Happy Clients" },
+  { icon: Star, value: `${new Date().getFullYear() - 2020}`, label: "Years Experience" },
+  { icon: Zap, value: "7+", label: "Projects Delivered" },
   { icon: Shield, value: "6", label: "States Served" },
 ];
 

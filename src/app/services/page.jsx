@@ -147,7 +147,7 @@ export default function ServicesPage() {
         </div>
 
         <div className="relative z-10 min-h-screen flex items-center">
-          <div className="container mx-auto px-8 lg:px-12 py-20">
+          <div className="container mx-auto md:px-8 px-4 lg:px-12 py-20">
             <div className="max-w-4xl mx-auto text-center">
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
@@ -188,15 +188,15 @@ export default function ServicesPage() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.8 }}
-                  className="flex flex-col sm:flex-row gap-4 justify-center">
+                  className="flex gap-4 justify-center">
                   <Link href="/contact">
-                    <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-full hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center">
+                    <button className="md:px-8 px-4 py-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-full hover:shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center">
                       Get Started
                       <ArrowRight className="w-5 h-5 ml-2" />
                     </button>
                   </Link>
                   <Link href="/about">
-                    <button className="px-8 py-4 border border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300">
+                    <button className="md:px-8 px-4 py-4 border border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300">
                       Learn More
                     </button>
                   </Link>
@@ -209,7 +209,7 @@ export default function ServicesPage() {
 
       {/* Services Grid Section */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-8">
+        <div className="container mx-auto md:px-8 px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -265,7 +265,7 @@ export default function ServicesPage() {
                   </div>
 
                   {/* Expanded Content - Slides up from bottom */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-t-2 border-blue-200/60 px-8 pt-12 pb-6 min-h-[280px] transform translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-out rounded-b-3xl shadow-lg mt-2">
+                  <div className="absolute bottom-0 left-0 right-0 bg-white/95 backdrop-blur-sm border-t-2 border-blue-200/60 md:px-8 px-4 pt-12 pb-6 min-h-[280px] transform translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-out rounded-b-3xl shadow-lg mt-2">
 
                     {/* Spacer line for visual separation */}
                     <div className="w-16 h-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full mx-auto mb-6"></div>
