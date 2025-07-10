@@ -12,7 +12,7 @@ const stats = [
   },
   {
     icon: Award,
-    number: '2007',
+    number: '2020',
     label: 'Experience Since',
     description: 'Years of industry expertise'
   },
