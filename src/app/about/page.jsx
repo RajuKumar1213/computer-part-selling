@@ -328,6 +328,12 @@ export default function AboutPage() {
                           Odisha
                         </span>
                       </div>
+                      <div className="flex items-center p-3 bg-blue-50 rounded-lg">
+                        <Globe className="w-5 h-5 text-blue-600 mr-2" />
+                        <span className="font-medium text-gray-800">
+                          Uttar Pradesh
+                        </span>
+                      </div>
                     </div>
                     <div className="mt-4 p-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg text-white text-center">
                       <div className="text-2xl font-bold">24/7</div>
