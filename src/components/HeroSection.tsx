@@ -15,10 +15,15 @@ import {
 } from "lucide-react";
 import { Button } from "./ui/Button";
 import { heroSlides } from "@/data/hero-slides";
+import Link from "next/link";
 
 const stats = [
   { icon: Users, value: "5+", label: "Happy Clients" },
-  { icon: Star, value: `${new Date().getFullYear() - 2020}`, label: "Years Experience" },
+  {
+    icon: Star,
+    value: `${new Date().getFullYear() - 2020}`,
+    label: "Years Experience",
+  },
   { icon: Zap, value: "7+", label: "Projects Delivered" },
   { icon: Shield, value: "6", label: "States Served" },
 ];
@@ -98,7 +103,9 @@ export function HeroSection() {
                 transition={{ delay: 0.2 }}
                 className="inline-flex items-center px-2 sm:px-3 py-1 bg-white/20 backdrop-blur-md border border-white/30 rounded-full text-white font-medium text-xs sm:text-sm">
                 <Zap className="w-3 h-3 mr-1 sm:mr-2" />
-                <span className="hidden sm:inline">Professional IT Services Since 2007</span>
+                <span className="hidden sm:inline">
+                  Professional IT Services Since 2007
+                </span>
                 <span className="sm:hidden">IT Services Since 2007</span>
               </motion.div>
               {/* Dynamic Heading */}
@@ -142,20 +149,24 @@ export function HeroSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
                 className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                <Button
-                  size="lg"
-                  className="group bg-blue-600 hover:bg-blue-700 text-sm sm:text-base">
-                  <span className="hidden sm:inline">Get Started Today</span>
-                  <span className="sm:hidden">Get Started</span>
-                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="border-white text-white hover:bg-white hover:text-gray-900 text-sm sm:text-base">
-                  <span className="hidden sm:inline">View Our Services</span>
-                  <span className="sm:hidden">Our Services</span>
-                </Button>
+                <Link href="/contact">
+                  <Button
+                    size="lg"
+                    className="group bg-blue-600 hover:bg-blue-700 text-sm sm:text-base">
+                    <span className="hidden sm:inline">Get Started Today</span>
+                    <span className="sm:hidden">Get Started</span>
+                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
+                <Link href="/services">
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="border-white text-white hover:bg-white hover:text-gray-900 text-sm sm:text-base">
+                    <span className="hidden sm:inline">View Our Services</span>
+                    <span className="sm:hidden">Our Services</span>
+                  </Button>
+                </Link>
               </motion.div>
               {/* Stats - Simplified for mobile */}
               <motion.div

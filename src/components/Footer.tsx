@@ -32,7 +32,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Corporate Office',
-    details: ['1st Floor, Jainul Manzil', 'Near Jain Mandir, Doranda', 'Ranchi, Jharkhand']
+    details: ['Ward No-45, First Floor, C/O , Jainul Lodge, Near Jain Mandir, Doranda, Ranchi,Jharkhand, India, 834002']
   },
   {
     icon: Phone,
@@ -62,7 +62,7 @@ export function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer */}
-      <div className="container mx-auto px-6 lg:px-8 py-16">
+      <div className="container mx-auto px-2 lg:px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 ">
           {/* Company Info */}
           <div className="lg:col-span-2">
@@ -74,7 +74,8 @@ export function Footer() {
             >
               <h3 className="text-2xl font-bold mb-4">
                 Sagacious Global Services
-              </h3>              <p className="text-gray-400 mb-6 leading-relaxed text-sm">
+              </h3>             
+               <p className="text-gray-400 mb-6 leading-relaxed text-sm">
                 A team of professionals delivering quality IT solutions in Data Processing, Database Administration, 
                 Software Development, Web Designing, and Back Office Activities since 2020. Truly Partnered in IT Excellence.
               </p>
@@ -107,7 +108,7 @@ export function Footer() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <h4 className="text-lg font-semibold mb-6">Services</h4>
+              <h4 className="text-md font-semibold mb-6">Services</h4>
               <ul className="space-y-3">
                 {footerLinks.services.map((link, index) => (
                   <li key={index}>
@@ -150,7 +151,7 @@ export function Footer() {
           </div>
 
           {/* Support */}
-          <div>
+          <div className='md:relative md:-left-14'>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -194,7 +195,7 @@ export function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div>
+          <div className='md:relative md:-left-14'>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

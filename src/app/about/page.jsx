@@ -992,11 +992,7 @@ export default function AboutPage() {
                   <div>
                     <p className="text-gray-900 font-medium mb-1">Address:</p>
                     <p className="text-gray-700 leading-relaxed">
-                      Shop No 08, 2nd Floor, Mukti Tower,
-                      <br />
-                      Opposite Ashoka Hotel, Circular Road,
-                      <br />
-                      Ranchi, Jharkhand - 834001
+                      Ward No-45, First Floor, C/O , Jainul Lodge, Near Jain Mandir, Doranda, Ranchi,Jharkhand, India, 834002
                     </p>
                   </div>
                 </div>
@@ -1016,7 +1012,7 @@ export default function AboutPage() {
                   </svg>
                   <div>
                     <p className="text-gray-900 font-medium">Phone:</p>
-                    <p className="text-gray-700">+91 9308899616</p>
+                    <p className="text-gray-700">+91 9835439197</p>
                   </div>
                 </div>
 
@@ -1035,7 +1031,7 @@ export default function AboutPage() {
                   </svg>
                   <div>
                     <p className="text-gray-900 font-medium">Email:</p>
-                    <p className="text-gray-700">info@sagaciousglobal.com</p>
+                    <p className="text-gray-700">sagaciousglobals@gmail.com</p>
                   </div>
                 </div>
 
@@ -1134,7 +1130,7 @@ export default function AboutPage() {
                   </svg>
                   <div>
                     <p className="text-gray-900 font-medium">Phone:</p>
-                    <p className="text-gray-700">+91 8969222014</p>
+                    <p className="text-gray-700">+91 7879518211</p>
                   </div>
                 </div>
 
@@ -1153,7 +1149,7 @@ export default function AboutPage() {
                   </svg>
                   <div>
                     <p className="text-gray-900 font-medium">Email:</p>
-                    <p className="text-gray-700">branch@sagaciousglobal.com</p>
+                    <p className="text-gray-700">sagaciousglobals@gmail.com</p>
                   </div>
                 </div>
 
@@ -1194,7 +1190,7 @@ export default function AboutPage() {
                 goals.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center">
+                <a href="tel:+917879518211" className="px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-full hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center">
                   <svg
                     className="w-4 h-4 mr-2"
                     fill="none"
@@ -1208,8 +1204,8 @@ export default function AboutPage() {
                     />
                   </svg>
                   Call Us Now
-                </button>
-                <button className="px-6 py-3 border border-gray-300 text-gray-700 font-semibold rounded-full hover:bg-gray-50 transition-all duration-300 flex items-center justify-center">
+                </a>
+                <a href="mailto:branch@sagaciousglobal.com" className="px-6 py-3 border border-gray-300 text-gray-700 font-semibold rounded-full hover:bg-gray-50 transition-all duration-300 flex items-center justify-center">
                   <svg
                     className="w-4 h-4 mr-2"
                     fill="none"
@@ -1223,39 +1219,14 @@ export default function AboutPage() {
                     />
                   </svg>
                   Send Email
-                </button>
+                </a>
               </div>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Contact CTA */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="container mx-auto px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="max-w-3xl mx-auto">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Let's discuss how Sagacious Global Services can help drive your
-              digital transformation
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-full hover:shadow-xl transition-all duration-300">
-                Get Started Today
-              </button>
-              <button className="px-8 py-4 border border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300">
-                Schedule Consultation
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+
       <Footer />
     </>
   );
