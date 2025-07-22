@@ -644,7 +644,7 @@ export default function AboutPage() {
               <div className=" grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="relative h-80 overflow-hidden group cursor-pointer">
                   <Image
-                    src="https://scontent.fpat2-7.fna.fbcdn.net/v/t39.30808-6/470076772_464414946682383_2720910171639936896_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=KyGbN06EjwsQ7kNvwF7GfCu&_nc_oc=Adl6XT_UwwEO5HLvJsjLWIx6fWI2O3KwMuF-d2gitM7XRfU7fsy4EjhWiYAfR08e033vggfM7rVUQbAjG_X6oWar&_nc_zt=23&_nc_ht=scontent.fpat2-7.fna&_nc_gid=s2Jg_HH_LqeJBft9sQGNxg&oh=00_AfNbqQmqQZdfp35gMj8gqdoTFxKilZLdgkR3j9aZvixcJg&oe=68640F9B"
+                    src="/ranchi1.jpg"
                     alt="A G Office Team - Office Operations"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -660,7 +660,7 @@ export default function AboutPage() {
 
                 <div className="relative h-80 overflow-hidden group cursor-pointer">
                   <Image
-                    src="https://scontent.fpat2-4.fna.fbcdn.net/v/t39.30808-6/470120974_464414716682406_7699217653799957253_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=AS8PG2uu4XIQ7kNvwHa0BcO&_nc_oc=AdkU34q19YoPyrjHSLe_dUp2xEMQM8kV32oiv_hxVEi-ETYQv2fafJUbLzkA6OsdrgKjkFe4fRH-xRpwLOvez5if&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&_nc_gid=s2Jg_HH_LqeJBft9sQGNxg&oh=00_AfPP2fRxWgGf-pqT5f8FJuRkh4wSNDEgbqnQ8WQWxm50jA&oe=6864062E"
+                    src="/ranchi2.jpg"
                     alt="A G Office Team - Team Collaboration"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -701,7 +701,7 @@ export default function AboutPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
                 <div className="relative h-64 overflow-hidden group cursor-pointer">
                   <Image
-                    src="https://scontent.fpat2-2.fna.fbcdn.net/v/t39.30808-6/486852070_3051877818314705_8931193882290261326_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Z_4E4m7aXJ4Q7kNvwFAFqxT&_nc_oc=AdnZkjY03ULzxOlrZ4DP6QAlhBzSGBnWbx65-gDlQ5JJz6MbhWS5bcNY2NPGZhmaQsgCbpgIRQLwGWfxCk7irojk&_nc_zt=23&_nc_ht=scontent.fpat2-2.fna&_nc_gid=s2Jg_HH_LqeJBft9sQGNxg&oh=00_AfOrCBDNoA9vjPwjHY4u8qnbS0RwZEwMJ0t_A9XnD7RvrA&oe=686403E0"
+                    src="/cg1.jpg"
                     alt="Team Chhattisgarh - Field Operations"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -717,7 +717,7 @@ export default function AboutPage() {
 
                 <div className="relative h-64 overflow-hidden group cursor-pointer">
                   <Image
-                    src="https://scontent.fpat2-4.fna.fbcdn.net/v/t39.30808-6/487397164_3051877938314693_5880860208558751064_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=bWEFxiS6rz8Q7kNvwFoXnqz&_nc_oc=AdnqbAYzyXZ7VwoXXIvMwGvWAagEYB0EdiMqgbbEnHX95i4it0OjkQon1c4ccB9zYjaumg95eodEG9KGB1qmOjv7&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&_nc_gid=s2Jg_HH_LqeJBft9sQGNxg&oh=00_AfOJaenL_N4bc5YyxVdzY46-NVDDzRc36ufBN8IoJ2Ca4Q&oe=6863FD7F"
+                    src="/cg2.jpg"
                     alt="Team Chhattisgarh - Team Meeting"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -733,7 +733,7 @@ export default function AboutPage() {
 
                 <div className="relative h-64 overflow-hidden group cursor-pointer">
                   <Image
-                    src="https://scontent.fpat2-5.fna.fbcdn.net/v/t39.30808-6/470192634_466492003141344_7800479170594568180_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=8n-k2ItT_ikQ7kNvwFrc2ff&_nc_oc=Adl_o1uBM-_KjBrHLESMf4iunmKQ9Yi0z5_VKwUgFAf5O4DGciYU60Ba99K7mAAAiA2vJ64_h6_HV5RvGCmcofhW&_nc_zt=23&_nc_ht=scontent.fpat2-5.fna&_nc_gid=ZPz5jDFXgDAIQLGSNua_8Q&oh=00_AfMn_vXdNuYnMxvGEj9LL42MbEVOyYHu5bVwMBmAe7hNVw&oe=6863FECD"
+                    src="/cg3.jpg"
                     alt="Team Chhattisgarh - Strategic Planning"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -787,9 +787,9 @@ export default function AboutPage() {
 
             {/* Three Images Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-              <div className="relative h-64 overflow-hidden group cursor-pointer">
+              <div className="relative h-80 overflow-hidden group cursor-pointer">
                 <Image
-                  src="https://scontent.fpat2-4.fna.fbcdn.net/v/t39.30808-6/470073587_464416943348850_8810529119886131419_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=kZZCSBZuJqUQ7kNvwG5Mr9f&_nc_oc=AdnJeu8VfIdxrX1dLnuiEZDcvE1rm6SaGhPz6SPbB_qNsk9szen2Ar6noPBeocLav78eQSA73D3Pbpxkt3UNS7YC&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&_nc_gid=RHTiuLVKL70Fa41djF-fqQ&oh=00_AfO_ziIUHkf_h_5e-LjBEOEVQAvqZe9VdDMukm41n19CEg&oe=6863F811"
+                  src="/odisa1.jpg"
                   alt="Team Bhubaneshwar - Project Management"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -803,9 +803,9 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <div className="relative h-64 overflow-hidden group cursor-pointer">
+              <div className="relative h-80 overflow-hidden group cursor-pointer">
                 <Image
-                  src="https://scontent.fpat2-1.fna.fbcdn.net/v/t39.30808-6/469896178_464417063348838_7430837654979796490_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=s6EJbDBfzTMQ7kNvwFAYE5t&_nc_oc=AdnVaoTQ5VtIYeAMBK3UUNqid7G6J03RJNETyy_mW4PmAsjldQQfeCmkOXhokt5CzThmtf9dG5htQlpnG1sWuejX&_nc_zt=23&_nc_ht=scontent.fpat2-1.fna&_nc_gid=URAqAOxGoFMsMCwPcHRE2w&oh=00_AfOgKo2x39-iUbHof2KbCjlSLKO7ieSxHX1HBxFk291yFA&oe=68640B98"
+                  src="/odisa2.jpg"
                   alt="Team Bhubaneshwar - Team Collaboration"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -819,9 +819,9 @@ export default function AboutPage() {
                 </div>
               </div>
 
-              <div className="relative h-64 overflow-hidden group cursor-pointer">
+              <div className="relative h-80 overflow-hidden group cursor-pointer">
                 <Image
-                  src="https://scontent.fpat2-4.fna.fbcdn.net/v/t39.30808-6/470109815_464416926682185_8208749327283033721_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=gZ9BtuX-6bYQ7kNvwGu1YW1&_nc_oc=AdlQsawn7SYi0fMytoh4M1z2gQe7QTlaQqvSUB16YkF3cj97FRDCcpUEvNM2f1MDsgNey1741nTSi1XXwN9fe9tr&_nc_zt=23&_nc_ht=scontent.fpat2-4.fna&_nc_gid=RHTiuLVKL70Fa41djF-fqQ&oh=00_AfMGrKeDLuZSfVjXa3zUqDi_kijU9xcOQ9B9K3KHIdOE4w&oe=68640976"
+                  src="/odisa3.jpg"
                   alt="Team Bhubaneshwar - Technical Implementation"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -860,7 +860,7 @@ export default function AboutPage() {
 
             {/* Three Images Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-              <div className="relative h-64 overflow-hidden group cursor-pointer">
+              <div className="relative h-80 overflow-hidden group cursor-pointer">
                 <Image
                   src="/team-bareilly.jpg"
                   alt="Team bareilly Project Management"
