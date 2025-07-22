@@ -347,7 +347,7 @@ export default function ContactPage() {
                     </div>
                   </motion.div>
                 )}
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form action="https://formsubmit.co/sagaciousglobals@gmail.com" method="POST" onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -475,7 +475,8 @@ export default function ContactPage() {
                       placeholder="Tell us about your requirements, project details, or any questions you have..."
                     ></textarea>
                   </div>{" "}
-                  <div className="flex flex-col sm:flex-row gap-4">                    <button
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <button
                       type="submit"
                       disabled={isSubmitting || isSubmitted || isDuplicate}
                       className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-gray-400 disabled:to-gray-500 text-white py-3 px-6 rounded-lg font-semibold transition-all flex items-center justify-center gap-2"
@@ -501,7 +502,7 @@ export default function ContactPage() {
                     </button>
 
                     <button
-                      type="button"
+                      type="submit"
                       onClick={handleWhatsAppContact}
                       className="flex-1 bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg font-semibold transition-all flex items-center justify-center gap-2"
                       title={

@@ -82,7 +82,7 @@ export function CTASection() {
             <h3 className="text-xl font-bold text-gray-900 mb-4">
               Get Project Quote
             </h3>
-            <form className="space-y-6">
+            <form action="https://formsubmit.co/sagaciousglobals@gmail.com" method="POST" className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -90,6 +90,7 @@ export function CTASection() {
                   </label>
                   <input
                     type="text"
+                    name="first_name"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Enter your first name"
                   />
@@ -100,6 +101,7 @@ export function CTASection() {
                   </label>
                   <input
                     type="text"
+                    name="last_name"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Enter your last name"
                   />
@@ -112,6 +114,7 @@ export function CTASection() {
                 </label>
                 <input
                   type="text"
+                  name="business_name"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Enter your business name"
                 />
@@ -122,6 +125,7 @@ export function CTASection() {
                   Phone Number
                 </label>
                 <input
+                  name="phone"
                   type="tel"
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   placeholder="Enter your phone number"
@@ -132,7 +136,7 @@ export function CTASection() {
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Service Needed
                 </label>{" "}
-                <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
+                <select name="service" className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
                   <option>Select a service</option>
                   <option>Data Processing</option>
                   <option>Database Administration</option>
@@ -144,7 +148,7 @@ export function CTASection() {
                 </select>
               </div>
 
-              <Button className="w-full">Get My Quote</Button>
+              <Button type="submit" className="w-full">Get My Quote</Button>
             </form>
           </motion.div>
         </div>
