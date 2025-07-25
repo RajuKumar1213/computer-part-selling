@@ -221,7 +221,7 @@ export default function ContactPage() {
                   Ranchi-834002, Jharkhand, India
                 </p>
                 <a
-                  href="https://www.google.co.in/maps/dir//23.33591,85.32826"
+                  href="https://www.google.com/maps/dir//88QG%2B6VG+Jain+Mandir+Rd+Kusai+Ranchi,+Jharkhand+834002/@23.3382173,85.3272919,610m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x39f4e1b8ed3834c1:0xb826362808ac6566!2m2!1d85.3272919!2d23.3382173?entry=ttu&g_ep=EgoyMDI1MDcyMi4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 font-medium"

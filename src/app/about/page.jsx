@@ -569,6 +569,40 @@ export default function AboutPage() {
                 </p>
               </div>
             </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 group">
+              <div className="relative mb-6">
+                <div className="flex items-center justify-center rounded-full ">
+                  <Image
+                    src="/priya.jpg"
+                    alt="Project Leader"
+                    width={128}
+                    height={128}
+                    className="h-44 w-44 rounded-full items-center ring-4 ring-blue-500/20 group-hover:ring-blue-500/40 transition-all duration-300 object-cover"
+                  />
+                </div>
+
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                  <div className="px-3 py-1 text-center  bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs font-semibold rounded-full">
+                    WFM
+                  </div>
+                </div>
+              </div>
+              <div className="text-center">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  Priya Singh
+                </h3>
+
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  Dedicated WFM professional ensuring optimal workforce
+                  management and operational efficiency.
+                </p>
+              </div>
+            </motion.div>
           </div>
 
           {/* Team Stats */}
